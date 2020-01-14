@@ -1,0 +1,258 @@
+.d_home_top{
+    padding: 1rem 0rem;
+}
+p{
+    font-family: "sutonnymjregular"; 
+}
+.d_home_image{
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    float: left;
+    margin: 0 0.5rem 0 0.5rem;
+}
+.d_override_container{
+    margin-left: -5%;
+    margin-right: -5%;
+}
+hr.style1{
+    border-top: 1.5px solid #8c8b8b;
+    width: 100%;
+    margin-top: -.1%;
+}
+.d_news_box{
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(black, 0.1);
+    border-radius: 3px;
+    /*background-color: green;*/
+    margin-bottom: 1rem;
+}
+.d_image_box{
+    width: 40%;
+    height: 11rem;
+    float: left;
+    /*background-color: red;*/
+    margin-right: 5px;
+
+}
+.d_post_image{
+    float: left;
+    height: 100%;
+    width: 100%;
+
+}
+.d_clock_image{
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    float: left;
+    margin-right: 5px;
+}
+/*.d_post_date{
+position: relative;
+margin-top: -.5%;
+}*/
+.d_post_image:hover{
+    /*transform: scale(.95);*/
+} 
+.d_text_box{
+    padding: 10px;
+    width: 58%;
+    height: 12rem;
+    float: left;
+    /*
+    background-color: yellow;
+    */
+}
+.d_heading_text{
+    font-size: 20px;
+    margin-bottom: 1px;
+    color: black !important;
+}
+.d_recent_news_parent{
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: #DCDCDC;    
+}
+.d_recent_heading{
+    font-size: 18px;
+    font-weight: 600;
+    color: #8B0000;
+}
+.d_recent_news{
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 1rem;  
+}
+hr .d_recentnews_hr{
+    padding: 1rem 0rem;
+    border-top: 2px dashed #8B0000;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    color: #fff;
+    text-decoration:none;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    background-color: #6FB7E9;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.75rem;
+
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+    background-color: #3C8DC5;
+}
+
+/*Style for single post starts*/
+
+.d_post_top{
+    padding: 1rem 0;
+}
+
+hr.style2{
+    border-top: 1.5px solid #8c8b8b;
+    top: -8%;
+} 
+.d_socialmedia_post{
+    margin-top: 11rem;
+}
+.d_single_cat_heading{
+    color: red;
+    font-size: 20px;
+    margin: 1rem 0 2rem 0;
+}
+.d_single_post_heading{
+    font-size: 32px;
+    font-weight: 600;
+}
+.d_single_date{
+    padding: 0.5rem 0 1.5rem 0;
+}
+.d_single_post_content{
+    font-family: "sutonnymjregular", Arial, sans-serif; 
+    padding: 1rem 0 1rem 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+/*Style for single post ends*/
+
+/*Same Category news sidebar starts*/
+.d_same_cat_news_parent{
+    float: left;
+    width: 100%;
+    position: relative;  
+    margin-top: 11rem;
+}
+.d_same_cat_news{
+    font-size: 18px;
+    font-weight: 600;
+    color: #8B0000;
+}
+.d_cat_heading_text{
+    font-size: 20px;
+    margin-bottom: 1px;
+    font-weight: 400;
+    color: black !important;
+}
+hr.d_same_cat_news_hr{
+    padding: 0.4rem 0rem;
+    background-color: #fff;
+    border-top: 1px dashed #8B0000;
+}
+/*Same Category news sidebar ends*/
+
+/*footer design starts*/
+.d_site-footer{
+    position: absolute;
+    width: 100%;
+    background-color: #4f5d52;
+}
+.d_footer_clm1{
+    margin: 1rem 0 2rem 0;
+}
+.d_footer_image{
+    display: block;
+    width: 13rem;
+    height: 5rem;
+    padding: .5rem;
+    margin-left: -1rem;
+}
+.d_footer_clm_text{
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+.d_footer_clm2{
+    height: 80%;
+    margin-top: 1rem;
+    border-right: 1px solid white;
+    margin-right: 15%;
+}
+.d_footer_clm_text2{
+    font-size: 16px;
+    color: white;
+    line-height: 2;
+}
+.d_footer_clm3{
+    border-right: 1px solid white;
+}
+.d_footer_table{
+    float: left;
+    margin: 1rem;
+}
+.d_list_parent{
+    list-style-type: none;
+    font-size: 16px;
+    color: white;
+    line-height: 1.8;
+}
+.d_list_text{
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+}
+.d_footer_2nd_row{
+    width: 100%;
+    background-color: #222823;
+}
+.d_footer_2nd_row_text{
+    padding: 0.75rem;
+    font-size: 16px;
+    color: white;
+}
+.d_footer_3rd_row{
+    width: 100%;
+    background-color: white;
+    position: absolute;
+}
+.one{
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.d_footer_3rd_row_text{
+    /*margin-left: 40%;*/
+    padding: 1rem;
+    font-size: 16px;
+}
+/*footer design ends*/
