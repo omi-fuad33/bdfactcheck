@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Anannya
+ * @package bgmea
  */
 
 ?>
@@ -17,41 +17,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<!--css stylesheet block START -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- css stylesheet block ENDS -->
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<header id="masthead" class="site-header">
-<!--  Header menu starts      -->
-        <div class="menu_header">
-            <div class="menu_container">
-                <div class="top_bar">
-                    <div class="row">
-                        <div class="col-lg-2">
-                        </div>
-                        <div class="col-lg-8" style="text-align: center">
-                            <a href="http://omnispace.co/a/"><img class="o_header_logo" src="<?php echo get_template_directory_uri(); ?>/Images/Anannya-logo.png" alt="image not found"></a>
-                        </div>
-                        <div class="col-lg-2">
-                        </div>
-                    </div>
-                </div>
-                <nav class="menu_bottom container-fluid">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-2 logo2" style="text-align: center;">
-                                <a href="http://localhost/anannya/"><img src="<?php echo get_template_directory_uri(); ?>/Images/Anannya-logo.png" style="height: 40px; width: 150px;"></a>
-                            </div>
-                            <div class="menu_item col-lg-12">
-                                <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-<!-- Header menu ends-->
-	</header><!-- #masthead -->
+<?php wp_body_open(); ?>
+<header id="masthead" class="site-header">
+<div class="d_menu_header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-6">
+					<a href="<?php echo get_home_url(); ?>"><img class="d_header_logo" src="<?php echo get_template_directory_uri(); ?>/Images/bdfactlogo-min.png" alt="image not found"></a>
+				</div>
+			<div class="col-xs-6 col-md-6">
+				<div class="d_top_buttons">
+					<button class="d_button button1">English</button>
+					<button class="d_button button2">Donate</button>
+				</div>
+				<div class="d_top_social">
+					<a href="https://www.facebook.com/BGMEA.official/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
+					<a href="https://www.linkedin.com/company/13268451/admin/" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
+					<a href="https://instagram.com/brandbgmea?igshid=u2m5b975u82k"><i class="fa fa-instagram d_s_icon"></i></a>
+					<a href="https://www.youtube.com/channel/UCVhQMYrp0X1z24DdqMGVagw" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/search.png" class="d-none d-sm-block d_search_img">
 
-	<div id="content" class="site-content">
+				</div>
+				<div class="d-none d-sm-block d_search_pos">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="d_sticky_nav">
+				<div class="row">
+						<div class="menu_item col-lg-12">
+								<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+						</div>
+				</div>
+		</div>
+	</div>
+</div>
+</header><!-- #masthead -->

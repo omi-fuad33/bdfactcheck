@@ -4,7 +4,7 @@
     padding: 0;
 }
 html, body{
-    font-family: "sutonnymjregular", Arial, sans-serif; 
+    font-family: "sutonnymjregular", Arial, sans-serif;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -40,7 +40,7 @@ html, body{
     margin: 0 auto;
 	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
     z-index: 2;
-    
+
 }
 .menu-main_menu-container ul{
     text-align: center;
@@ -57,7 +57,7 @@ html, body{
 }
 .menu-main_menu-container ul li a{
     text-decoration: none;
-    font-family: "sutonnymjregular", Arial, sans-serif; 
+    font-family: "sutonnymjregular", Arial, sans-serif;
     color: black;
     font-weight: 500;
     font-size: 14px;
@@ -250,7 +250,7 @@ html, body{
 }
 .o_3rd_row_post_wrap{
     margin-left: -10px;
-    
+
 }
 .o_landscape_ad_landscape_big{
     width: 900px;
@@ -321,14 +321,14 @@ html, body{
 .o_camera_icon{
     height: 25px;
     width: 32px;
-    margin-top: 7px; 
+    margin-top: 7px;
     float: left;
     object-fit: cover;
 }
 .o_camera_icon_2ndrow{
     height: 18px;
     width: 24px;
-    margin-top: 7px; 
+    margin-top: 7px;
     float: left;
     object-fit: cover;
 }
