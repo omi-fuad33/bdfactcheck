@@ -271,12 +271,8 @@ get_header();
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
                              ?>
                             <div class=" o_top_fact-wrap">
-                                <!-- <img class="o_top_factcheck_img" src="<?php echo $image_url[0]; ?>"> -->
                                 <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
@@ -284,9 +280,49 @@ get_header();
                                    ?>
                              <?php wp_reset_query(); ?>
                     </div>
-                    <div class="o_sideber_ad1">
-                         ADVERTISEMENT
+<!-- MOst read tab -->
+                    <div class="o_most_read_post_wrap clearfix">
+                        <div class="o_most_read_button_wrap">
+                            <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
+                            <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>
+                        </div>
+                        <?php
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 5, 
+                              
+                          ); //start counter
+                            $slider_query=new WP_Query($args); //Need this to make pagination work
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+
+                             ?>
+                            <div class=" o_top_fact-wrap" id="o_most_recent_tab">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>       
+                             <?php endwhile;
+                               endif;
+                                   ?>
+                             <?php wp_reset_query(); ?>
+
+                             <?php
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 5, 
+                              
+                          ); //start counter
+                            $slider_query=new WP_Query($args); //Need this to make pagination work
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+
+                             ?>
+                            <div class=" o_top_fact-wrap" id="o_most_read_tab">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>       
+                             <?php endwhile;
+                               endif;
+                                   ?>
+                             <?php wp_reset_query(); ?>
                     </div>
+                    <!-- <div class="o_sideber_ad1">
+                         ADVERTISEMENT
+                    </div> -->
                     <div class="o_sideber_ad2">
                          ADVERTISEMENT
                     </div>
@@ -346,7 +382,7 @@ get_header();
                                   <?php if($counter == 1) :
                                   ?>
                                     <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">রূপ-চর্চা</p>
+                                            <p class="o_2nd_row_cat">মিডিয়া স্কুল</p>
                                             <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -408,7 +444,7 @@ get_header();
                                   <?php if($counter == 1) :
                                   ?>
                                     <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">জীবনযাপন</p>
+                                            <p class="o_2nd_row_cat">মিডিয়া ওয়াচ</p>
                                             <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -580,7 +616,7 @@ get_header();
             <p class="o_2nd_row_cat">গ্যালারি</p>
             <img class="o_photo_gallaery_feature" src="http://omnispace.co/a/wp-content/uploads/2018/11/HA_0873.jpg"><br>
                 <div class="o_gallery_title_wrap">
-                    <div><img class="o_camera_icon" src="http://omnispace.co/a/wp-content/uploads/2018/11/camera_icon1.png"></div>
+                    <div><img class="o_camera_icon" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
                     <div class="o_gallery_title">ঈদের সাজ</div>
                 </div>
                 <div class="clearfix"></div>
@@ -599,7 +635,7 @@ get_header();
                             <div class="col-lg-4">
                                 <img class="o_gallery_img" src="<?php echo $image_url[0]; ?>">
                                 <div class="o_gallery_title_wrap">
-                                    <div><img class="o_camera_icon_2ndrow" src="http://omnispace.co/a/wp-content/uploads/2018/11/camera_icon1.png"></div>
+                                    <div><img class="o_camera_icon_2ndrow" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
                                     <div class="o_gallery_title_2ndrow"><h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5></div>
                                 </div>
                             </div>       
