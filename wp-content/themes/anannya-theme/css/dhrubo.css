@@ -1,5 +1,11 @@
 /* Starting new design for bdfactcheck */
-
+@font-face {
+  font-family: solaimanlipi;
+  src: url(fonts/SolaimanLipi.ttf);
+}
+body{
+  font-family: solaimanlipi !important;
+}
 .d_header_logo{
   object-fit: cover;
   width: 200px;
@@ -113,7 +119,6 @@
 
 .d_single{
   margin: 4% 0 3% 0;
-  font-family: 'Arimo', sans-serif;
 }
 .d_single_cat{
   margin: 5px 0 5px 0;
@@ -131,7 +136,6 @@
   border-bottom: 1px solid black;
 }
 .d_single_title{
-  font-family: 'Arimo', sans-serif;
   margin: 5% 0;
   font-size: 26px;
   color: #ae1a20;
@@ -141,7 +145,6 @@
   margin-top: 3%;
 }
 .d_single_content p{
-    font-family: 'Arimo', sans-serif;
     font-size: 16px;
 }
 .d_single_sml{
@@ -222,7 +225,7 @@ hr.d_same_cat_news_hr{
   color: #064618;
 }
 .d_donate{
-  margin-top: 20px;
+  margin: 10px 0;
 }
 /* Archieve page design Ends */
 
@@ -436,9 +439,7 @@ hr.d_same_cat_news_hr{
 
 
 
-p{
-    font-family: "sutonnymjregular";
-}
+
 .d_home_image{
     display: block;
     height: 1.25rem;
