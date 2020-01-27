@@ -585,29 +585,6 @@ get_header();
                  ADVERTISEMENT
          </div>
     </div>
-<!--    খাবার দাবার starts here-->
-                        <p class="o_2nd_row_cat">খাবারদাবার</p>
-                        <div class="row">
-                        <?php
-						  $args = array('category_name' => 'খাবারদাবার',
-                              'posts_per_page' => 3, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
-                             ?>
-                            <div class="col-lg-4">
-                                <img class="o_khabardabar_img" src="<?php echo $image_url[0]; ?>">
-                                <h5 class="o_post_2ndrow_column1 o_khabardabar_title"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                        </div>
 <!--  Photo gallery satrts form here -->
     <div class="row o_gallery_wrap">
         <div class="col-lg-8">
