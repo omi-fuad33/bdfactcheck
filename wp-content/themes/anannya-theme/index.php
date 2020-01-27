@@ -266,7 +266,7 @@ get_header();
                 <div class="o_top_fact_check_wrap">
                         <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
