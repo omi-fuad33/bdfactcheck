@@ -326,9 +326,7 @@ get_header();
                     <div class="o_sideber_ad2">
                          ADVERTISEMENT
                     </div>
-                    <div class="o_sideber_ad3">
-                         ADVERTISEMENT
-                    </div>
+                    <img class="d_donate o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
                     <div class="o_sideber_ad4">
                          ADVERTISEMENT
                     </div>

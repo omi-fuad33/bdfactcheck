@@ -210,7 +210,11 @@ html, body{
 #o_most_read_tab{
     display: none;
 }
-
+/* Donate image front page */
+.o_donate_front_page{
+    width: 90%;
+    margin: 0 5%;
+}
 /*front page 2nd row 1st post*/
 .o_2nd_row_post1{
     background-color: #f1f1f2;
