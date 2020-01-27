@@ -77,7 +77,7 @@ get_header();
                              <div id="spotlight_img">
                                 <img class="spotlight_img" src="<?php echo $image_url[0]; ?>">
                               </div>
-                              <h5 class="o_spotlight_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
+                              <h5 class="o_spotlight_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
                              <?php endwhile;
                                endif;
                                    ?>
@@ -326,7 +326,7 @@ get_header();
                     <div class="o_sideber_ad2">
                          ADVERTISEMENT
                     </div>
-                    <img class="d_donate o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
+                    <img class="o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
                     <div class="o_sideber_ad4">
                          ADVERTISEMENT
                     </div>
@@ -334,9 +334,9 @@ get_header();
             </div>
             
 <!--Advertisement block-->
-        <div class="o_landscape_ad_landscape_big">
+        <!-- <div class="o_landscape_ad_landscape_big">
                  ADVERTISEMENT
-            </div>
+            </div> -->
 <!--4th row post starts-->
         <div class="row">
             <div class="col-lg-6">
