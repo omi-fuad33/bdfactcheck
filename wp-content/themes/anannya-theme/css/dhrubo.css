@@ -1,8 +1,158 @@
+/* Starting new design for bdfactcheck */
+
+.d_header_logo{
+  width: 200px;
+  height: 100px;
+}
+.d_top_buttons{
+  text-align: right;
+}
+.d_button {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.d_button:hover{
+  background-color: #ae1a20;
+  color: white;
+}
+.d_top_social{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+}
+.d_top_social p{
+  padding: 5px 3px;
+}
+.d_top_social a{
+  text-decoration: none;
+  color: black;
+}
+.d_top_social .fa{
+  padding: 5px;
+  font-size: 24px;
+  transition: transform 0.5s;
+}
+.d_top_social .fa:hover{
+  transform: scale(1.10);
+}
+.d_search_img{
+  cursor: pointer;
+  margin: 5px 0 0 20px;
+  height: 20px;
+  width: 20px;
+}
+.menu_item{
+  margin-top: 5px;
+}
+.dashicons-admin-home::before {
+    font-size: 20px !important;
+}
+
+#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.8s;
+}
+#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:hover{
+  border-bottom: 3px solid #ae1a20;
+}
+.d_search{
+  text-align: right;
+}
+.gsc-search-button-v2{
+  height: 40px;
+  background-color: #ae1a20 !important;
+  cursor: pointer;
+}
+/* .gsc-search-box table{
+  margin: 0 0 0 1.4em !important;
+} */
+.gsib_a{
+  padding: 0 0 0 5px !important;
+}
+#navbar {
+  overflow: hidden;
+}
+
+.sticky {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+}
+
+.d_menu_header{
+  z-index: 10000000;
+    margin-top: 20px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+}
+#mysticky-wrap {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3 ) !important;
+
+}
+#mysticky-nav.wrapfixed {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3 ) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .d_home_top{
     padding: 1rem 0rem;
 }
 p{
-    font-family: "sutonnymjregular"; 
+    font-family: "sutonnymjregular";
 }
 .d_home_image{
     display: block;
@@ -56,7 +206,7 @@ margin-top: -.5%;
 }*/
 .d_post_image:hover{
     /*transform: scale(.95);*/
-} 
+}
 .d_text_box{
     padding: 10px;
     width: 58%;
@@ -75,7 +225,7 @@ margin-top: -.5%;
     float: left;
     width: 100%;
     position: relative;
-    background-color: #DCDCDC;    
+    background-color: #DCDCDC;
 }
 .d_recent_heading{
     font-size: 18px;
@@ -86,7 +236,7 @@ margin-top: -.5%;
     float: left;
     width: 100%;
     position: relative;
-    padding: 1rem;  
+    padding: 1rem;
 }
 hr .d_recentnews_hr{
     padding: 1rem 0rem;
@@ -130,7 +280,7 @@ hr .d_recentnews_hr{
 hr.style2{
     border-top: 1.5px solid #8c8b8b;
     top: -8%;
-} 
+}
 .d_socialmedia_post{
     margin-top: 11rem;
 }
@@ -147,7 +297,7 @@ hr.style2{
     padding: 0.5rem 0 1.5rem 0;
 }
 .d_single_post_content{
-    font-family: "sutonnymjregular", Arial, sans-serif; 
+    font-family: "sutonnymjregular", Arial, sans-serif;
     padding: 1rem 0 1rem 0;
     font-size: 18px;
     line-height: 1.8;
@@ -158,7 +308,7 @@ hr.style2{
 .d_same_cat_news_parent{
     float: left;
     width: 100%;
-    position: relative;  
+    position: relative;
     margin-top: 11rem;
 }
 .d_same_cat_news{
