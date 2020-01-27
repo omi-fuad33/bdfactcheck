@@ -55,6 +55,3 @@
 	</div><!-- .entry-content -->
 
 </article>
-<footer class="entry-footer">
-    <?php anannya_entry_footer(); ?>
-</footer><!-- .entry-footer -->

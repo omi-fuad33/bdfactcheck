@@ -15,10 +15,7 @@ get_header();
     <div class="row">
         <div class="col-lg-12">
             <div class="d_home_top">
-                <img class="d_home_image" src="http://omnispace.co/a/wp-content/uploads/2018/07/home.png">
-                <img class="d_home_image" src="http://omnispace.co/a/wp-content/uploads/2018/07/arrow.png">
                 <?php single_cat_title(); ?>
-
                 <hr class="style1">
             </div>
         </div>
@@ -43,36 +40,55 @@ get_header();
             get_template_part( 'template-parts/content', 'none' );
 
             endif; ?>
-            <?php numeric_posts_nav(); ?>
+            <div class="d_pagination">
+              <?php wpbeginner_numeric_posts_nav(); ?>
+            </div>
+
         </div>
 
         <div class="clearfix"></div>
         <div class="col-lg-4 col-md-4">
-            <div class="d_recent_news_parent">
-                <div class="d_recent_news">
-                    <p class="d_recent_heading">সর্বশেষ</p>
-                    <hr class="style1">
-                    <?php $counter = 0; ?>
-                    <?php
-                    $recent_posts=new WP_Query('posts_per_page=4');
-                    if($recent_posts->have_posts()): 
-                    while($recent_posts->have_posts()): $recent_posts->the_post(); ?>
-                    <a class="d_heading_text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                    <?php if($counter <3)
-{ ?>
-                    <hr class="d_recentnews_hr">
-                    <?php $counter++;
-} ?>
 
-                    <?php
+          <div class="o_most_read_post_wrap clearfix">
+                                  <div class="o_most_read_button_wrap">
+                                      <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
+                                      <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>
+                                  </div>
+                                  <?php
+                                    $args = array('category_name' => 'ফিচার',
+                                        'posts_per_page' => 5,
 
-                    endwhile; 
-                    endif;
-                    ?>
+                                    ); //start counter
+                                      $slider_query=new WP_Query($args); //Need this to make pagination work
+                                          if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
 
+                                       ?>
+                                      <div class=" o_top_fact-wrap" id="o_most_recent_tab">
+                                          <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                      </div>
+                                       <?php endwhile;
+                                         endif;
+                                             ?>
+                                       <?php wp_reset_query(); ?>
 
-                </div>
-            </div>
+                                       <?php
+                                    $args = array('category_name' => 'ফিচার',
+                                        'posts_per_page' => 5,
+
+                                    ); //start counter
+                                      $slider_query=new WP_Query($args); //Need this to make pagination work
+                                          if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
+
+                                       ?>
+                                      <div class=" o_top_fact-wrap" id="o_most_read_tab">
+                                          <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                      </div>
+                                       <?php endwhile;
+                                         endif;
+                                             ?>
+                                       <?php wp_reset_query(); ?>
+                              </div>
+                              <img class="d_donate" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png"" alt="">
         </div>
     </div>
 

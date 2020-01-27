@@ -25,15 +25,11 @@ get_header();
               // Start the loop.
               while ( have_posts() ) : the_post();
                   $category_id = the_category_id(false);
-
-                  if ($category_id === 14 or $category_id === 15)
-                  {
-                      get_template_part( 'template-parts/content-gallery', get_post_type() );
-                  }
-
-                  else {
                       get_template_part( 'template-parts/content', get_post_type() );
-                  }
+                      // If comments are open or we have at least one comment, load up the comment template.
+    			if ( comments_open() || get_comments_number() ) :
+    				comments_template();
+    			endif;
                     endwhile;
       ?>
         </div>

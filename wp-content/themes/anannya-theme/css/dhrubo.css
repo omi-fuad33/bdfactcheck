@@ -1,6 +1,7 @@
 /* Starting new design for bdfactcheck */
 
 .d_header_logo{
+  object-fit: cover;
   width: 200px;
   height: 100px;
 }
@@ -8,20 +9,21 @@
   text-align: right;
 }
 .d_button {
-  background-color: #fff;
-  border: 1px solid black;
+  background-color: #f1f1f2;
+  border: 1px solid #064618;
   border-radius: 5px;
   color: black;
-  padding: 6px 18px;
+  padding: 3px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  font-weight: 600;
 }
 .d_button:hover{
-  background-color: #ae1a20;
+  background-color: #064618;
   color: white;
 }
 .d_top_social{
@@ -46,9 +48,14 @@
 }
 .d_search_img{
   cursor: pointer;
-  margin: 5px 0 0 20px;
-  height: 20px;
-  width: 20px;
+  margin: 6px 0 0 20px;
+  height: 25px;
+  width: 25px;
+  transition: transform 0.3s ease;
+}
+.d_search_img:hover{
+ transform: scale(1.10);
+
 }
 .menu_item{
   margin-top: 5px;
@@ -68,18 +75,29 @@
 .d_search{
   text-align: right;
 }
+.gsc-input-box{
+  border: none !important;
+}
+.gsc-search-button{
+  margin-top: -20px;
+  height: 40px !important;
+}
 .gsc-search-button-v2{
   height: 40px;
-  background-color: #ae1a20 !important;
+  background-color: #064618 !important;
   cursor: pointer;
 }
-/* .gsc-search-box table{
-  margin: 0 0 0 1.4em !important;
-} */
-.gsib_a{
-  padding: 0 0 0 5px !important;
+.gsc-search-button svg{
+  width: 20px !important;
+  height: 20px !important;
 }
-
+.gsib_a{
+  padding: 8px 0 8px 5px !important;
+  border: 2px solid #064618 !important;
+}
+.gsc-input{
+  border-color: white !important;
+}
 .d_menu_header{
   z-index: 10000000;
     margin-top: 20px;
@@ -156,6 +174,90 @@ hr.d_same_cat_news_hr{
 }
 /*Same Category news sidebar ends*/
 
+/* comments page design starts */
+.comment-list{
+  background-color: #f1f1f2;
+  padding: 10px;
+}
+.comment-metadata time{
+  color: black;
+  font-size: 10px;
+  text-decoration: none;
+}
+.comment-content p{
+  color: #064618;
+  font-size: 20px;
+}
+.comments-area ol{
+  margin: 0;
+}
+
+/* Comments page design ends */
+
+/* Archieve page Design starts */
+.d_home_top{
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 0rem;
+}
+.d_heading_text a{
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 1px;
+    color: #064618;
+    font-weight: 600;
+}
+.d_heading_text a:hover{
+    color: #ae1a20;
+    text-decoration: none;
+}
+.d_heading_text p{
+    font-size: 15px;
+}
+.btn_2{
+  color: #ae1a20;
+  font-weight: 600;
+}
+.btn_2:hover{
+  color: #064618;
+}
+.d_donate{
+  margin-top: 20px;
+}
+/* Archieve page design Ends */
+
+.d_pagination{
+  margin-top: 3%;
+  text-align: center;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    color: #fff;
+    text-decoration:none;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    background-color: #006747;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.5rem 0.7rem;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+    background-color: #ae1a20;
+}
 
 
 /*footer design starts===================================*/
@@ -333,9 +435,7 @@ hr.d_same_cat_news_hr{
 
 
 
-.d_home_top{
-    padding: 1rem 0rem;
-}
+
 p{
     font-family: "sutonnymjregular";
 }
@@ -373,7 +473,7 @@ hr.style1{
 
 }
 .d_post_image{
-    float: left;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 
@@ -401,11 +501,7 @@ margin-top: -.5%;
     background-color: yellow;
     */
 }
-.d_heading_text{
-    font-size: 20px;
-    margin-bottom: 1px;
-    color: black !important;
-}
+
 .d_recent_news_parent{
     float: left;
     width: 100%;
