@@ -273,7 +273,7 @@ get_header();
                                 if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
                              ?>
                             <div class=" o_top_fact-wrap">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -288,7 +288,7 @@ get_header();
                         </div>
                         <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
@@ -296,7 +296,7 @@ get_header();
 
                              ?>
                             <div class=" o_top_fact-wrap" id="o_most_recent_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -305,7 +305,7 @@ get_header();
 
                              <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
@@ -313,7 +313,7 @@ get_header();
 
                              ?>
                             <div class=" o_top_fact-wrap" id="o_most_read_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;

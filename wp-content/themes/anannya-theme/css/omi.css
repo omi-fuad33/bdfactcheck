@@ -148,17 +148,23 @@ html, body{
     -moz-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
     box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
 }
-.o_spotlight_headline, .o_spotlight_headline:visited{
+.o_spotlight_headline a, .o_spotlight_headline a:visited{
     font-size: 16px;
     font-weight: 400;
     color:rgb(49, 49, 49);
     margin-bottom: 20px;
     transition: all 0.2s ease;
 }
-.o_spotlight_headline:hover{
+.o_spotlight_headline{
+    transition: all 0.2s ease;
+}
+.o_spotlight_headline a:hover{
     color: #006747;
     font-size: 17px;
     text-decoration: none;
+}
+.o_spotlight_headline:hover{
+    border-left: 5px solid #006747;
 }
 /* Top fact check */
 .o_top_fact_check_wrap{
