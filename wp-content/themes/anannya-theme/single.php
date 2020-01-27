@@ -40,16 +40,17 @@ get_header();
             <div class="col-lg-3 col-md-3">
                 <div class="d_same_cat_news_parent">
                     <div class="d_same_cat_news">
-                        <p class="d_recent_heading">এই বিভাগের অন্যান্য</p>
-                        <hr class="style1">
+                      <h5 class="o_spotlight_title o_top_fact_check_title">এই বিভাগের অন্যান্য</h5>
+
                         <?php
 
-                        $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID) ) );
+                        $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
                         if( $related ) foreach( $related as $post ) {
                             setup_postdata($post); ?>
 
-                        <div><a class="d_cat_heading_text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
-                        <hr class="d_same_cat_news_hr">
+                            <div class=" o_top_fact-wrap">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>
 
                         <?php }
                         wp_reset_postdata(); ?>

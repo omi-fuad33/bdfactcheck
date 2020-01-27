@@ -116,7 +116,7 @@
   font-family: 'Arimo', sans-serif;
   margin: 5% 0;
   font-size: 26px;
-  color: #f25b52;
+  color: #ae1a20;
   font-weight: 700;
 }
 .d_test{
@@ -140,18 +140,17 @@
     margin-top: 4%;
 }
 .d_same_cat_news{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #8B0000;
 }
 .d_cat_heading_text{
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 1px;
     font-weight: 400;
     color: black !important;
 }
 hr.d_same_cat_news_hr{
-    padding: 0.4rem 0rem;
     background-color: #fff;
     border-top: 1px dashed #8B0000;
 }
@@ -416,7 +415,7 @@ margin-top: -.5%;
 .d_recent_heading{
     font-size: 18px;
     font-weight: 600;
-    color: #8B0000;
+    color: #ae1a20;
 }
 .d_recent_news{
     float: left;
