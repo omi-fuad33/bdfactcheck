@@ -1,14 +1,15 @@
-// $(window).on('scroll', function() {
-//     if ($(this).scrollTop()>=100) { // this refers to window
-//         $(".menu_bottom").addClass("menu_bottom_sticky");
-//         $(".logo2").addClass("logo2_show");
-//         $(".menu_item").removeClass("col-lg-12");
-//         $(".menu_item").addClass("col-lg-10");
-//     }
-//     else{
-//         $("nav").removeClass("menu_bottom_sticky");
-//         $(".logo2").removeClass("logo2_show");
-//         $(".menu_item").removeClass("col-lg-10");
-//         $(".menu_item").addClass("col-lg-12");
-//     }
-// })
+// Scripts for most read button function
+$(document).ready(function(){
+$("#o_most_read_button").click(function(){
+    $("#o_most_read_tab").show(400);
+    $("#o_most_recent_tab").hide(400);
+    $("#o_most_read_button").css({"background-color": "#006747", "color": "#ffffff"});
+    $("#o_most_recent_button").css({"background-color": "#f1f1f2", "color": "#006747"});
+  });
+  $("#o_most_recent_button").click(function(){
+    $("#o_most_recent_tab").show(400);
+    $("#o_most_read_tab").hide(400);
+    $("#o_most_recent_button").css({"background-color": "#006747", "color": "#ffffff"});
+    $("#o_most_read_button").css({"background-color": "#f1f1f2", "color": "#006747"});
+  });
+});

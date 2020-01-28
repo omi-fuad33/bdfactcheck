@@ -16,7 +16,7 @@ get_header();
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-9 o_slider_wrapper">
 <!--Slider Starts-->
                 <div class="o_featured_slider">
                      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
@@ -59,47 +59,34 @@ get_header();
 <!-- Advertisement block-->
         </div>
         <div class="col-lg-3 o_slider_right">
-            <div class="o_subscribe_box">
+            <div class="spotlight_box">
+                <h5 class="o_spotlight_title">স্পটলাইট</h5>
                 <?php
-						 $args = array('category_name' => 'subscribe',
-                              'posts_per_page' => 1, 
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 2, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
+                            ?>
+                            <?php
                                 if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
 
                                 $image_id = get_post_thumbnail_id();
                                 $image_url = wp_get_attachment_image_src($image_id, 'large', true);
                              ?>
-                                <img class="o_subscribe_img" src="<?php echo $image_url[0]; ?>">      
+                             <div id="spotlight_img">
+                                <img class="spotlight_img" src="<?php echo $image_url[0]; ?>">
+                              </div>
+                              <h5 class="o_spotlight_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
                              <?php endwhile;
                                endif;
                                    ?>
                              <?php wp_reset_query(); ?>
-                    </div>
-                    <button class="o_subscribe_button">সাবস্ক্রাইব</button>
-            <div class="o_editor_box">
-                <?php
-						 $args = array('category_name' => 'সম্পাদকীয়',
-                              'posts_per_page' => 1, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
-                             ?>
-                                <img class="o_editor_img" src="<?php echo $image_url[0]; ?>">
-                                <p class="o_editor_cat">সম্পাদকীয়</p>
-                                <h5><a class="o_editor_box_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                    </div>
+            </div>
         </div>
     </div>
+
+
     <div class="row">
         <div class="col-lg-8">
             <div class="o_landscape_ad_landscape">
@@ -122,7 +109,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">রচনা</p>
+                                        <p class="o_2nd_row_cat">ফেক নিউজ</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -155,7 +142,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img2" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">অর্জন</p>
+                                        <p class="o_2nd_row_cat">পলিটি চেক</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -188,7 +175,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">সাহিত্য</p>
+                                        <p class="o_2nd_row_cat">হেলথ চেক</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -251,7 +238,7 @@ get_header();
                                   ?>
                                     <div class="o_3rd_row_post1">
                                         <div class="o_3rd_row_post1_wrap">
-                                            <p class="o_2nd_row_cat">ফ্যাশন</p>
+                                            <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
                                             <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                         </div>
                                     </div>
@@ -274,9 +261,68 @@ get_header();
             </div>
         </div>
                 <div class="col-lg-4">
-                    <div class="o_sideber_ad1">
-                         ADVERTISEMENT
+                     <!--    শীর্ষ ফ্যাক্ট চেক starts here-->
+                <h5 class="o_spotlight_title o_top_fact_check_title">শীর্ষ ফ্যাক্ট চেক</h5>
+                <div class="o_top_fact_check_wrap">
+                        <?php
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 5, 
+                              
+                          ); //start counter
+                            $slider_query=new WP_Query($args); //Need this to make pagination work
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+                             ?>
+                            <div class=" o_top_fact-wrap">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>       
+                             <?php endwhile;
+                               endif;
+                                   ?>
+                             <?php wp_reset_query(); ?>
                     </div>
+<!-- MOst read tab -->
+                    <div class="o_most_read_post_wrap clearfix">
+                        <div class="o_most_read_button_wrap">
+                            <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
+                            <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>
+                        </div>
+                        <?php
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 7, 
+                              
+                          ); //start counter
+                            $slider_query=new WP_Query($args); //Need this to make pagination work
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+
+                             ?>
+                            <div class=" o_top_fact-wrap" id="o_most_recent_tab">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>       
+                             <?php endwhile;
+                               endif;
+                                   ?>
+                             <?php wp_reset_query(); ?>
+
+                             <?php
+						  $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 7, 
+                              
+                          ); //start counter
+                            $slider_query=new WP_Query($args); //Need this to make pagination work
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+
+                             ?>
+                            <div class=" o_top_fact-wrap" id="o_most_read_tab">
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            </div>       
+                             <?php endwhile;
+                               endif;
+                                   ?>
+                             <?php wp_reset_query(); ?>
+                    </div>
+                    <!-- <div class="o_sideber_ad1">
+                         ADVERTISEMENT
+                    </div> -->
                     <div class="o_sideber_ad2">
                          ADVERTISEMENT
                     </div>
@@ -336,7 +382,7 @@ get_header();
                                   <?php if($counter == 1) :
                                   ?>
                                     <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">রূপ-চর্চা</p>
+                                            <p class="o_2nd_row_cat">মিডিয়া স্কুল</p>
                                             <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -398,7 +444,7 @@ get_header();
                                   <?php if($counter == 1) :
                                   ?>
                                     <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">জীবনযাপন</p>
+                                            <p class="o_2nd_row_cat">মিডিয়া ওয়াচ</p>
                                             <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -570,7 +616,7 @@ get_header();
             <p class="o_2nd_row_cat">গ্যালারি</p>
             <img class="o_photo_gallaery_feature" src="http://omnispace.co/a/wp-content/uploads/2018/11/HA_0873.jpg"><br>
                 <div class="o_gallery_title_wrap">
-                    <div><img class="o_camera_icon" src="http://omnispace.co/a/wp-content/uploads/2018/11/camera_icon1.png"></div>
+                    <div><img class="o_camera_icon" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
                     <div class="o_gallery_title">ঈদের সাজ</div>
                 </div>
                 <div class="clearfix"></div>
@@ -589,7 +635,7 @@ get_header();
                             <div class="col-lg-4">
                                 <img class="o_gallery_img" src="<?php echo $image_url[0]; ?>">
                                 <div class="o_gallery_title_wrap">
-                                    <div><img class="o_camera_icon_2ndrow" src="http://omnispace.co/a/wp-content/uploads/2018/11/camera_icon1.png"></div>
+                                    <div><img class="o_camera_icon_2ndrow" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
                                     <div class="o_gallery_title_2ndrow"><h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5></div>
                                 </div>
                             </div>       
@@ -603,31 +649,6 @@ get_header();
             
         </div>
     </div>
-<!--বাগান অন্দরসাজ-->
-    <div style="height: 80px;"></div>
-  
-    <!--   আর্কাইভ starts here-->
-                        <p class="o_2nd_row_cat">আর্কাইভ</p>
-                        <div class="row">
-                        <?php
-						  $args = array('category_name' => 'আর্কাইভ',
-                              'posts_per_page' => 4, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
-                             ?>
-                            <div class="col-lg-3">
-                                <img class="o_archive_img" src="<?php echo $image_url[0]; ?>">
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                        </div>
     <div style="height: 80px;"></div>
 </div>
     <?php get_sidebar(); ?>
