@@ -11,7 +11,7 @@
 
 <div class="container">
     
-        <div class="row">
+        <div class="row n_imageRow">
             <div class="offset-lg-1 col-lg-7 n_contains">
                 
                   <h3 class="n_title"><?php the_title(); ?></h3>
@@ -68,4 +68,7 @@
         <?php wp_reset_query(); ?>
         </div>
     </div>
-</section>
+</div>
+<?php
+   get_footer();
+   ?>
