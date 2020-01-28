@@ -69,6 +69,9 @@ body{
 .dashicons-admin-home::before {
     font-size: 20px !important;
 }
+.d_most_read_post_wrap{
+  width: 100% !important;
+}
 
 #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
   border-bottom: 3px solid transparent;

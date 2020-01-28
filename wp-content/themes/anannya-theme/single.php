@@ -36,7 +36,7 @@ get_header();
             <div class="col-lg-3 col-md-3">
                 <div class="d_same_cat_news_parent">
                     <div class="d_same_cat_news">
-                      <h5 class="o_spotlight_title o_top_fact_check_title">এই বিভাগের অন্যান্য</h5>
+                      <h5 class="o_spotlight_title d_most_read_post_wrap o_top_fact_check_title">এই বিভাগের অন্যান্য</h5>
 
                         <?php
 
@@ -53,7 +53,7 @@ get_header();
 
                     </div>
                 </div>
-                <h5 class="o_spotlight_title o_top_fact_check_title">শীর্ষ ফ্যাক্ট চেক</h5>
+                <h5 class="o_spotlight_title d_most_read_post_wrap o_top_fact_check_title">শীর্ষ ফ্যাক্ট চেক</h5>
                 <div class="o_top_fact_check_wrap">
                         <?php
                           $args = array('category_name' => 'ফিচার',
@@ -66,8 +66,8 @@ get_header();
                                 $image_id = get_post_thumbnail_id();
                                 $image_url = wp_get_attachment_image_src($image_id, 'large', true);
                              ?>
-                            <div class=" o_top_fact-wrap">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                            <div class=" o_top_fact-wrap d_most_read_post_wrap">
+                                <h5 class="o_spotlight_headline o_top_fact_headline d_most_read_post_wrap"><a class="d_most_read_post_wrap"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>
                              <?php endwhile;
                                endif;
