@@ -49,7 +49,7 @@ get_header();
         <div class="clearfix"></div>
         <div class="col-lg-4 col-md-4">
 
-          <div class="o_most_read_post_wrap clearfix">
+          <div class="o_most_read_post_wrap d_most_read_post_wrap clearfix">
                                   <div class="o_most_read_button_wrap">
                                       <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
                                       <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>

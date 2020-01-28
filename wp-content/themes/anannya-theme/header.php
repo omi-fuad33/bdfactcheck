@@ -54,7 +54,7 @@
 		</div>
 		<div class="container" id="d_sticky_nav">
 				<div class="row">
-						<div class="menu_item col-lg-12">
+						<div class="col-lg-12">
 								<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 						</div>
 				</div>
