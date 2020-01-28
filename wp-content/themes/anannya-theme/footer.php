@@ -11,14 +11,14 @@
 
 ?>
 
-	</div><!-- #content -->
+	<!-- #content -->
 
 	<footer class="d_site-footer n_site-footer">
         <div class="d_footerMain container-fluid">
             <div class="row n_test">
                 <div class="col-md-3 offset-md-1">
                     <div class="d_footer_clm1">
-                    <img class="d_footer_logo" src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/BDFactCheck-Logo-Transparent-1.png">
+                    <img class="d_header_logo" src="<?php echo get_template_directory_uri(); ?>/Images/bdfactlogo-min.png">
 <!--
                         <p class="d_footer_clm_text">সম্পাদক ও প্রকাশকঃ তাসমিমা হোসেন <br>
                          &copy; প্রকাশক কর্তৃক সর্বস্বত্ব সংরক্ষিত</p>
@@ -55,16 +55,16 @@
                 <div class="row d_footer_socIcon">
 
              <div class="offset-xl-1 d_footer_Social">
-                    <a href=""><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/facebook.png"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/facebook.png"></a>
                 </div>
                 <div class="offset-xl-1 offset-1 d_footer_Social">
-                    <a href=""><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/twitter.png"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/twitter.png"></a>
                 </div>
                 <div class="offset-xl-1 offset-1 d_footer_Social">
-                    <a href=""><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/youtube.png"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/instagram.png"></a>
                 </div>
                 <div class="offset-xl-1 offset-1 d_footer_Social">
-                    <a href=""><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/instagram-2.png"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/youtube.png"></a>
                 </div>
             </div>
 
@@ -75,26 +75,8 @@
 
             </div>
 
-        <div class="d_footer_2nd_row">
-           <div class="container-fluid">
-            <div class="row">
-                <div class="offset-md-2 col-md-10 col-xs-12 col-sm-12">
+                        <div class="d_footer_2nd_row_text"><span>প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com</span> <br><p class="d_footer_margin"> &copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত </p></div>
 
-                        <p class="d_footer_2nd_row_text">প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d_footer_3rd_row">
-           <div class="container-fluid">
-            <div class="row">
-                <div class="offset-md-5 col-md-7 offset-sm-2 col-sm-10 col-xs-12 ">
-
-                   <p class="d_footer_3rd_row_text"> <img class=d_footer_cr src="<?php echo get_home_url(); ?>/wp-content/uploads/2020/01/copyright-24px.png">বিডিফ্যাক্টচেক    ২০২০, সর্বস্বত্ব সংরক্ষিত</p>
-                </div>
-            </div>
-        </div>
-        </div>
 	</footer><!-- #colophon -->
 <!-- #page -->
 

@@ -44,7 +44,7 @@ get_header();
                         if( $related ) foreach( $related as $post ) {
                             setup_postdata($post); ?>
 
-                            <div class=" o_top_fact-wrap">
+                            <div class="o_top_fact-wrap d_top_fact_background">
                                 <h5 class="o_spotlight_headline o_top_fact_headline"><a  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>
 
@@ -54,7 +54,7 @@ get_header();
                     </div>
                 </div>
                 <h5 class="o_spotlight_title d_most_read_post_wrap o_top_fact_check_title">শীর্ষ ফ্যাক্ট চেক</h5>
-                <div class="o_top_fact_check_wrap">
+                <div class="o_top_fact_check_wrap d_most_read_post_wrap">
                         <?php
                           $args = array('category_name' => 'ফিচার',
                               'posts_per_page' => 5,
@@ -67,7 +67,7 @@ get_header();
                                 $image_url = wp_get_attachment_image_src($image_id, 'large', true);
                              ?>
                             <div class=" o_top_fact-wrap d_most_read_post_wrap">
-                                <h5 class="o_spotlight_headline o_top_fact_headline d_most_read_post_wrap"><a class="d_most_read_post_wrap"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>
                              <?php endwhile;
                                endif;

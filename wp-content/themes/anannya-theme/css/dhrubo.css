@@ -141,18 +141,19 @@ body{
 .d_single_title{
   margin: 5% 0;
   font-size: 26px;
-  color: #ae1a20;
+  color: #006747;
   font-weight: 700;
 }
 .d_test{
   margin-top: 3%;
 }
 .d_single_content p{
-    font-size: 16px;
+    font-size: 18px;
 }
 .d_single_sml{
   margin: 3% 0;
 }
+
 /* Single Page Design Ends */
 
 
@@ -161,7 +162,7 @@ body{
     float: left;
     width: 100%;
     position: relative;
-    margin-top: 4%;
+    margin: 0 0 20px 0;
 }
 .d_same_cat_news{
     font-size: 16px;
@@ -177,6 +178,9 @@ body{
 hr.d_same_cat_news_hr{
     background-color: #fff;
     border-top: 1px dashed #8B0000;
+}
+.d_top_fact_background{
+  background-color: #f1f1f2;
 }
 /*Same Category news sidebar ends*/
 
@@ -208,7 +212,7 @@ hr.d_same_cat_news_hr{
 }
 .d_heading_text a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 1px;
     color: #064618;
     font-weight: 600;
@@ -217,8 +221,14 @@ hr.d_same_cat_news_hr{
     color: #ae1a20;
     text-decoration: none;
 }
-.d_heading_text p{
-    font-size: 15px;
+.d_text_box{
+    padding: 0 10px;
+    width: 58%;
+    height: 12rem;
+    float: left;
+}
+.d_text_box p{
+    font-size: 18px;
 }
 .btn_2{
   color: #ae1a20;
@@ -270,13 +280,9 @@ hr.d_same_cat_news_hr{
  .d_site-footer{
      position: absolute;
      width: 100%;
-    /* background-color: #4f5d52;
-    */
-     background-color: #ADB1AF;
+     background-color: rgba(0, 98, 71, 0.659);
 }
  .d_footerMain {
-    /* border:2px solid red;
-    */
      padding-top:5%;
      padding-bottom:5%;
 }
@@ -339,14 +345,27 @@ hr.d_same_cat_news_hr{
      background-color: #222823;
 }
  .d_footer_2nd_row_text{
-     padding: 0.75rem;
      font-size: 16px;
      color: white;
+     padding: 15px 0;
+     text-align: center;
+     background-color: #3a3b3a;
 }
- .d_footer_3rd_row{
-     width: 100%;
+.d_footer_2nd_row_text span:first-child{
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 5px;
+}
+.d_footer_margin{
+  padding-top: 10px;
+  margin-bottom: -10px;
+}
+
+ .d_footer_3rd_row_text{
      background-color: white;
-     position: absolute;
+     height: 40px;
+     line-height: 40px;
+     text-align: center;
+     font-size: 16px;
 }
  .one{
      padding: 1rem;
@@ -355,12 +374,7 @@ hr.d_same_cat_news_hr{
      left: 50%;
      transform: translate(-50%, -50%);
 }
- .d_footer_3rd_row_text{
-    /*margin-left: 40%;
-    */
-     padding: 1rem;
-     font-size: 16px;
-}
+
 /*footer design ends*===================================/
 /* Footer Responsive Design */
  @media only screen and (max-width: 600px) {
@@ -496,15 +510,7 @@ margin-top: -.5%;
 .d_post_image:hover{
     /*transform: scale(.95);*/
 }
-.d_text_box{
-    padding: 10px;
-    width: 58%;
-    height: 12rem;
-    float: left;
-    /*
-    background-color: yellow;
-    */
-}
+
 
 .d_recent_news_parent{
     float: left;
