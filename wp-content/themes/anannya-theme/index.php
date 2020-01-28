@@ -77,7 +77,7 @@ get_header();
                              <div id="spotlight_img">
                                 <img class="spotlight_img" src="<?php echo $image_url[0]; ?>">
                               </div>
-                              <h5 class="o_spotlight_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
+                              <h5 class="o_spotlight_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
                              <?php endwhile;
                                endif;
                                    ?>
@@ -266,14 +266,14 @@ get_header();
                 <div class="o_top_fact_check_wrap">
                         <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
                              ?>
                             <div class=" o_top_fact-wrap">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -288,7 +288,7 @@ get_header();
                         </div>
                         <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
@@ -296,7 +296,7 @@ get_header();
 
                              ?>
                             <div class=" o_top_fact-wrap" id="o_most_recent_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -305,7 +305,7 @@ get_header();
 
                              <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 5, 
+                              'posts_per_page' => 7, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
@@ -313,7 +313,7 @@ get_header();
 
                              ?>
                             <div class=" o_top_fact-wrap" id="o_most_read_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -326,9 +326,7 @@ get_header();
                     <div class="o_sideber_ad2">
                          ADVERTISEMENT
                     </div>
-                    <div class="o_sideber_ad3">
-                         ADVERTISEMENT
-                    </div>
+                    <img class="o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
                     <div class="o_sideber_ad4">
                          ADVERTISEMENT
                     </div>
@@ -336,9 +334,9 @@ get_header();
             </div>
             
 <!--Advertisement block-->
-        <div class="o_landscape_ad_landscape_big">
+        <!-- <div class="o_landscape_ad_landscape_big">
                  ADVERTISEMENT
-            </div>
+            </div> -->
 <!--4th row post starts-->
         <div class="row">
             <div class="col-lg-6">
@@ -587,29 +585,6 @@ get_header();
                  ADVERTISEMENT
          </div>
     </div>
-<!--    খাবার দাবার starts here-->
-                        <p class="o_2nd_row_cat">খাবারদাবার</p>
-                        <div class="row">
-                        <?php
-						  $args = array('category_name' => 'খাবারদাবার',
-                              'posts_per_page' => 3, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
-                             ?>
-                            <div class="col-lg-4">
-                                <img class="o_khabardabar_img" src="<?php echo $image_url[0]; ?>">
-                                <h5 class="o_post_2ndrow_column1 o_khabardabar_title"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                        </div>
 <!--  Photo gallery satrts form here -->
     <div class="row o_gallery_wrap">
         <div class="col-lg-8">

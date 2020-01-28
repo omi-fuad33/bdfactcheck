@@ -125,7 +125,7 @@ html, body{
     font-weight: 600;
     background-color: #006747;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 auto;
     margin-bottom: 10px;
     -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
@@ -148,17 +148,23 @@ html, body{
     -moz-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
     box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
 }
-.o_spotlight_headline, .o_spotlight_headline:visited{
-    font-size: 16px;
+.o_spotlight_headline a, .o_spotlight_headline a:visited{
+    font-size: 18px;
     font-weight: 400;
     color:rgb(49, 49, 49);
     margin-bottom: 20px;
     transition: all 0.2s ease;
 }
-.o_spotlight_headline:hover{
+.o_spotlight_headline{
+    transition: all 0.2s ease;
+}
+.o_spotlight_headline a:hover{
     color: #006747;
     font-size: 17px;
     text-decoration: none;
+}
+.o_spotlight_headline:hover{
+    border-left: 5px solid #006747;
 }
 /* Top fact check */
 .o_top_fact_check_wrap{
@@ -187,7 +193,7 @@ html, body{
 .o_most_read_button{
     width: 50%;
     float: left;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #f1f1f2;
     border: 3px solid #ffffff;
     cursor: pointer;
@@ -204,7 +210,11 @@ html, body{
 #o_most_read_tab{
     display: none;
 }
-
+/* Donate image front page */
+.o_donate_front_page{
+    width: 90%;
+    margin: 10px 5%;
+}
 /*front page 2nd row 1st post*/
 .o_2nd_row_post1{
     background-color: #f1f1f2;
@@ -223,7 +233,7 @@ html, body{
     vertical-align: middle;
     width: max-content;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     margin-top: 10px;    
     -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
@@ -233,7 +243,7 @@ html, body{
 .o_2nd_row_1_title{
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -242,24 +252,24 @@ html, body{
 }
 .o_2nd_row_1_title:hover{
     text-decoration: none;
-    font-size: 17px;
+    font-size: 19px;
     color: #006747;
 }
 .o_2nd_row_2_title{
     text-decoration: none;
     color: #4f5d52;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.2s ease;
 }
 .o_2nd_row_2_title:visited{
     text-decoration: none;
     color: #4f5d52;
-    font-size: 16px;
+    font-size: 18px;
 }
 .o_2nd_row_2_title:hover{
     color: #006747;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 19px;
 }
 .o_2nd_row_2_title_box{
     border-bottom: 1px solid #006747;
@@ -324,7 +334,7 @@ html, body{
 /*4th row post styling front page*/
 .o_4th_row_img{
     width: 100%;
-    height: 410px;
+    height: 210px;
     object-fit: cover;
 }
 .o_4th_row_post1{
@@ -337,18 +347,18 @@ html, body{
 .o_4th_row_2_title{
     text-decoration: none;
     color: #4f5d52;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.2s ease;
 }
 .o_4th_row_2_title:visited{
     text-decoration: none;
     color: #4f5d52;
-    font-size: 16px;
+    font-size: 18px;
 }
 .o_4th_row_2_title:hover{
     color: #006747;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 19px;
 }
 .o_5th_row_post_right{
     margin-top: 40px;
@@ -392,7 +402,7 @@ html, body{
 }
 .o_gallery_title_2ndrow{
     float: left;
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 5px;
 }
 .o_gallery_title{
