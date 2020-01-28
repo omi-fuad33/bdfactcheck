@@ -368,7 +368,7 @@ get_header();
                                             ?>
                                             <?php wp_reset_query(); ?>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 o_media_school_content">
                          <?php
                     $counter = 1; //start counter
                     $args = array(
@@ -430,7 +430,7 @@ get_header();
                                             ?>
                                             <?php wp_reset_query(); ?>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 o_media_school_content">
                          <?php
                     $counter = 1; //start counter
                     $args = array(
@@ -482,7 +482,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">মেল কর্নার</p>
+                                        <p class="o_2nd_row_cat">ফ্যাক্টচেক অনুরোধ</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -515,7 +515,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img2" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">মেন্টাল হেলথ</p>
+                                        <p class="o_2nd_row_cat">শীর্ষ ফ্যাক্টচেক</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -548,7 +548,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">স্বাস্থ্য-ফিটনেস</p>
+                                        <p class="o_2nd_row_cat">সর্বাধিক পঠিত</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>

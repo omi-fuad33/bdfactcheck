@@ -306,7 +306,7 @@ html, body{
 }
 .o_3rd_row_2_title_box{
     position: relative;
-    left: -30px;
+    left: 0px;
     border-bottom: 1px solid #006747;
     margin-top: 20px;
 }
@@ -374,6 +374,9 @@ html, body{
 .o_khabardabar_title_text{
    font-weight: 500;
    font-size: 20px;
+}
+.o_media_school_content{
+    padding-left: 0 !important;
 }
 /*===========================
     Styles for gallery
