@@ -74,7 +74,7 @@ get_header();
                                    ?>
                              <?php wp_reset_query(); ?>
                     </div>
-                    <img class="d_donate" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png"" alt="">
+                    <img class="d_donate" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
 
             </div>
         </div>

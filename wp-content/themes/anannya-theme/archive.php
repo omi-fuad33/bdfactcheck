@@ -46,7 +46,6 @@ get_header();
 
         </div>
 
-        <div class="clearfix"></div>
         <div class="col-lg-4 col-md-4">
 
           <div class="o_most_read_post_wrap d_most_read_post_wrap clearfix">
