@@ -84,7 +84,7 @@ html, body{
 }
 .o_slider_headline_box{
     padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
     vertical-align: middle;
     position: absolute;
@@ -92,11 +92,13 @@ html, body{
     left: 20px;
     z-index: 2;
 }
+.o_slider_headline_box h5{
+    padding: 20px 0px;
+}
 .o_slider_headline_box h5 a{
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 25px;
-    line-height: 70px;
+    font-size: 30px;
     color: black;
 }
 .o_slider_headline_box h5 a:hover{
@@ -143,10 +145,7 @@ html, body{
     height: 160px;
     width: 90%;
     object-fit: cover;
-    margin-bottom: 5px;    
-    -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
-    -moz-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
-    box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
+    margin-bottom: 5px;
 }
 .o_spotlight_headline a, .o_spotlight_headline a:visited{
     font-size: 18px;
@@ -281,7 +280,7 @@ html, body{
 }
 .o_2nd_row_img2{
     width: 225px;
-    height: 200px;
+    height: 170px;
     object-fit: cover;
 }
 /*Styling for 3rd row post front page*/
