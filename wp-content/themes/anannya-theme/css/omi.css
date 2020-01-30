@@ -9,7 +9,7 @@ html, body{
     margin: 0;
     overflow-x: hidden;
 }
-/*Styling for menu bar*/
+/* Styling for menu bar
 .top_bar{
     height: 100px;
 }
@@ -60,12 +60,16 @@ html, body{
     color: black;
     font-weight: 500;
     font-size: 14px;
-}
+} */
 /*Styles for slides*/
 .carousel-inner{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 480px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    height: 30px !important;
+    background-color: #ae1a20 !important;
 }
 .slider_img{
     height: 480px;
