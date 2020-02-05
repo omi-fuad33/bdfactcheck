@@ -600,7 +600,7 @@ get_header();
 <!--  Photo gallery satrts form here -->
     <div class="row o_gallery_wrap">
         <div class="col-lg-8">
-            <p class="o_2nd_row_cat">গ্যালারি</p>
+            <p class="o_2nd_row_cat">মাল্টিমিডিয়া</p>
             <img class="o_photo_gallaery_feature" src="http://omnispace.co/a/wp-content/uploads/2018/11/HA_0873.jpg"><br>
                 <div class="o_gallery_title_wrap">
                     <div><img class="o_camera_icon" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
