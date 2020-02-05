@@ -607,7 +607,7 @@ get_header();
                     <div class="o_gallery_title">ঈদের সাজ</div>
                 </div>
                 <div class="clearfix"></div>
-            <div class="row">
+            <!-- <div class="row">
                         <?php
 						  $args = array('category_name' => 'খাবারদাবার',
                               'posts_per_page' => 3, 
@@ -630,7 +630,7 @@ get_header();
                                endif;
                                    ?>
                              <?php wp_reset_query(); ?>
-                        </div>
+              </div> -->
         </div>
         <div class="col-lg-4">
             
