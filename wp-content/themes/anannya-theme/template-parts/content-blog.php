@@ -1,11 +1,14 @@
-  <div class="d_news_box">
-                <figure class="d_image_box">
-                   <img class ="d_post_image" <?php echo the_post_thumbnail(array(384,298)); ?>
-                </figure>
-                <div class="d_text_box">
-                    <h3 class="d_heading_text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                 <p><?php echo the_excerpt(); ?></p> <!--get_excerpt(140, 'content');-->
-                    <p> <img class="d_clock_image" src="<?php echo get_template_directory_uri(); ?>/Images/clock.png"></p>
-                    <p class="d_post_date"> <?php the_time(get_option('date_format')); ?> </p>
-                </div>
-            </div>
+<div class="d_archive">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-5 d_arc_img">
+      <?php the_post_thumbnail(); ?>
+    </div>
+    <div class="col-12 col-md-6 col-lg-7 d_arc_news">
+        <h3 class="d_arc_heading"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+        <div class="d-md-none d-lg-block">
+          <?php echo the_excerpt(); ?>
+        </div>
+        <p class="d_post_date"> <?php the_time(get_option('date_format')); ?> </p>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
 <?php wp_body_open(); ?>
 <header id="masthead" class="site-header">
 <div class="d_menu_header">
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container" id="d_sticky_nav">
+		<div class="container d_main_menu" id="d_sticky_nav">
 				<div class="row">
 						<div class="col-lg-12">
 								<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
@@ -61,4 +61,26 @@
 		</div>
 	</div>
 </div>
+
+<!-- For Mobile Menu -->
+<div class="container">
+	<div class="row">
+		<div class="col-12 d-md-none">
+			<div class="d_mobile_button">
+				<button class="d_m_button button1">English</button>
+				<button class="d_m_button button2">Donate</button>
+				<div class="d_m_top_social">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/search.png" class="d_search_img">
+				</div>
+			</div>
+
+			<div class="d_search_pos">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 </header><!-- #masthead -->
