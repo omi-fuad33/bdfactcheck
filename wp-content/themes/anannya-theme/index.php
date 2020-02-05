@@ -203,7 +203,7 @@ get_header();
             </div>
             <!--3rd Row post starts-->
             <div class="row o_post_3rd_row">
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-md-6">
                     <?php
                     $counter = 1; //start counter
                     $args = array(
@@ -231,7 +231,7 @@ get_header();
                                     <?php wp_reset_query(); ?>
                 </div>
 
-                <div class="col-lg-4 o_3rd_row_post_wrap">
+                <div class="col-lg-4 col-md-6 o_3rd_row_post_wrap">
                     <?php
                     $counter = 1; //start counter
                     $args = array(
