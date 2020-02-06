@@ -100,7 +100,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'রচনা',
+                                   'category_name' => 'ফেক নিউজ',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -169,8 +169,8 @@ get_header();
                     <?php
                     $counter = 1; //start counter
                     $args = array(
-                                  'posts_per_page' => 3,
-                                   'category_name' => 'সাহিত্য',
+                                  'posts_per_page' => 4,
+                                   'category_name' => 'হেলথ-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -352,7 +352,7 @@ get_header();
                             $counter = 1; //start counter
                             $args = array(
                                           'posts_per_page' => 1,
-                                           'category_name' => 'রূপ-চর্চা',
+                                           'category_name' => 'ফেক-নিউজ',
                                         ); //start counter
                                         $front_query=new WP_Query($args); //Need this to make pagination work
                                         if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -379,7 +379,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 3,
-                                   'category_name' => 'রূপ-চর্চা',
+                                   'category_name' => 'ফেক-নিউজ',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -414,7 +414,7 @@ get_header();
                             $counter = 1; //start counter
                             $args = array(
                                           'posts_per_page' => 1,
-                                           'category_name' => 'জীবনযাপন',
+                                           'category_name' => 'হেলথ চেক',
                                         ); //start counter
                                         $front_query=new WP_Query($args); //Need this to make pagination work
                                         if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -441,7 +441,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 3,
-                                   'category_name' => 'জীবনযাপন',
+                                   'category_name' => 'হেলথ-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -479,7 +479,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'মেল কর্নার',
+                                   'category_name' => 'ফ্যাশন',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -514,7 +514,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'মেন্টাল হেলথ',
+                                   'category_name' => 'পলিটি-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -549,7 +549,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'স্বাস্থ্য-ফিটনেস',
+                                   'category_name' => 'ফেক-নিউজ',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -601,10 +601,10 @@ get_header();
     <div class="row o_gallery_wrap">
         <div class="col-lg-8">
             <p class="o_2nd_row_cat">মাল্টিমিডিয়া</p>
-            <img class="o_photo_gallaery_feature" src="http://omnispace.co/a/wp-content/uploads/2018/11/HA_0873.jpg"><br>
+            <img class="o_photo_gallaery_feature" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/02/f1.png"><br>
                 <div class="o_gallery_title_wrap">
                     <div><img class="o_camera_icon" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
-                    <div class="o_gallery_title">ঈদের সাজ</div>
+                    <div class="o_gallery_title">বর্ষার গ্রাম বাংলা</div>
                 </div>
                 <div class="clearfix"></div>
             <!-- <div class="row">

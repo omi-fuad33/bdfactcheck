@@ -21,6 +21,7 @@ html, body{
 }
 .slider_img{
     height: 480px;
+    width: 100%;
     padding: 12px 15px;
     padding-bottom: 20px;
 }
