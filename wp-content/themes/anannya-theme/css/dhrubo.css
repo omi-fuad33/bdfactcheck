@@ -245,7 +245,9 @@ body{
 
 /* Category Page Design Starts */
 .d_archive{
-  margin: 2% 0;
+  margin: 3% 0;
+  border-bottom: 1px solid #525352;
+  padding-bottom: 3%;
 }
 .d_arc_img img{
   height: 180px;
