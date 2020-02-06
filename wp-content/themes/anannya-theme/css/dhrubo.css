@@ -248,6 +248,7 @@ body{
   margin: 2% 0;
 }
 .d_arc_img img{
+  height: 180px;
   object-fit: cover;
 }
 .d_arc_heading{
