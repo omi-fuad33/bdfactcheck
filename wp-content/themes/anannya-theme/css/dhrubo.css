@@ -389,7 +389,6 @@ hr.d_same_cat_news_hr{
 
 /*footer design starts===================================*/
  .d_site-footer{
-     position: absolute;
      width: 100%;
      background-color: rgba(0, 98, 71, 0.659);
 }
@@ -462,22 +461,15 @@ hr.d_same_cat_news_hr{
      text-align: center;
      background-color: #3a3b3a;
 }
-.d_footer_2nd_row_text span:first-child{
-  border-bottom: 1px solid #ffffff;
-  padding-bottom: 5px;
+.d_footer_3rd_row_text{
+  background-color: #ffffff;
+  color: #3a3b3a;
+  padding: 5px 0;
 }
 .d_footer_margin{
   padding-top: 10px;
-  margin-bottom: -10px;
 }
 
- .d_footer_3rd_row_text{
-     background-color: white;
-     height: 40px;
-     line-height: 40px;
-     text-align: center;
-     font-size: 16px;
-}
  .one{
      padding: 1rem;
      position: absolute;

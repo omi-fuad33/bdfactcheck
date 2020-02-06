@@ -74,8 +74,8 @@
 
 
             </div>
-
-                        <div class="d_footer_2nd_row_text"><span>প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com</span> <br><p class="d_footer_margin"> &copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত </p></div>
+    <div class="d_footer_2nd_row_text">প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com</div>
+    <div class="d_footer_2nd_row_text d_footer_3rd_row_text">&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</div>
 
 	</footer><!-- #colophon -->
 <!-- #page -->
