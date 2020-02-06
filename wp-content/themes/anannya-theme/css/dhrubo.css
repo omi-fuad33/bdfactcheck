@@ -418,7 +418,7 @@ hr.d_same_cat_news_hr{
      margin-left: -1rem;
 }
  .d_footer_clm_text{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 1.5;
 }
@@ -428,7 +428,7 @@ hr.d_same_cat_news_hr{
      margin-right: 15%;
 }
  .d_footer_clm_text2{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 2;
 }
@@ -441,12 +441,12 @@ hr.d_same_cat_news_hr{
 }
  .d_list_parent{
      list-style-type: none;
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 2.2;
 }
  .d_list_text{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 1.6;
 }
