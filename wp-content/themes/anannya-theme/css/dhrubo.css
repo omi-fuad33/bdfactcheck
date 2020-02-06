@@ -399,7 +399,12 @@ hr.d_same_cat_news_hr{
  .d_footer_socIcon {
      width:20%;
      margin-top: -5%;
-     margin-left: 12%!important;
+     margin-left: 7%!important;
+}
+.d_footer_logo{
+  margin-top: 20px;
+  width: 180px;
+  object-fit: cover;
 }
  .d_footer_Social {
      transform:scale(0.8);
@@ -520,7 +525,9 @@ hr.d_same_cat_news_hr{
     }
      .d_footer_clm_text{
          margin-left:15%;
-         text-align: center;
+    }
+    .d_text_about_border{
+      border-bottom: 1px solid #ffffff;
     }
      .d_footer_socIcon {
          margin-left: 25%!important;
@@ -538,8 +545,8 @@ hr.d_same_cat_news_hr{
          margin-bottom: 10%;
     }
      .d_footer_logo {
-         transform: scale(1.5);
-         margin-left: 0%!importent;
+         transform: scale(1.0);
+         margin-left: 0% !important;
          margin-top: 10%!important;
     }
      .d_footer_socIcon {
