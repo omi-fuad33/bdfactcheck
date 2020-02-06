@@ -135,7 +135,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'অর্জন',
+                                   'category_name' => 'পলিটি-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
