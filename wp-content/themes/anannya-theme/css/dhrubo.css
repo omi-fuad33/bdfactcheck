@@ -88,7 +88,7 @@ body{
 }
 .d_search_img{
   cursor: pointer;
-  margin: 6px 0 0 20px;
+  margin: 8px 0 0 20px;
   height: 25px;
   width: 25px;
   transition: transform 0.3s ease;
@@ -116,6 +116,9 @@ body{
   border-bottom: 3px solid #ae1a20;
   color: #006747;
 }
+#mega-menu-main-menu li ul li >  a.mega-menu-link{
+  color: white !important;
+}
 .d_search{
   text-align: right;
 }
@@ -123,7 +126,7 @@ body{
   border: none !important;
 }
 .gsc-search-button{
-  margin-top: -20px;
+  margin-top: -20px !important;
   height: 40px !important;
 }
 .gsc-search-button-v2{
@@ -200,22 +203,23 @@ body{
   margin-bottom: 2%;
 }
 .d_tf_button {
- padding: 12px 12px;
- margin: 0 10px;
+ height: 12px;
+ width: 12px;
+ margin: 6px 10px;
 }
 .d_tf_button:first-child {
  margin-left: 0px;
 }
 
 
-.b1 {background-color: #064618;} /* green */
+.b1 {background-color: #006747;} /* green */
 .b2 {background-color: #ae1a20;} /* Red */
 .b3 {background-color: #ffd500; } /* Gray */
-.b4 {background-color: #555555;} /* Black */
+.b4 {background-color: #067aff;} /* Black */
 .d_tf_bar1{
   margin-top: 5px;
   width: 100%;
-  background-color: #064618;
+  background-color: #006747;
   height: 5px;
 }
 .d_tf_bar2{
@@ -235,7 +239,7 @@ body{
 .d_tf_bar4{
   margin-top: 5px;
   width: 100%;
-  background-color: #555555;
+  background-color: #067aff;
   height: 5px;
 }
 
@@ -244,9 +248,12 @@ body{
 
 /* Category Page Design Starts */
 .d_archive{
-  margin: 2% 0;
+  margin: 3% 0;
+  border-bottom: 1px solid #525352;
+  padding-bottom: 3%;
 }
 .d_arc_img img{
+  height: 180px;
   object-fit: cover;
 }
 .d_arc_heading{
@@ -388,7 +395,6 @@ hr.d_same_cat_news_hr{
 
 /*footer design starts===================================*/
  .d_site-footer{
-     position: absolute;
      width: 100%;
      background-color: rgba(0, 98, 71, 0.659);
 }
@@ -399,7 +405,12 @@ hr.d_same_cat_news_hr{
  .d_footer_socIcon {
      width:20%;
      margin-top: -5%;
-     margin-left: 12%!important;
+     margin-left: 7%!important;
+}
+.d_footer_logo{
+  margin-top: 20px;
+  width: 180px;
+  object-fit: cover;
 }
  .d_footer_Social {
      transform:scale(0.8);
@@ -418,7 +429,7 @@ hr.d_same_cat_news_hr{
      margin-left: -1rem;
 }
  .d_footer_clm_text{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 1.5;
 }
@@ -428,7 +439,7 @@ hr.d_same_cat_news_hr{
      margin-right: 15%;
 }
  .d_footer_clm_text2{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 2;
 }
@@ -441,12 +452,12 @@ hr.d_same_cat_news_hr{
 }
  .d_list_parent{
      list-style-type: none;
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 2.2;
 }
  .d_list_text{
-     font-size: 16px;
+     font-size: 18px;
      color: white;
      line-height: 1.6;
 }
@@ -461,22 +472,15 @@ hr.d_same_cat_news_hr{
      text-align: center;
      background-color: #3a3b3a;
 }
-.d_footer_2nd_row_text span:first-child{
-  border-bottom: 1px solid #ffffff;
-  padding-bottom: 5px;
+.d_footer_3rd_row_text{
+  background-color: #ffffff;
+  color: #3a3b3a;
+  padding: 5px 0;
 }
 .d_footer_margin{
   padding-top: 10px;
-  margin-bottom: -10px;
 }
 
- .d_footer_3rd_row_text{
-     background-color: white;
-     height: 40px;
-     line-height: 40px;
-     text-align: center;
-     font-size: 16px;
-}
  .one{
      padding: 1rem;
      position: absolute;
@@ -497,9 +501,15 @@ hr.d_same_cat_news_hr{
     margin-bottom: 2%;
   }
   .d_tf_button {
-   padding: 8px 8px;
-   margin: 0 5px;
-  }
+    height: 10px;
+    width: 10px;
+    margin: 6px 10px;
+   }
+   .d_m_button {
+    font-size: 12px;
+    margin: 8px 5px;
+
+}
  }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -526,7 +536,9 @@ hr.d_same_cat_news_hr{
     }
      .d_footer_clm_text{
          margin-left:15%;
-         text-align: center;
+    }
+    .d_text_about_border{
+      border-bottom: 1px solid #ffffff;
     }
      .d_footer_socIcon {
          margin-left: 25%!important;
@@ -544,8 +556,8 @@ hr.d_same_cat_news_hr{
          margin-bottom: 10%;
     }
      .d_footer_logo {
-         transform: scale(1.5);
-         margin-left: 0%!importent;
+         transform: scale(1.0);
+         margin-left: 0% !important;
          margin-top: 10%!important;
     }
      .d_footer_socIcon {
