@@ -241,7 +241,9 @@ function anannya_scripts() {
 
     wp_enqueue_style ('naeeb-style', get_template_directory_uri().'/css/naeeb.css');
 
-    wp_enqueue_style ('dhrubo-style', get_template_directory_uri().'/css/dhrubo.css');
+	wp_enqueue_style ('dhrubo-style', get_template_directory_uri().'/css/dhrubo.css');
+	
+	wp_enqueue_style ('ridwan-style', get_template_directory_uri().'/css/ridwan.css');
 
     wp_enqueue_style ('bootstrap-style', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
 

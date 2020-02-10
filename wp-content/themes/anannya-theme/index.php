@@ -16,7 +16,7 @@ get_header();
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-9 o_slider_wrapper">
+        <div class="col-lg-8 o_slider_wrapper">
 <!--Slider Starts-->
                 <div class="o_featured_slider">
                      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
@@ -58,12 +58,12 @@ get_header();
                     </div>
 <!-- Advertisement block-->
         </div>
-        <div class="col-lg-3 o_slider_right">
+        <div class="col-lg-4 o_slider_right">
             <div class="spotlight_box">
-                <h5 class="o_spotlight_title">স্পটলাইট</h5>
+                <h5 class="o_spotlight_title o_spotlight_title_top">স্পটলাইট</h5>
                 <?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 2, 
+                              'posts_per_page' => 1, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
@@ -77,7 +77,10 @@ get_header();
                              <div id="spotlight_img">
                                 <img class="spotlight_img" src="<?php echo $image_url[0]; ?>">
                               </div>
-                              <h5 class="o_spotlight_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
+                              <h5 class="o_spotlight_headline o_spotlight_headline_top"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
+                              <div class="d-md-none d-lg-block o_spotlight_excerpt">
+                                  <?php echo the_excerpt(); ?>
+                              </div>
                              <?php endwhile;
                                endif;
                                    ?>
@@ -386,7 +389,7 @@ get_header();
                                   <?php if($counter == 1) :
                                   ?>
                                     <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">মিডিয়া স্কুল</p>
+                                            <p class="o_2nd_row_cat o_2nd_row_cat">মিডিয়া স্কুল</p>
                                             <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
