@@ -9,66 +9,19 @@ html, body{
     margin: 0;
     overflow-x: hidden;
 }
-/*Styling for menu bar*/
-.top_bar{
-    height: 100px;
-}
-.o_header_logo{
-    width: 350px;
-    height: 100px;
-}
-.logo2{
-    display: none;
-}
-.logo2_show{
-	display:block;
-	transition: all 1s ease;
-}
-.menu_header{
-    margin-top: 20px;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-}
-.menu_bottom{
-    height: 50px;
-    line-height: 50px;
-}
-.menu_bottom_sticky{
-    position: fixed;
-    top: 0;
-    background: white;
-    width: 75%;
-    margin: 0 auto;
-	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-    z-index: 2;
-
-}
-.menu-main_menu-container ul{
-    text-align: center;
-}
-.menu-main_menu-container ul li{
-    list-style: none;
-    text-decoration: none;
-    display: inline;
-    padding: 10px;
-    text-align: center;
-}
-.menu-main_menu-container ul li:hover{
-    border-bottom: solid 4px #ED1D24;
-}
-.menu-main_menu-container ul li a{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 14px;
-}
 /*Styles for slides*/
 .carousel-inner{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 480px;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    height: 30px !important;
+    background-color: #ae1a20 !important;
+}
 .slider_img{
     height: 480px;
+    width: 100%;
     padding: 12px 15px;
     padding-bottom: 20px;
 }
@@ -78,13 +31,13 @@ html, body{
     position: absolute;
     top: 0px;
     left: 0px;
-    text-align: center;
+    text-align: left;
     line-height: 480px;
     object-fit: cover;
 }
 .o_slider_headline_box{
     padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
     vertical-align: middle;
     position: absolute;
@@ -92,11 +45,13 @@ html, body{
     left: 20px;
     z-index: 2;
 }
+.o_slider_headline_box h5{
+    padding: 20px 0px;
+}
 .o_slider_headline_box h5 a{
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 25px;
-    line-height: 70px;
+    font-size: 30px;
     color: black;
 }
 .o_slider_headline_box h5 a:hover{
@@ -109,7 +64,7 @@ html, body{
 }
 /*Style for advertisement box*/
 .o_landscape_ad_landscape{
-    width: 700px;
+    width: 100%;
     height: 90px;
     margin: 0 auto;
     background-color: #b9e6fa;
@@ -143,10 +98,7 @@ html, body{
     height: 160px;
     width: 90%;
     object-fit: cover;
-    margin-bottom: 5px;    
-    -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
-    -moz-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
-    box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
+    margin-bottom: 5px;
 }
 .o_spotlight_headline a, .o_spotlight_headline a:visited{
     font-size: 18px;
@@ -281,7 +233,7 @@ html, body{
 }
 .o_2nd_row_img2{
     width: 225px;
-    height: 200px;
+    height: 170px;
     object-fit: cover;
 }
 /*Styling for 3rd row post front page*/
@@ -306,7 +258,7 @@ html, body{
 }
 .o_3rd_row_2_title_box{
     position: relative;
-    left: -30px;
+    left: 0px;
     border-bottom: 1px solid #006747;
     margin-top: 20px;
 }
@@ -374,6 +326,9 @@ html, body{
 .o_khabardabar_title_text{
    font-weight: 500;
    font-size: 20px;
+}
+.o_media_school_content{
+    padding-left: 0 !important;
 }
 /*===========================
     Styles for gallery
@@ -467,4 +422,103 @@ html, body{
     height: 340px;
     width: 100%;
     object-fit: cover;
+}
+/*============================================
+            Media query for mobile
+==============================================*/
+
+@media only screen and (max-width: 576px) {
+    .carousel-inner, .slider_img{
+        height: 240px;
+    }
+    #slider_img{
+        line-height: 240px;
+    }
+    .o_slider_headline_box h5 a {
+        font-size: 20px;
+        text-align: left;
+        padding: 0px;
+        line-height: 1;
+    }
+    .o_slider_headline_box {
+        padding: 0px 10px;
+        text-align: left;
+    }
+    .o_slider_headline_box h5{
+        padding: 3px 0;
+    }
+    .o_slider_right{
+        margin-left: 15px;
+    }
+    .o_2nd_row_img, .o_2nd_row_img2, .o_3rd_row_img, .o_4th_row_img {
+        width: 100%;
+        height: 220px;
+    }
+    .o_3rd_row_post_wrap {
+        margin-left: 0px;
+    }
+    .o_3rd_row_post1 {
+        width: 100%;
+        left: 0px;
+    }
+    .o_media_school_content{
+        padding-left: 15px !important;
+    }
+
+}
+/*============================================
+            Media query for tablet
+==============================================*/
+@media (min-width: 577px) and (max-width: 993px) {
+    .carousel-inner, .slider_img{
+        height: 420px;
+    }
+    #slider_img{
+        line-height: 420px;
+    }
+    .o_slider_headline_box h5 a {
+        font-size: 25px;
+        text-align: left;
+        padding: 0px;
+        line-height: 1;
+    }
+    .o_slider_headline_box {
+        padding: 5px 10px;
+        text-align: left;
+    }
+    .o_slider_headline_box h5{
+        padding: 3px 0;
+    }
+    .o_slider_right{
+        margin-left: 15px;
+        height: auto;
+    }
+    .spotlight_img {
+        height: 300px;
+    }
+    .o_2nd_row_img, .o_2nd_row_img2, .o_4th_row_img {
+        width: 100%;
+        height: 410px;
+    }
+    .o_3rd_row_post_wrap {
+        margin-left: 0px;
+    }
+    .o_3rd_row_post1 {
+        width: 100%;
+        left: 0px;
+    }
+    .o_3rd_row_img{
+        width: 100%;
+        height: 300px;
+    }
+    .o_media_school_content{
+        padding-left: 15px !important;
+    }
+
+}
+/*===================================================
+=========Media Query for Large Screen=================
+====================================================*/
+@media only screen and (min-width: 1900px) {
+
 }

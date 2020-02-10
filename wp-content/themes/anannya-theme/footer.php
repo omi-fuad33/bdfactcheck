@@ -18,7 +18,7 @@
             <div class="row n_test">
                 <div class="col-md-3 offset-md-1">
                     <div class="d_footer_clm1">
-                    <img class="d_header_logo" src="<?php echo get_template_directory_uri(); ?>/Images/bdfactlogo-min.png">
+                    <img class="d_header_logo d_footer_logo" src="<?php echo get_template_directory_uri(); ?>/Images/bdfactlogo-min.png">
 <!--
                         <p class="d_footer_clm_text">সম্পাদক ও প্রকাশকঃ তাসমিমা হোসেন <br>
                          &copy; প্রকাশক কর্তৃক সর্বস্বত্ব সংরক্ষিত</p>
@@ -28,7 +28,7 @@
                   <div class="offset-md-1 col-md-2 col-12">
                       <div class="d_footer_clm2">
                           <br><p class="d_footer_clm_text">যোগাযোগ </p>
-                          <p class="d_footer_clm_text">অ্যাবাউট আস</p>
+                          <p class="d_footer_clm_text d_text_about_border">অ্যাবাউট আস</p>
                       </div>
                 </div>
                 <div class="d_footer_tab">
@@ -74,8 +74,8 @@
 
 
             </div>
-
-                        <div class="d_footer_2nd_row_text"><span>প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com</span> <br><p class="d_footer_margin"> &copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত </p></div>
+    <div class="d_footer_2nd_row_text">প্লটঃ ২৫/১, ক্রিস্টাল কমপ্লেক্স, গুলশান ০২, ঢাকা। মোবাইলঃ +৮৮০১৭১২৩৪৫৬৭৮। ইমেইলঃ  contact@bdfactcheck.com</div>
+    <div class="d_footer_2nd_row_text d_footer_3rd_row_text">&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</div>
 
 	</footer><!-- #colophon -->
 <!-- #page -->
