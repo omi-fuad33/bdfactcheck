@@ -150,7 +150,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 function wpdocs_excerpt_more( $more ) {
-	return '<a class="btn_2" href="'.get_the_permalink().'" rel="nofollow"> ..আরও পড়ুন</a>';
+	return '<a class="btn_2 o_read_more_button" href="'.get_the_permalink().'" rel="nofollow"> ...আরও পড়ুন</a>';
     return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( 'Read More', 'textdomain' )
