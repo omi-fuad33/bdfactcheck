@@ -10,6 +10,9 @@ html, body{
     overflow-x: hidden;
 }
 /*Styles for slides*/
+.o_featured_bottom_margin{
+    margin-bottom: -25px;
+}
 .carousel-inner{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -67,9 +70,9 @@ html, body{
 /*Style for advertisement box*/
 .o_landscape_ad_landscape{
     width: 100%;
-    height: 90px;
+    height: 100px;
     background-color: #b9e6fa;
-    line-height: 90px;
+    line-height: 100px;
     text-align: center;
     font-size: 28px;
     font-weight: 500;
@@ -107,6 +110,8 @@ html, body{
 .o_spotlight_headline_top{
     text-align: left;
     margin: 0 10%;
+}
+.o_spotlight_headline_top:hover{
     padding-left: 5px;
 }
 .o_spotlight_headline_top a{
@@ -130,7 +135,7 @@ html, body{
     font-size: 17px;
     text-align: left;
     margin: 0 10%;
-    color: #818181;
+    color: #504e4e;
 }
 .spotlight_box{
     padding-top: 20px;
@@ -189,6 +194,7 @@ html, body{
 .o_donate_front_page{
     width: 90%;
     margin: 10px 5%;
+    margin-bottom: 0px;
 }
 /*front page 2nd row 1st post*/
 .o_2nd_row_post1{
@@ -225,11 +231,12 @@ html, body{
 .o_2nd_row_1_title:visited{
     color: black;
 }
+.o_post_2ndrow_column1:hover{
+    border-left: 5px solid #006747;
+}
 .o_2nd_row_1_title:hover{
     text-decoration: none;
     color: #006747;
-    border-left: 5px solid #ae1a20;
-    padding-left: 5px;
 }
 .o_2nd_row_2_title{
     text-decoration: none;
@@ -245,8 +252,6 @@ html, body{
 .o_2nd_row_2_title:hover{
     color: #006747;
     text-decoration: none;
-    border-left: 5px solid #ae1a20;
-    padding-left: 5px;
 }
 .o_2nd_row_2_title_box{
     border-bottom: 1px solid #006747;
@@ -255,13 +260,14 @@ html, body{
     border-bottom: none;
 }
 .o_post_2ndrow_column1{
-    padding-left: 10px;
+    padding-left: 7px;
     padding-top: 0px;
     padding-bottom: 10px;
+    transition: all 0.2s ease;
 }
 .o_2nd_row_img2{
     width: 225px;
-    height: 170px;
+    height: 140px;
     object-fit: cover;
 }
 /*Styling for 3rd row post front page*/
@@ -303,7 +309,7 @@ html, body{
 
 }
 .o_landscape_ad_landscape_big{
-    width: 900px;
+    width: 85%;
     height: 120px;
     margin: 0 auto;
     background-color: #b9e6fa;
@@ -344,8 +350,6 @@ html, body{
 .o_4th_row_2_title:hover{
     color: #006747;
     text-decoration: none;
-    border-left: 5px solid #ae1a20;
-    padding-left: 5px;
 }
 .o_2nd_row_cat{
     margin-top: 0;
@@ -425,13 +429,13 @@ html, body{
 }
 .o_sideber_ad2{
     width: 90%;
-    height: 80px;
+    height: 100px;
     margin: 0 auto;
     text-align: center;
-    line-height: 80px;
+    line-height: 100px;
     background-color: #b9e6fa;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .o_sideber_ad3{
     width: 90%;
@@ -446,15 +450,20 @@ html, body{
 .o_sideber_ad4{
     width: 90%;
     height: 120px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
-    line-height: 100px;
+    line-height: 120px;
     background-color: #b9e6fa;
     font-size: 20px;
+    margin-bottom: 0;
+}
+.o_sideber_ad4_margin_bottom{
     margin-bottom: 20px;
 }
 .o_sideber_ad4_green_color{
     background-color: #c4df9b;
+    height: 300px;
+    line-height: 300px;
 }
 .o_archive_img{
     height: 340px;
@@ -508,6 +517,9 @@ html, body{
             Media query for tablet
 ==============================================*/
 @media (min-width: 577px) and (max-width: 993px) {
+    .o_featured_bottom_margin{
+        margin-bottom: 40px;
+    }
     .carousel-inner, .slider_img{
         height: 420px;
     }

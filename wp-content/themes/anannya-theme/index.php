@@ -15,7 +15,7 @@
 get_header();
 ?>
 <div class="container">
-    <div class="row">
+    <div class="row o_featured_bottom_margin">
         <div class="col-lg-8 o_slider_wrapper">
 <!--Slider Starts-->
                 <div class="o_featured_slider">
@@ -93,7 +93,7 @@ get_header();
     <div class="row">
         <div class="col-lg-8">
             <div class="o_landscape_ad_landscape">
-                 ADVERTISEMENT
+                 <p>ADVERTISEMENT</p>
             </div>
             
 <!-- 2nd Row post starts-->
@@ -333,11 +333,11 @@ get_header();
                          ADVERTISEMENT
                     </div> -->
                     <div class="o_sideber_ad2">
-                         ADVERTISEMENT
+                         <p>ADVERTISEMENT</p>
                     </div>
                     <img class="o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
-                    <div class="o_sideber_ad4">
-                         ADVERTISEMENT
+                    <div class="o_sideber_ad4 o_sideber_ad4_margin_bottom">
+                         <p>ADVERTISEMENT</p>
                     </div>
                 </div>
             </div>
@@ -586,18 +586,18 @@ get_header();
         </div>
         <div class="col-lg-4 o_5th_row_post_right">
             <div class="o_sideber_ad2">
-                 ADVERTISEMENT
+                 <p>ADVERTISEMENT</p>
              </div>
             <div class="o_sideber_ad4 o_sideber_ad4_green_color">
-                 ADVERTISEMENT
+                 <p>ADVERTISEMENT</p>
              </div>
             <div class="o_sideber_ad4">
-                 ADVERTISEMENT
+                 <p>ADVERTISEMENT</p>
              </div>
         </div>
 <!--Advertisement box-->
         <div class="o_landscape_ad_landscape_big">
-                 ADVERTISEMENT
+                 <p>ADVERTISEMENT</p>
          </div>
     </div>
 <!--  Photo gallery satrts form here -->
