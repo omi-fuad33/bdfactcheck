@@ -36,15 +36,15 @@
 				</div>
 			<div class="col-xs-6 col-md-6">
 				<div class="d_top_buttons">
-					<button class="d_button button1">English</button>
-					<button class="d_button button2">Donate</button>
+					<button class="d_button button1">English Version</button>
 				</div>
 				<div class="d_top_social">
+					<button class="d_d_button button2">Donate</button>
 					<a href="https://www.facebook.com/BGMEA.official/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
 					<a href="https://www.linkedin.com/company/13268451/admin/" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
 					<a href="https://instagram.com/brandbgmea?igshid=u2m5b975u82k"><i class="fa fa-instagram d_s_icon"></i></a>
 					<a href="https://www.youtube.com/channel/UCVhQMYrp0X1z24DdqMGVagw" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/search.png" class="d-none d-sm-block d_search_img">
+					<img src="<?php echo get_template_directory_uri(); ?>/Images/search.png" class="d-none d-sm-block d_search_img">
 
 				</div>
 				<div class="d-none d-sm-block d_search_pos">
@@ -63,7 +63,7 @@
 </div>
 
 <!-- For Mobile Menu -->
-<div class="container">
+<div class="container d-md-none">
 	<div class="row">
 		<div class="col-12 d-md-none">
 			<div class="d_mobile_button">
