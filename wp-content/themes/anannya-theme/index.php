@@ -60,31 +60,29 @@ get_header();
         </div>
         <div class="col-lg-4 o_slider_right">
             <div class="spotlight_box">
-                <h5 class="o_spotlight_title o_spotlight_title_top">স্পটলাইট</h5>
-                <?php
-						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 1, 
+                <h5 class="o_spotlight_title o_spotlight_title_top">শীর্ষ ফ্যাক্ট চেক</h5>
+                <div class="o_top_fact_check_wrap_top">
+                        <?php
+						                $args = array('category_name' => 'ফিচার',
+                              'posts_per_page' => 4, 
                               
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
-                            ?>
-                            <?php
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
                                 $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
+                                $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true);
                              ?>
-                             <div id="spotlight_img">
-                                <img class="spotlight_img" src="<?php echo $image_url[0]; ?>">
-                              </div>
-                              <h5 class="o_spotlight_headline o_spotlight_headline_top"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>         
-                              <div class="d-md-none d-lg-block o_spotlight_excerpt">
-                                  <?php echo the_excerpt(); ?>
-                              </div>
+                            <div class="row o_top_fact_wrap_top">
+                                <div class="o_top_fact_img col-lg-4">
+                                  <img class="" src="<?php echo $image_url[0]; ?>">
+                                </div>
+                                <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                            </div>       
                              <?php endwhile;
                                endif;
                                    ?>
                              <?php wp_reset_query(); ?>
+                    </div>
             </div>
         </div>
     </div>
@@ -347,132 +345,140 @@ get_header();
                  ADVERTISEMENT
             </div> -->
 <!--4th row post starts-->
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <?php
-                            $counter = 1; //start counter
-                            $args = array(
-                                          'posts_per_page' => 1,
-                                           'category_name' => 'ফেক-নিউজ',
-                                        ); //start counter
-                                        $front_query=new WP_Query($args); //Need this to make pagination work
-                                        if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
-                                          <?php if($counter == 1) :
-                                          $image_id = get_post_thumbnail_id();
-                                                $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
-                                            <div class="o_3nd_row_post1">
-                                                <img class="o_4th_row_img" src="<?php echo $image_url[0]; ?>">
-                                            </div>
-                                            <?php
-                                                $counter = 0;
-                                                endif;
-                                                ?>
-                                                <?php
-                                                $counter++;
-                                                endwhile; 
-                                                //Pagination can go here if you want it.
-                                                endif;
-                                            ?>
-                                            <?php wp_reset_query(); ?>
-                    </div>
-                    <div class="col-lg-5 o_media_school_content">
-                         <?php
-                    $counter = 1; //start counter
-                    $args = array(
-                                  'posts_per_page' => 3,
-                                   'category_name' => 'ফেক-নিউজ',
-                                ); //start counter
-                                $front_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
-                                  <?php if($counter == 1) :
-                                  ?>
-                                    <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat o_2nd_row_cat">মিডিয়া স্কুল</p>
-                                            <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                    </div>
-                                  <?php elseif($counter == 2) : ?>
-                                    <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                    <?php elseif($counter == 3) : ?>
-                                    <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                  <?php
-                                        $counter = 0;
-                                        endif;
-                                        ?>
-                                        <?php
-                                        $counter++;
-                                        endwhile; 
-                                        //Pagination can go here if you want it.
-                                        endif;
-                                    ?>
-                        <?php wp_reset_query(); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <?php
-                            $counter = 1; //start counter
-                            $args = array(
-                                          'posts_per_page' => 1,
-                                           'category_name' => 'হেলথ চেক',
-                                        ); //start counter
-                                        $front_query=new WP_Query($args); //Need this to make pagination work
-                                        if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
-                                          <?php if($counter == 1) :
-                                          $image_id = get_post_thumbnail_id();
-                                                $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
-                                            <div class="o_3nd_row_post1">
-                                                <img class="o_4th_row_img" src="<?php echo $image_url[0]; ?>">
-                                            </div>
-                                            <?php
-                                                $counter = 0;
-                                                endif;
-                                                ?>
-                                                <?php
-                                                $counter++;
-                                                endwhile; 
-                                                //Pagination can go here if you want it.
-                                                endif;
-                                            ?>
-                                            <?php wp_reset_query(); ?>
-                    </div>
-                    <div class="col-lg-5 o_media_school_content">
-                         <?php
-                    $counter = 1; //start counter
-                    $args = array(
-                                  'posts_per_page' => 3,
-                                   'category_name' => 'হেলথ-চেক',
-                                ); //start counter
-                                $front_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
-                                  <?php if($counter == 1) :
-                                  ?>
-                                    <div class=".o_4th_row_post1">
-                                            <p class="o_2nd_row_cat">মিডিয়া ওয়াচ</p>
-                                            <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                    </div>
-                                  <?php elseif($counter == 2) : ?>
-                                    <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                    <?php elseif($counter == 3) : ?>
-                                    <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                  <?php
-                                        $counter = 0;
-                                        endif;
-                                        ?>
-                                        <?php
-                                        $counter++;
-                                        endwhile; 
-                                        //Pagination can go here if you want it.
-                                        endif;
-                                    ?>
-                        <?php wp_reset_query(); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="row">
+  <div class="col-lg-3 o_media_school_content">
+          <?php
+      $counter = 1; //start counter
+      $args = array(
+                    'posts_per_page' => 4,
+                    'category_name' => 'ফেক-নিউজ',
+                  ); //start counter
+                  $front_query=new WP_Query($args); //Need this to make pagination work
+                  if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
+                    <?php if($counter == 1) :
+                    ?>
+                      <div class="o_4th_row_post1">
+                              <p class="o_2nd_row_cat o_2nd_row_cat">পাবলিক ফিগার</p>
+                              <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      </div>
+                    <?php elseif($counter == 2) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 3) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 4) : ?>
+                        <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                    <?php
+                          $counter = 0;
+                          endif;
+                          ?>
+                          <?php
+                          $counter++;
+                          endwhile; 
+                          //Pagination can go here if you want it.
+                          endif;
+                      ?>
+          <?php wp_reset_query(); ?>
+    </div>
+    <div class="col-lg-3 o_media_school_content">
+          <?php
+      $counter = 1; //start counter
+      $args = array(
+                    'posts_per_page' => 4,
+                    'category_name' => 'ফেক-নিউজ',
+                  ); //start counter
+                  $front_query=new WP_Query($args); //Need this to make pagination work
+                  if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
+                    <?php if($counter == 1) :
+                    ?>
+                      <div class="o_4th_row_post1">
+                              <p class="o_2nd_row_cat o_2nd_row_cat">দল/প্রতিষ্ঠান</p>
+                              <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      </div>
+                    <?php elseif($counter == 2) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 3) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 4) : ?>
+                        <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                    <?php
+                          $counter = 0;
+                          endif;
+                          ?>
+                          <?php
+                          $counter++;
+                          endwhile; 
+                          //Pagination can go here if you want it.
+                          endif;
+                      ?>
+          <?php wp_reset_query(); ?>
+    </div>
+    <div class="col-lg-3 o_media_school_content">
+          <?php
+      $counter = 1; //start counter
+      $args = array(
+                    'posts_per_page' => 4,
+                    'category_name' => 'ফেক-নিউজ',
+                  ); //start counter
+                  $front_query=new WP_Query($args); //Need this to make pagination work
+                  if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
+                    <?php if($counter == 1) :
+                    ?>
+                      <div class="o_4th_row_post1">
+                              <p class="o_2nd_row_cat o_2nd_row_cat">গণমাধ্যম</p>
+                              <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      </div>
+                    <?php elseif($counter == 2) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 3) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 4) : ?>
+                        <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                    <?php
+                          $counter = 0;
+                          endif;
+                          ?>
+                          <?php
+                          $counter++;
+                          endwhile; 
+                          //Pagination can go here if you want it.
+                          endif;
+                      ?>
+          <?php wp_reset_query(); ?>
+    </div>
+    <div class="col-lg-3 o_media_school_content">
+          <?php
+      $counter = 1; //start counter
+      $args = array(
+                    'posts_per_page' => 4,
+                    'category_name' => 'ফেক-নিউজ',
+                  ); //start counter
+                  $front_query=new WP_Query($args); //Need this to make pagination work
+                  if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
+                    <?php if($counter == 1) :
+                    ?>
+                      <div class="o_4th_row_post1">
+                              <p class="o_2nd_row_cat o_2nd_row_cat">সামাজিক মাধ্যম</p>
+                              <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      </div>
+                    <?php elseif($counter == 2) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 3) : ?>
+                      <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                      <?php elseif($counter == 4) : ?>
+                        <h5 class="o_post_2ndrow_column1 o_4th_row_2_title_box"><a class="o_4th_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                    <?php
+                          $counter = 0;
+                          endif;
+                          ?>
+                          <?php
+                          $counter++;
+                          endwhile; 
+                          //Pagination can go here if you want it.
+                          endif;
+                      ?>
+          <?php wp_reset_query(); ?>
+    </div>
+</div>
 <!--5th row post starts-->
     <div class="row">
         <div class="col-lg-8">
