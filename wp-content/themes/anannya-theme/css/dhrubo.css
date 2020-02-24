@@ -485,7 +485,7 @@ hr.d_same_cat_news_hr{
      background-color: #222823;
 }
  .d_footer_2nd_row_text{
-     font-size: 16px;
+     font-size: 17px;
      color: white;
      padding-top: 10px;
      text-align: center;
@@ -494,7 +494,7 @@ hr.d_same_cat_news_hr{
 .d_footer_2nd_row_text p{
   width: 300px;
   margin: 0 auto;
-  border-bottom: 1px solid #579785;
+  border-bottom: 2px solid #579785;
   padding-bottom: 5px;
 }
 .d_footer_3rd_row_text{
