@@ -170,7 +170,9 @@ body{
 
 #mysticky-nav.wrapfixed {
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.99) !important;
+    background: #006747 !important;
 }
+
 #wprmenu_bar .bar_logo{
   height: 60px !important;
   margin-top: -10px;
