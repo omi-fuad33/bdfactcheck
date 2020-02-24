@@ -122,6 +122,14 @@ function anannya_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => 'ফ্যাক্ট যাচাই করুন',
+		'id'            => 'fact-test',
+	) );
+	register_sidebar( array(
+		'name'          => 'Twitter Feed',
+		'id'            => 'twitter-feed',
+	) );
 }
 add_action( 'widgets_init', 'anannya_widgets_init' );
 

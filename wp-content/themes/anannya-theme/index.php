@@ -204,55 +204,65 @@ get_header();
             </div>
             <!--3rd Row post starts-->
             <div class="row o_post_3rd_row">
-                <div class="col-lg-8 col-md-6">
-                    <?php
+            <?php
                     $counter = 1; //start counter
                     $args = array(
-                                  'posts_per_page' => 1,
-                                   'category_name' => 'ফ্যাশন',
+                                  'posts_per_page' => 5,
+                                   'category_name' => 'ফিচার',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
                                   <?php if($counter == 1) :
                                   $image_id = get_post_thumbnail_id();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
-                                    <div class="o_3nd_row_post1">
-                                        <img class="o_3rd_row_img" src="<?php echo $image_url[0]; ?>">
-                                    </div>
-                                    <?php
-                                        $counter = 0;
-                                        endif;
-                                        ?>
-                                        <?php
-                                        $counter++;
-                                        endwhile; 
-                                        //Pagination can go here if you want it.
-                                        endif;
-                                    ?>
-                                    <?php wp_reset_query(); ?>
-                </div>
-
-                <div class="col-lg-4 col-md-6 o_3rd_row_post_wrap">
-                    <?php
-                    $counter = 1; //start counter
-                    $args = array(
-                                  'posts_per_page' => 3,
-                                   'category_name' => 'ফ্যাশন',
-                                ); //start counter
-                                $front_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
-                                  <?php if($counter == 1) :
-                                  ?>
-                                    <div class="o_3rd_row_post1">
-                                        <div class="o_3rd_row_post1_wrap">
-                                            <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
-                                            <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                    <div class="col-lg-6">
+                    <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
+                                        <img class="o_facebook_gujob_col1_img" src="<?php echo $image_url[0]; ?>">
+                                        <div class="o_facebook_gujob_info_box">
+                                          <h5 class="o_post_2ndrow_column1 o_facebook_gujob_title"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                          <div class="d-md-none d-lg-block">
+                                            <?php echo the_excerpt(); ?>
+                                          </div>
                                         </div>
                                     </div>
-                                  <?php elseif($counter == 2) : ?>
-                                    <h5 class="o_3rd_row_2_title_box o_post_2ndrow_column1"><a class="o_2nd_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                                    <?php elseif($counter == 3) : ?>
-                                    <h5 class="o_3rd_row_2_title_box o_post_2ndrow_column1"><a class="o_2nd_row_2_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+                                    <div class="col-lg-6 o_facebook_gujob_right_column">
+                                  <?php elseif($counter == 2) :
+                                    $image_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
+                                    <div class="row o_facbook_gujob_cl2_post">
+                                      <div class="o_top_fact_img col-lg-4">
+                                          <img class="" src="<?php echo $image_url[0]; ?>">
+                                      </div>
+                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                    </div>
+                                    <?php elseif($counter == 3) :
+                                    $image_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
+                                    <div class="row o_facbook_gujob_cl2_post">
+                                      <div class="o_top_fact_img col-lg-4">
+                                          <img class="" src="<?php echo $image_url[0]; ?>">
+                                      </div>
+                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                    </div>
+                                    <?php elseif($counter == 4) :
+                                    $image_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
+                                    <div class="row o_facbook_gujob_cl2_post">
+                                      <div class="o_top_fact_img col-lg-4">
+                                          <img class="" src="<?php echo $image_url[0]; ?>">
+                                      </div>
+                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                    </div>
+                                    <?php elseif($counter == 5) :
+                                    $image_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
+                                    <div class="row o_facbook_gujob_cl2_post">
+                                      <div class="o_top_fact_img col-lg-4">
+                                          <img class="" src="<?php echo $image_url[0]; ?>">
+                                      </div>
+                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                    </div>
+                                    </div>
                                   <?php
                                         $counter = 0;
                                         endif;
@@ -264,72 +274,19 @@ get_header();
                                         endif;
                                     ?>
                         <?php wp_reset_query(); ?>
-                </div>
             </div>
         </div>
                 <div class="col-lg-4">
-                     <!--    শীর্ষ ফ্যাক্ট চেক starts here-->
-                <h5 class="o_spotlight_title o_top_fact_check_title">শীর্ষ ফ্যাক্ট চেক</h5>
+                     <!-- ফ্যাক্ট যাচাই করুন starts here-->
+                <h5 class="o_spotlight_title o_top_fact_check_title">ফ্যাক্ট যাচাই করুন</h5>
                 <div class="o_top_fact_check_wrap">
-                        <?php
-						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 7, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-                             ?>
-                            <div class=" o_top_fact-wrap">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                    </div>
-<!-- MOst read tab -->
-                    <div class="o_most_read_post_wrap clearfix">
-                        <div class="o_most_read_button_wrap">
-                            <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
-                            <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>
-                        </div>
-                        <?php
-						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 7, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                             ?>
-                            <div class=" o_top_fact-wrap" id="o_most_recent_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-
-                             <?php
-						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 7, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                             ?>
-                            <div class=" o_top_fact-wrap" id="o_most_read_tab">
-                                <h5 class="o_spotlight_headline o_top_fact_headline"><a class=""  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-                    </div>
-                    <!-- <div class="o_sideber_ad1">
-                         ADVERTISEMENT
-                    </div> -->
+                    <?php dynamic_sidebar( 'fact-test' ); ?>    
+                </div>
+                <!--    twitter feed starts here-->
+                <h5 class="o_spotlight_title o_top_fact_check_title">Follow us on twitter</h5>
+                <div class="o_top_fact_check_wrap">
+                    <?php dynamic_sidebar( 'twitter-feed' ); ?>    
+                </div>
                     <div class="o_sideber_ad2">
                          <p>ADVERTISEMENT</p>
                     </div>
@@ -339,11 +296,6 @@ get_header();
                     </div>
                 </div>
             </div>
-            
-<!--Advertisement block-->
-        <!-- <div class="o_landscape_ad_landscape_big">
-                 ADVERTISEMENT
-            </div> -->
 <!--4th row post starts-->
 <div class="row">
   <div class="col-lg-3 o_media_school_content">
@@ -479,6 +431,10 @@ get_header();
           <?php wp_reset_query(); ?>
     </div>
 </div>
+<!--Advertisement block-->
+<div class="o_landscape_ad_landscape_big">
+                 ADVERTISEMENT
+            </div>
 <!--5th row post starts-->
     <div class="row">
         <div class="col-lg-8">
@@ -497,7 +453,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">ফ্যাক্টচেক অনুরোধ</p>
+                                        <p class="o_2nd_row_cat">মিডিয়া লিটারেসি</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -532,7 +488,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img2" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">শীর্ষ ফ্যাক্টচেক</p>
+                                        <p class="o_2nd_row_cat">পরিবেশ চেক</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -567,7 +523,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">সর্বাধিক পঠিত</p>
+                                        <p class="o_2nd_row_cat">বিজনেস চেক</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
