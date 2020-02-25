@@ -275,6 +275,22 @@ get_header();
                                     ?>
                         <?php wp_reset_query(); ?>
             </div>
+            <div class="o_disclaimer_text_wrap">
+              <div class="o_disclaimer_logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/Images/bdfactlogo-min.png" alt="image not found"><span>আমাদের লক্ষ্য!</span>
+              </div>
+              <div class="o_disclaimer_text">
+              <?php
+                $post_id = 373;
+                $queried_post = get_post($post_id);
+                $content = $queried_post->post_content;
+              ?>
+              <?php echo $content; ?>
+              </div>
+            </div>
+            <div class="o_landscape_ad_landscape">
+                 <p>ADVERTISEMENT</p>
+            </div>
         </div>
                 <div class="col-lg-4">
                      <!-- ফ্যাক্ট যাচাই করুন starts here-->
@@ -287,17 +303,20 @@ get_header();
                 <div class="o_top_fact_check_wrap">
                     <?php dynamic_sidebar( 'twitter-feed' ); ?>    
                 </div>
-                    <div class="o_sideber_ad2">
+                    <!-- <div class="o_sideber_ad2">
                          <p>ADVERTISEMENT</p>
+                    </div> -->
+                    <div class="o_sideber_ad4 o_sideber_ad4_green_color">
+                      <p>ADVERTISEMENT</p>
                     </div>
+                    <!-- <div class="o_sideber_ad4 o_sideber_ad4_margin_bottom">
+                         <p>ADVERTISEMENT</p>
+                    </div> -->
                     <img class="o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
-                    <div class="o_sideber_ad4 o_sideber_ad4_margin_bottom">
-                         <p>ADVERTISEMENT</p>
-                    </div>
                 </div>
             </div>
 <!--4th row post starts-->
-<div class="row">
+<div class="row o_after_disclaimer_row">
   <div class="col-lg-3 o_media_school_content">
           <?php
       $counter = 1; //start counter
