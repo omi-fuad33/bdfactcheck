@@ -73,10 +73,10 @@ get_header();
                                 $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true);
                              ?>
                             <div class="row o_top_fact_wrap_top">
-                                <div class="o_top_fact_img col-lg-4">
+                                <div class="o_top_fact_img col-lg-4 col-4 col-sm-4">
                                   <img class="" src="<?php echo $image_url[0]; ?>">
                                 </div>
-                                <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                <div class="col-lg-8 col-8 col-sm-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                             </div>       
                              <?php endwhile;
                                endif;
@@ -230,37 +230,37 @@ get_header();
                                     $image_id = get_post_thumbnail_id();
                                     $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
                                     <div class="row o_facbook_gujob_cl2_post">
-                                      <div class="o_top_fact_img col-lg-4">
+                                      <div class="o_top_fact_img col-lg-4 col-4 col-sm-4">
                                           <img class="" src="<?php echo $image_url[0]; ?>">
                                       </div>
-                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                      <div class="col-lg-8 col-8 col-sm-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                                     </div>
                                     <?php elseif($counter == 3) :
                                     $image_id = get_post_thumbnail_id();
                                     $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
                                     <div class="row o_facbook_gujob_cl2_post">
-                                      <div class="o_top_fact_img col-lg-4">
+                                      <div class="o_top_fact_img col-lg-4 col-4 col-sm-4">
                                           <img class="" src="<?php echo $image_url[0]; ?>">
                                       </div>
-                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                      <div class="col-lg-8 col-8 col-sm-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                                     </div>
                                     <?php elseif($counter == 4) :
                                     $image_id = get_post_thumbnail_id();
                                     $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
                                     <div class="row o_facbook_gujob_cl2_post">
-                                      <div class="o_top_fact_img col-lg-4">
+                                      <div class="o_top_fact_img col-lg-4 col-4 col-sm-4">
                                           <img class="" src="<?php echo $image_url[0]; ?>">
                                       </div>
-                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                      <div class="col-lg-8 col-8 col-sm-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                                     </div>
                                     <?php elseif($counter == 5) :
                                     $image_id = get_post_thumbnail_id();
                                     $image_url = wp_get_attachment_image_src($image_id, 'thumbnail', true); ?>
                                     <div class="row o_facbook_gujob_cl2_post">
-                                      <div class="o_top_fact_img col-lg-4">
+                                      <div class="o_top_fact_img col-lg-4 col-4 col-sm-4">
                                           <img class="" src="<?php echo $image_url[0]; ?>">
                                       </div>
-                                      <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                                      <div class="col-lg-8 col-8 col-sm-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                                     </div>
                                     </div>
                                   <?php
