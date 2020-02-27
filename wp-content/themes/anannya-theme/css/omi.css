@@ -397,7 +397,7 @@ html, body{
 .o_disclaimer_text_wrap{
     margin: 5% 0;
     width: 100%;
-    background-color: #006747;
+    background-color: rgba(0, 103, 70, 0.8);
     font-size: 18px;
     color: #ffffff;
     -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);

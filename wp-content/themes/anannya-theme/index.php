@@ -110,7 +110,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">ফেক নিউজ</p>
+                                        <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -216,7 +216,7 @@ get_header();
                                   $image_id = get_post_thumbnail_id();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="col-lg-6">
-                    <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
+                    <p class="o_2nd_row_cat">মিডিয়া লিটারেসি</p>
                                         <img class="o_facebook_gujob_col1_img" src="<?php echo $image_url[0]; ?>">
                                         <div class="o_facebook_gujob_info_box">
                                           <h5 class="o_post_2ndrow_column1 o_facebook_gujob_title"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
@@ -472,7 +472,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">মিডিয়া লিটারেসি</p>
+                                        <p class="o_2nd_row_cat">মিডিয়া ওয়াচ</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
