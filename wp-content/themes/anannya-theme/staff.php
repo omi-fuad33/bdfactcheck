@@ -28,28 +28,28 @@
                ?>
             <?php if($counter == 1) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+               <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
             <?php elseif($counter == 2) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+            <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
             <?php elseif($counter == 3
                ) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+            <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
          </div>
          <?php

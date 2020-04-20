@@ -63,7 +63,7 @@ get_header();
                 <h5 class="o_spotlight_title o_spotlight_title_top">শীর্ষ ফ্যাক্ট চেক</h5>
                 <div class="o_top_fact_check_wrap_top">
                         <?php
-						                $args = array('category_name' => 'ফিচার',
+						                $args = array('category_name' => 'শীর্ষ-ফ্যাক্ট-চেক',
                               'posts_per_page' => 4, 
                               
                           ); //start counter
@@ -91,7 +91,7 @@ get_header();
     <div class="row">
         <div class="col-lg-8">
             <div class="o_landscape_ad_landscape">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
             </div>
             
 <!-- 2nd Row post starts-->
@@ -101,7 +101,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'ফেক নিউজ',
+                                   'category_name' => 'ফেক-নিউজ',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -110,7 +110,7 @@ get_header();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="o_2nd_row_post1">
                                         <img class="o_2nd_row_img" src="<?php echo $image_url[0]; ?>">
-                                        <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
+                                        <p class="o_2nd_row_cat">ফেক নিউজ</p>
                                         <h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                                   <?php elseif($counter == 2) : ?>
@@ -208,7 +208,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 5,
-                                   'category_name' => 'ফিচার',
+                                   'category_name' => 'ফেসবুক-গুজব',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -216,7 +216,7 @@ get_header();
                                   $image_id = get_post_thumbnail_id();
                                         $image_url = wp_get_attachment_image_src($image_id, 'large', true); ?>
                                     <div class="col-lg-6">
-                    <p class="o_2nd_row_cat">মিডিয়া লিটারেসি</p>
+                                      <p class="o_2nd_row_cat">ফেসবুক গুজব</p>
                                         <img class="o_facebook_gujob_col1_img" src="<?php echo $image_url[0]; ?>">
                                         <div class="o_facebook_gujob_info_box">
                                           <h5 class="o_post_2ndrow_column1 o_facebook_gujob_title"><a class="o_2nd_row_1_title"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
@@ -289,7 +289,7 @@ get_header();
               </div>
             </div>
             <div class="o_landscape_ad_landscape">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
             </div>
         </div>
                 <div class="col-lg-4">
@@ -307,7 +307,7 @@ get_header();
                          <p>ADVERTISEMENT</p>
                     </div> -->
                     <div class="o_sideber_ad4 o_sideber_ad4_green_color">
-                      <p>ADVERTISEMENT</p>
+                      <p>AD</p>
                     </div>
                     <!-- <div class="o_sideber_ad4 o_sideber_ad4_margin_bottom">
                          <p>ADVERTISEMENT</p>
@@ -322,7 +322,7 @@ get_header();
       $counter = 1; //start counter
       $args = array(
                     'posts_per_page' => 4,
-                    'category_name' => 'ফেক-নিউজ',
+                    'category_name' => 'পাবলিক-ফিগার',
                   ); //start counter
                   $front_query=new WP_Query($args); //Need this to make pagination work
                   if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -355,7 +355,7 @@ get_header();
       $counter = 1; //start counter
       $args = array(
                     'posts_per_page' => 4,
-                    'category_name' => 'ফেক-নিউজ',
+                    'category_name' => 'দল-প্রতিষ্ঠান',
                   ); //start counter
                   $front_query=new WP_Query($args); //Need this to make pagination work
                   if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -388,7 +388,7 @@ get_header();
       $counter = 1; //start counter
       $args = array(
                     'posts_per_page' => 4,
-                    'category_name' => 'ফেক-নিউজ',
+                    'category_name' => 'গণমাধ্যম',
                   ); //start counter
                   $front_query=new WP_Query($args); //Need this to make pagination work
                   if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -421,7 +421,7 @@ get_header();
       $counter = 1; //start counter
       $args = array(
                     'posts_per_page' => 4,
-                    'category_name' => 'ফেক-নিউজ',
+                    'category_name' => 'সামাজিক-মাধ্যম',
                   ); //start counter
                   $front_query=new WP_Query($args); //Need this to make pagination work
                   if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -452,7 +452,7 @@ get_header();
 </div>
 <!--Advertisement block-->
 <div class="o_landscape_ad_landscape_big">
-                 ADVERTISEMENT
+                 AD
             </div>
 <!--5th row post starts-->
     <div class="row">
@@ -463,7 +463,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'ফ্যাশন',
+                                   'category_name' => 'মিডিয়া-ওয়াচ',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -498,7 +498,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'পলিটি-চেক',
+                                   'category_name' => 'পরিবেশ-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -533,7 +533,7 @@ get_header();
                     $counter = 1; //start counter
                     $args = array(
                                   'posts_per_page' => 4,
-                                   'category_name' => 'ফেক-নিউজ',
+                                   'category_name' => 'বিজনেস-চেক',
                                 ); //start counter
                                 $front_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :	while($front_query->have_posts()) :  $front_query->the_post(); ?>
@@ -567,18 +567,18 @@ get_header();
         </div>
         <div class="col-lg-4 o_5th_row_post_right">
             <div class="o_sideber_ad2">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
              </div>
             <div class="o_sideber_ad4 o_sideber_ad4_green_color">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
              </div>
             <div class="o_sideber_ad4">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
              </div>
         </div>
 <!--Advertisement box-->
         <div class="o_landscape_ad_landscape_big">
-                 <p>ADVERTISEMENT</p>
+                 <p>AD</p>
          </div>
     </div>
 <!--  Photo gallery satrts form here -->

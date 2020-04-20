@@ -22,26 +22,26 @@
 				</div>
 
 				<?php
-            if (has_category('ৎ-সত্য'))
+            if (has_category('ৎৎৎ-সত্য'))
             { ?>
                 <p class="d_tf_bar1"></p>
 								<?php
 							}
-							 elseif (has_category('ৎ-মিথ্যা'))
+							 elseif (has_category('ৎৎৎ-মিথ্যা'))
 							{
 								?>
               <p class="d_tf_bar2"></p>
 
 							<?php
 						}
-						 elseif (has_category('ৎ-আংশিক সত্য'))
+						 elseif (has_category('ৎৎৎ-আংশিক সত্য'))
 						{
 							?>
 
 								<p class="d_tf_bar3"></p>
 								<?php
 							}
-							 elseif (has_category('ৎ-আংশিক মিথ্যা'))
+							 elseif (has_category('ৎৎৎ-আংশিক মিথ্যা'))
 							{
 								?>
 

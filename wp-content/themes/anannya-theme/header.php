@@ -40,10 +40,10 @@
 				</div>
 				<div class="d_top_social">
 					<button class="d_d_button button2">Donate</button>
-					<a href="https://www.facebook.com/BGMEA.official/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
-					<a href="https://www.linkedin.com/company/13268451/admin/" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
-					<a href="https://instagram.com/brandbgmea?igshid=u2m5b975u82k"><i class="fa fa-instagram d_s_icon"></i></a>
-					<a href="https://www.youtube.com/channel/UCVhQMYrp0X1z24DdqMGVagw" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
+					<a href="https://www.facebook.com/bdfactcheck/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
+					<a href="https://twitter.com/BDFactChecks" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
+					<a href=""><i class="fa fa-instagram d_s_icon"></i></a>
+					<a href="" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
 					<img src="<?php echo get_template_directory_uri(); ?>/Images/search.png" class="d-none d-sm-block d_search_img">
 
 				</div>

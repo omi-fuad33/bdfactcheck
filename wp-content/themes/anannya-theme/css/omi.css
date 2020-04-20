@@ -657,6 +657,13 @@ html, body{
     color: #006747;
     text-decoration: underline;
   }
+  .o_staff_name{
+      font-size: 20px !important;
+      color: #006747;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: -15px;
+  }
 /*============================================
             Media query for mobile
 ==============================================*/
