@@ -582,43 +582,25 @@ get_header();
          </div>
     </div>
 <!--  Photo gallery satrts form here -->
-    <div class="row o_gallery_wrap">
-        <div class="col-lg-8">
+    <div class="o_gallery_wrap">
             <p class="o_2nd_row_cat">মাল্টিমিডিয়া</p>
-            <img class="o_photo_gallaery_feature" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/02/f1.png"><br>
-                <div class="o_gallery_title_wrap">
-                    <div><img class="o_camera_icon" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
-                    <div class="o_gallery_title">বর্ষার গ্রাম বাংলা</div>
+            <div class="o_home_gallery_wrapper row">
+            <div class="col-lg-7">
+                <div class="o_home_video_gallery">
+                    <?php dynamic_sidebar( 'front-page-gallery' ); ?>
                 </div>
-                <div class="clearfix"></div>
-            <!-- <div class="row">
-                        <?php
-						  $args = array('category_name' => 'খাবারদাবার',
-                              'posts_per_page' => 3, 
-                              
-                          ); //start counter
-                            $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-
-                                $image_id = get_post_thumbnail_id();
-                                $image_url = wp_get_attachment_image_src($image_id, 'large', true);
-                             ?>
-                            <div class="col-lg-4">
-                                <img class="o_gallery_img" src="<?php echo $image_url[0]; ?>">
-                                <div class="o_gallery_title_wrap">
-                                    <div><img class="o_camera_icon_2ndrow" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
-                                    <div class="o_gallery_title_2ndrow"><h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5></div>
-                                </div>
-                            </div>       
-                             <?php endwhile;
-                               endif;
-                                   ?>
-                             <?php wp_reset_query(); ?>
-              </div> -->
-        </div>
-        <div class="col-lg-4">
-            
-        </div>
+                <!-- <a href="<?php echo get_home_url(); ?>/photo-gallery/"><button class="o_gallery_button">View More</button></a> -->
+            </div>
+            <div class="col-lg-5 o_home_gallery_photo_container">
+                <div class="o_home_gallery_photo">
+                    <?php dynamic_sidebar( 'front-page-video-1' ); ?>
+                </div>
+                <div class="o_home_gallery_photo">
+                    <?php dynamic_sidebar( 'front-page-video-2' ); ?>
+                </div>
+                <!-- <a href="<?php echo get_home_url(); ?>/Video-gallery/"><button class="o_gallery_button o_photo_gallery_button">View More</button></a> -->
+            </div>
+    </div>
     </div>
     <div style="height: 80px;"></div>
 </div>

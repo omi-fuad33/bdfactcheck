@@ -4,7 +4,7 @@ Plugin Name: Bangla Date Display
 Plugin URI: http://i-onlinemedia.net/
 Description: Displays Bangla, Gregorian and Hijri date in bangla language via widgets and shortcodes! Options for displaying post/page's time, date, comment count, archive calendar etc in Bangla language.
 Author: M.A. IMRAN
-Version: 8.8
+Version: 8.9.1
 Author URI: http://facebook.com/imran2w
 */
 
@@ -30,6 +30,7 @@ if ( !is_array( $bddp_options ) ) {
 
 require 'translator.php';
 require 'class.banglaDate.php';
+require 'ajax-archive-calendar.php';
 
 if ( !class_exists( 'uCal' ) ) {
 	include_once( 'uCal.php' );

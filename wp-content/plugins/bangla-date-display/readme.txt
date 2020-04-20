@@ -26,7 +26,7 @@ Displays Bangla, Gregorian and Hijri date, time, name of the day, name of the cu
 - Gregorian date.
 - Bangla day and time.
 - Name of the current season of Bangladesh.
-- Monthly calendar widgets.
+- Advanced archive calendar widget.
 - Options for displaying post/page's default (english) time, date, comment count, dashboard and other numbers, archive calendar etc in bangla language ...and more!
 
 = Speciality =
@@ -48,6 +48,9 @@ Displays Bangla, Gregorian and Hijri date, time, name of the day, name of the cu
 
 
 == Changelog ==
+
+= 8.9 =
+* Advanced Archive Calendar widget added with AJAX year/month filter.
 
 = 8.8 =
 * Bangla date calculation rules updated according to Bangla Academy.
@@ -145,10 +148,7 @@ Yes! Its free! And alwayes will be!
 
 
 == Screenshots ==
-1. Main widget.
-2. Monthly calendar (Bangla).
-3. Monthly calendar (Bangla+gregorian).
-4. Archive calendar.
-5. Time and date.
-6. Archive.
-7. Settings page.
+1. Main Widget.
+2. Time and Date.
+3. Advanced Archive Calendar Widget.
+4. Settings Page.

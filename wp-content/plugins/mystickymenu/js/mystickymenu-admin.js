@@ -105,10 +105,13 @@
 		/*02-08-2019 welcom bar js*/
 		$( '.mysticky-welcomebar-action' ).on( 'change', function(){
 			var mysticky_welcomebar_action = $( this ).val();
-			if ( mysticky_welcomebar_action == 'close_bar' ) {
-				$( '.mysticky-welcomebar-redirect' ).hide();
-			} else {
+			if ( mysticky_welcomebar_action == 'redirect_to_url' ) {
 				$( '.mysticky-welcomebar-redirect' ).show();
+			} else {
+				$( '.mysticky-welcomebar-redirect' ).hide();
+			}
+			if ( $('.mysticky-welcomebar-action option:selected').attr('data-href') !== '' && mysticky_welcomebar_action == 'thankyou_screen' ) {
+				window.open( $( '.mysticky-welcomebar-action option:selected' ).attr('data-href') , '_blank');
 			}
 		} );
 		//$( '#mysticky_welcomebar_expirydate' ).datepicker(  );
@@ -218,6 +221,18 @@
 			} else {
 				$( '.mysticky-welcomebar-fixed' ).removeClass( 'mysticky-welcomebar-btn-desktop' );
 			}
+
+			if( $( this ).prop( "checked" ) == false && $( 'input[name="mysticky_option_welcomebar[mysticky_welcomebar_btn_mobile]"]' ).prop( "checked" ) == false ) {
+				$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+					'pointer-events': 'none',
+					'opacity': '0.5'
+				});
+			} else {
+				$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+					'pointer-events': '',
+					'opacity': ''
+				});
+			}
 		} );
 		$( 'input[name="mysticky_option_welcomebar[mysticky_welcomebar_btn_mobile]"]' ).on( 'change', function(){
 			if( $( this ).prop( "checked" ) == true ) {
@@ -225,7 +240,30 @@
 			} else {
 				$( '.mysticky-welcomebar-fixed' ).removeClass( 'mysticky-welcomebar-btn-mobile' );
 			}
+
+			if( $( this ).prop( "checked" ) == false && $( 'input[name="mysticky_option_welcomebar[mysticky_welcomebar_btn_desktop]"]' ).prop( "checked" ) == false ) {
+				$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+					'pointer-events': 'none',
+					'opacity': '0.5'
+				});
+			} else {
+				$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+					'pointer-events': '',
+					'opacity': ''
+				});
+			}
 		} );
+		if( $( 'input[name="mysticky_option_welcomebar[mysticky_welcomebar_btn_desktop]"]' ).prop( "checked" ) == false && $( 'input[name="mysticky_option_welcomebar[mysticky_welcomebar_btn_mobile]"]' ).prop( "checked" ) == false ) {
+			$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+				'pointer-events': 'none',
+				'opacity': '0.5'
+			});
+		} else {
+			$( ".mysticky_welcomebar_disable, .mysticky_welcomebar_btn_color button.wp-color-result" ).css({
+				'pointer-events': '',
+				'opacity': ''
+			});
+		}
 
 		$( 'select[name="mysticky_option_welcomebar[mysticky_welcomebar_font]"]' ).on( 'change', function(){
 			var myfixed_font_val = $( this ).val();
@@ -238,8 +276,18 @@
 			$( '.mysticky-welcomebar-fixed p' ).css( 'font-size', mysticky_welcomebar_fontsize_val + 'px' );
 			$( '.mysticky-welcomebar-btn a' ).css( 'font-size', mysticky_welcomebar_fontsize_val + 'px' );
 		} );
+		
+		$( '#wp-mysticky_bar_text-wrap .wp-editor-tabs button' ).on( 'click', function(){
+			if ( $("#wp-mysticky_bar_text-wrap").hasClass("tmce-active") ){
 
-		$( 'textarea[name="mysticky_option_welcomebar[mysticky_welcomebar_bar_text]"]' ).on( 'keyup', function(e){			
+			}
+		} );
+		
+		$( document ).on( 'click', '#qt_mysticky_bar_text_toolbar .ed_button', function(){
+			$( 'textarea[name="mysticky_option_welcomebar[mysticky_welcomebar_bar_text]"]' ).trigger( 'change keyup click' );
+		} );
+		
+		$( 'textarea[name="mysticky_option_welcomebar[mysticky_welcomebar_bar_text]"]' ).on( 'change keyup click', function(e){
 			var mysticky_bar_text_val = $( this ).val().replace(/(?:\r\n|\r|\n)/g, '<br />');
 			$( '.mysticky-welcomebar-content' ).html( "<p>" + mysticky_bar_text_val + "</p>");
 		} );

@@ -27,40 +27,40 @@
                 </div>
                   <div class="offset-md-1 col-md-2 col-12">
                       <div class="d_footer_clm2">
-                          <br><p class="d_footer_clm_text">যোগাযোগ </p>
-                          <p class="d_footer_clm_text d_text_about_border">অ্যাবাউট আস</p>
+                          <br><a href=""><p class="d_footer_clm_text">যোগাযোগ </p></a>
+                          <a href=""><p class="d_footer_clm_text d_text_about_border">আমাদের সম্পর্কে</p></a>
                       </div>
                 </div>
                 <div class="d_footer_tab">
                     <div class="d_footer_table">
                         <ul class="d_list_parent">
-                            <li>ফিচারড নিউজ</li>
-                            <li>ফেক নিউজ</li>
-                            <li>পলিটি চেক</li>
-                            <li>হেলথ চেক</li>
-                            <li>ফেসবুক গুজব</li>
+                            <a href=""><li>ফিচারড নিউজ</li></a>
+                            <a href=""><li>ফ্যাক্ট চেক</li></a>
+                            <a href=""><li>পলিটি চেক</li></a>
+                            <a href=""><li>হেলথ চেক</li></a>
+                            <a href=""><li>ফেসবুক গুজব</li></a>
                         </ul>
                     </div>
                     <div class="d_footer_table">
                         <ul class="d_list_parent">
-                            <li>মিডিয়া স্কুল</li>
-                            <li>মিডিয়া ওয়াচ</li>
-                            <li>ফ্যাক্টচেক অনুরোধ</li>
-                            <li>মাল্টিমিডিয়া</li>
-                            <li>আর্কাইভ </li>
+                            <a href=""><li>মিডিয়া ওয়াচ</li></a>
+                            <a href=""><li>পরিবেশ চেক</li></a>
+                            <a href=""><li>বিজনেস চেক</li></a>
+                            <a href=""><li>ফ্যাক্টচেক অনুরোধ</li></a>
+                            <a href=""><li>মাল্টিমিডিয়া</li></a>
                         </ul>
                     </div>
             </div>
 
                 <div class="row d_footer_socIcon">
 
-             <div class="offset-xl-1 d_footer_Social">
+             <div class="offset-xl-1 d_footer_Social o_footer_social_fb">
                     <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/facebook.png"></a>
                 </div>
-                <div class="offset-xl-1 offset-1 d_footer_Social">
+                <div class="offset-xl-1 offset-1 d_footer_Social o_footer_social_twitter">
                     <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/twitter.png"></a>
                 </div>
-                <div class="offset-xl-1 offset-1 d_footer_Social">
+                <div class="offset-xl-1 offset-1 d_footer_Social o_footer_social_instagram">
                     <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/instagram.png"></a>
                 </div>
                 <div class="offset-xl-1 offset-1 d_footer_Social">
@@ -75,7 +75,7 @@
 
             </div>
     <div class="d_footer_2nd_row_text"><p>&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</p></div>
-    <div class="d_footer_2nd_row_text d_footer_3rd_row_text">Design & Development: <a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/Omni_blue_logo.png" alt="logo not found"></a></div>
+    <div class="d_footer_2nd_row_text d_footer_3rd_row_text">Design & Development: <span><a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/Omni_blue_logo.png" alt="logo not found"></a></span></div>
 
 	</footer><!-- #colophon -->
 <!-- #page -->
