@@ -37,8 +37,8 @@
                             <a href="<?php echo get_home_url(); ?>/?cat=7"><li>ফিচারড নিউজ</li></a>
                             <a href="<?php echo get_home_url(); ?>/?cat=42"><li>ফ্যাক্ট চেক</li></a>
                             <a href="<?php echo get_home_url(); ?>/?cat=37"><li>পলিটি চেক</li></a>
-                            <a href="<?php echo get_home_url(); ?>/?cat=39"><li>হেলথ চেক</li></a>
-                            <a href="<?php echo get_home_url(); ?>/?cat=286"><li>ফেসবুক গুজব</li></a>
+                            <a href="<?php echo get_home_url(); ?>/?cat=38"><li>হেলথ চেক</li></a>
+                            <a href="<?php echo get_home_url(); ?>/?cat=39"><li>ফেসবুক গুজব</li></a>
                         </ul>
                     </div>
                     <div class="d_footer_table">

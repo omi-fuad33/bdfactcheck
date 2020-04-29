@@ -590,8 +590,7 @@ html, body{
     height: 28px !important;
 }
 .o_footer_social_fb{
-    height: 18px !important;
-    margin-top: 5px;
+    height: 10px !important;
 }
 .d_footer_Social img{
     transition: all 0.1s ease;
@@ -749,6 +748,9 @@ html, body{
         padding-bottom: 0;
     }
     .o_footer_developer_text{
+        display: none;
+    }
+    .d_footer_logo{
         display: none;
     }
 
