@@ -41,7 +41,7 @@ class Sfsi_Widget extends WP_Widget
 		/* Display the widget title */
 		if ($title) echo $before_title . $title . $after_title;
 		?>
-		<div class="sfsi_widget" data-position="widget" style="display:flex;justify-content:<?php echo $icons_alignment_widget; ?>">
+		<div class="sfsi_widget" data-position="widget" style="display:flex;flex-wrap:wrap;justify-content: <?php echo $icons_alignment_widget; ?>">
 			<div id='sfsi_wDiv'></div>
 			<?php
 					/* Link the main icons function */
@@ -283,16 +283,15 @@ class Sfsi_Widget extends WP_Widget
 				$main_width = $main_width . "px";
 			} else {
 				$width      = ((int) $icons_space + (int) $icons_size);
-				$main_width = "35%";
 			}
 
 
 
 			/* built the main widget div */
 			if ($shortcode) {
-				$icons_main = '<div class="norm_row sfsi_wDiv "  style="width:' . $main_width . ';text-align:' . $icons_alignment . ';">';
+				$icons_main = '<div class="norm_row sfsi_wDiv "  style="' . (isset($main_width)?'width:'.$main_width:'') . ';text-align:' . $icons_alignment . ';">';
 			} else {
-				$icons_main = '<div class="norm_row sfsi_wDiv "  style="width:' . $main_width . ';text-align:' . $icons_alignment . ';' . $position1 . '">';
+				$icons_main = '<div class="norm_row sfsi_wDiv "  style="' . (isset($main_width)?'width:'.$main_width. ';' . $position1:'') . ';text-align:' . $icons_alignment_widget . '">';
 			}
 			$icons = "";
 			/* loop through icons and bulit the icons with all settings applied in admin */
@@ -440,6 +439,7 @@ class Sfsi_Widget extends WP_Widget
 			// $current_url = $scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
 			$current_url = sfsi_get_current_page_url();
+			// var_dump($current_url);
 
 			$url 		= "#";
 			$cmcls 		= '';
@@ -1225,7 +1225,7 @@ class Sfsi_Widget extends WP_Widget
 							$hoverdiv .= "<div  class='icon1'>" . $socialObj->sfsi_LinkedInFollow($linkedIn_compayId) . "</div>";
 						}
 						if ($share == "yes") {
-							$hoverdiv .= "<div  class='icon2'>" . $socialObj->sfsi_LinkedInShare() . "</div>";
+							$hoverdiv .= "<div  class='icon2'>" . $socialObj->sfsi_LinkedInShare($current_url) . "</div>";
 						}
 						if ($reBusiness == "yes") {
 							$hoverdiv .= "<div  class='icon3'>" . $socialObj->sfsi_LinkedInRecommend($linkedIn_compay, $linkedIn_ProductId) . "</div>";

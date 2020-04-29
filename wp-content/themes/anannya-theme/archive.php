@@ -50,15 +50,17 @@ get_header();
 <!-- ফ্যাক্ট যাচাই করুন starts here-->
                 <h5 class="o_spotlight_title o_top_fact_check_title">ফ্যাক্ট যাচাই করুন</h5>
                 <div class="o_top_fact_check_wrap">
-                    <?php dynamic_sidebar( 'fact-test' ); ?>    
+                    <?php dynamic_sidebar( 'fact-test' ); ?>
                 </div>
                 <!--    twitter feed starts here-->
                 <h5 class="o_spotlight_title o_top_fact_check_title">Follow us on twitter</h5>
                 <div class="o_top_fact_check_wrap">
-                    <?php dynamic_sidebar( 'twitter-feed' ); ?>    
+                    <?php dynamic_sidebar( 'twitter-feed' ); ?>
                 </div>
 
                               <img class="d_donate" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png"" alt="">
+                              <?php echo do_shortcode( '[searchandfilter fields="category,post_date,date,daterange" ]' ); ?>
+
         </div>
     </div>
 

@@ -170,8 +170,7 @@ if (!isset($option6['sfsi_rectfbshare'])) {
                 <div class="sfsi_new_prmium_follw" style="width: 91%;">
                   <p style="font-size:20px !important">
                     <b>New: </b>In the Premium Plugin, we also added: Pinterest, Linkedin, WhatsApp, VK,
-                    OK, Telegram, Weibo, WeChat, Xing and the option to add custom icons. There are more
-                    important options to add custom icons. There are more placement options too, e.g.
+                    OK, Telegram, Weibo, WeChat, Xing and the option to add custom icons. There are more placement options too, e.g.
                     place the responsive icons before/after posts/pages, show them only on
                     desktop/mobile, insert them manually (via shortcode).<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=responsive_icons&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> See all features</a>
                   </p>
@@ -454,6 +453,22 @@ if (!isset($option6['sfsi_rectfbshare'])) {
                 <div class="field">
                   <input type="number" value="<?php echo isset($sfsi_responsive_icons["settings"]) && isset($sfsi_responsive_icons["settings"]["margin"]) ? $sfsi_responsive_icons["settings"]["margin"] : 0;  ?>" name="sfsi_responsive_icons_settings_margin" style="float:none" />
                   <span class="span_after_input">pixels</span>
+                </div>
+              </div>
+
+              <div class="options sfsi_margin_top_0 sfsi_inputSec">
+                <label class="first">
+                  Margins:
+                </label>
+                <div class="field" style="float: none;">
+                <span class="span_before_input" style="width: 120px;">Above Icon</span>
+                  <input type="number" value="<?php echo isset($sfsi_responsive_icons["settings"]) && isset($sfsi_responsive_icons["settings"]["margin_above"]) ? $sfsi_responsive_icons["settings"]["margin_above"] : 0;  ?>" name="sfsi_responsive_icons_settings_margin_above" style="float:none" />
+                  <span class="span_after_input">px</span>
+                </div>
+                <div class="field" style="float: none;">
+                <span class="span_before_input" style="width: 120px;">Below Icon</span>
+                  <input type="number" value="<?php echo isset($sfsi_responsive_icons["settings"]) && isset($sfsi_responsive_icons["settings"]["margin_below"]) ? $sfsi_responsive_icons["settings"]["margin_below"] : 0;  ?>" name="sfsi_responsive_icons_settings_margin_below" style="float:none" />
+                  <span class="span_after_input">px</span>
                 </div>
               </div>
 

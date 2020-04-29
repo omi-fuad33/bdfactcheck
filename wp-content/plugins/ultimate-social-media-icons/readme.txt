@@ -3,7 +3,7 @@ Contributors: socialdude, socialtech
 Tags: social media, share, buttons, social widget, icons, share icons, share buttons, sharing icons, sharing buttons, social share, sharing, social sharing
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 2.4.6
+Stable tag: 2.5.1
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,7 +46,7 @@ The social media plugin is very easy to use as it takes you through all the step
 
 In case of issues or questions please ask in the [Support forum](https://wordpress.org/support/plugin/ultimate-social-media-icons).
 
-We hope you'll enjoy the free social media plugin! 
+We hope you enjoy the free social media plugin! 
 
 = New Premium Plugin =
 
@@ -274,6 +274,24 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 
 == Changelog ==
+
+= 2.5.1 =
+* Price Change
+* Icon per row fixed css
+
+= 2.5.0 =
+* Fixed LinkedIn share to correct urls.
+
+= 2.4.9 =
+* Fixed Pinterest Save icon.
+
+= 2.4.8 =
+* Fixed Fblike
+
+= 2.4.7 =
+* Added Margins above and below responsive icons
+* Updated the display for widget
+* Replaced with icons which reduces the loading time
 
 = 2.4.6 =
 * Updated Tweet about my page can be empty.
@@ -894,5 +912,5 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 == Upgrade Notice ==
 
-= 2.4.6 =
+= 2.5.1 =
 Please upgrade

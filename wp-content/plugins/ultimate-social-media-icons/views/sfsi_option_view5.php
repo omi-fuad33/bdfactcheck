@@ -200,7 +200,7 @@
     
     <div class="row">
 	<h4>Alignments</h4>
-	<div class="icons_size" style="width: max-content;">
+	<div class="icons_size" style="width: max-content;display:flow-root">
 		<span>Icons per row:</span>
 		<input name="sfsi_icons_perRow" type="text" value="<?php echo ($option5['sfsi_icons_perRow']!='') ?  $option5['sfsi_icons_perRow'] : '' ;?>" />
 		<ins class="leave_empty" style="margin-bottom: 34px;">Leave empty if you don't want to <br /> define this</ins>

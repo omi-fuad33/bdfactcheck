@@ -1085,13 +1085,22 @@ ul.tab_3_icns li .radio {
     line-height: 20px;
 }
 
-.sfsi_Sicons .sf_fb {
+.sfsi_Sicons .sf_fb
+{
     margin: 0 4px 0 5px;
     line-height: 20px;
 }
+ .sfsi_Sicons .sf_fb_share {
+     text-align: left;
+     vertical-align: middle;
+     float: left;
+     line-height: 20px;
+     width: auto;
+     margin-right: 7px;
+ }
 
 .sfsi_Sicons .sf_twiter {
-    margin: 2px 7px 0 4px;
+    margin: -12px 7px 0 4px;
     line-height: 17px;
 }
 
@@ -1102,6 +1111,8 @@ ul.tab_3_icns li .radio {
 .sfsi_Sicons.left .sf_fb {
     margin: 0 8px 0 0;
 }
+
+
 
 .sfsi_Sicons.left .sf_twiter {
     margin: 2px 7px 0 0;
@@ -1118,6 +1129,8 @@ ul.tab_3_icns li .radio {
 .sfsi_Sicons.right .sf_twiter {
     margin: 2px 0 0 8px;
 }
+
+
 
 .sfsi_Sicons .sf_subscrbe,
 .sfsi_Sicons .sf_twiter {
@@ -1157,11 +1170,15 @@ ul.tab_3_icns li .radio {
     width: 75px;
 }
 
+
 .sfsi_Sicons .fb_iframe_widget {
     float: left;
-    /*min-width: 98px;*/
+    min-width: 115px;
     width: 73px;
     margin: 2px 0 0;
+}
+.sfsi_Sicons .fb_iframe_widget[data-layout="button_count"]{
+    min-width:125px;
 }
 
 .sfsi_pop_up .button a:hover {
@@ -2237,11 +2254,7 @@ h2.optional {
     position: relative;
 }
 
-.sfsi_Sicons .sf_fb {
-    position: relative;
-    /*z-index: 1;*/
-    width: 75px;
-}
+
 
 .sfsi_Sicons .fb_iframe_widget {
     float: left;
@@ -2495,9 +2508,11 @@ h1.abt_titl {
         width: 100%;
     }
 
-    .sfsi_Sicons .sf_fb {
+    .sfsi_Sicons .sf_fb
+     {
         margin-bottom: 24px;
     }
+    
 
     .sfsi_Sicons .sf_twiter {
         margin-bottom: 4px;
@@ -2724,7 +2739,8 @@ ul.cstmskin_iconlist {
     vertical-align: middle;
 }
 
-.sfsi_socialwpr .sf_fb {
+.sfsi_socialwpr .sf_fb
+ {
     float: left;
 }
 
@@ -2811,15 +2827,16 @@ ul.cstmskin_iconlist {
     left: 67px;
     line-height: 18px !important;
     margin-left: 0px;
-    margin-top: 8px;
+    margin-top: 0px;
     padding: 1px 0;
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
     top: -8px;
     white-space: pre;
     width: 33px;
     height: 24px;
     z-index: 9;
+    float:left;
 }
 
 .sfsi_wicons a.sficn,
@@ -2850,7 +2867,8 @@ a.sficn {
     vertical-align: top !important;
 }
 
-.sfsi_Sicons .sf_fb {
+.sfsi_Sicons .sf_fb
+ {
     margin: 0 0 0 5px !important;
 }
 
@@ -2876,6 +2894,7 @@ a.sficn {
     width: 100%;
     z-index: 99999;
     background: rgba(0, 0, 0, 0.7);
+    height:100vh;
 }
 
 .sfsi_wechat_follow_overlay .close_btn {
@@ -3485,4 +3504,123 @@ ul.sfsi_icn_listing8 li .tb_4_ck{
     padding-right: 11px;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.sf_subscrbe .bot_no,
+.sf_fb .bot_no,
+.sf_fb_share .bot_no,
+.sf_twiter .bot_no,
+.sf_pinit .bot_no,
+.sf_linkedin .bot_no
+ {
+    background: rgba(0, 0, 0, 0) url(images/count_left_arow.png) no-repeat scroll 0 0 / 27px auto;
+    font-size: 12px !important;
+    left: 67px;
+    line-height: 17px !important;
+    margin-left: 0;
+    padding: 1px 0;
+    text-align: center;
+    white-space: pre;
+    width: 33px;
+    height: 19px;
+    z-index: 9;
+    display: inline-block;
+    vertical-align:top!important;
+}
+.sfsi_responsive_icon_item_container {
+    height: 40px;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 10px;
+}
+
+.sfsi_responsive_icon_item_container img {
+    padding: 7px;
+    vertical-align: middle !important;
+    box-shadow: unset !important;
+    -webkit-box-shadow: unset !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+}
+
+.sfsi_responsive_icon_item_container span {
+    padding: 7px;
+    vertical-align: middle !important;
+    box-shadow: unset !important;
+    -webkit-box-shadow: unset !important;
+    line-height: 40px
+}
+
+.sfsi_icons_container>a {
+    float: left !important;
+    text-decoration: none !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+    -webkit-transition: unset !important;
+    transition: unset !important;
+}
+
+.sfsi_icons_container a:hover,
+.sfsi_icons_container a:focus,
+.sfsi_icons_container a:active {
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+}
+
+.sfsi_Sicons .sfsi_icons_container img {
+    height: unset !important;
+    width: unset !important;
+}
+
+.sfsi_flex_container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 36vh;
+}
+
+.sfsi_flex_container>div {
+    height: 90px;
+    width: 139px;
+    margin: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.sfsi_flex_container>div>a>img {
+    width: 100%;
+    height: 88px;
+    object-fit: scale-down;
+}
+
+.sfsi_flex_container>div a {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    height: 90px;
+}
+
+.sfsi_pinterest_overlay {
+    position: absolute;
+    top: -61px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    display: inline-block;
+    background: rgba(189, 8, 28, .3);
+    text-align: center;
+    padding-top: 22px;
+    color: #fff;
+    transition: all .3s;
+    display: none;
+}
+
+.sfsi_flex_container>div:hover a .sfsi_pinterest_overlay {
+    display: block;
 }

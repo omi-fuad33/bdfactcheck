@@ -105,10 +105,13 @@
 		/*02-08-2019 welcom bar js*/
 		$( '.mysticky-welcomebar-action' ).on( 'change', function(){
 			var mysticky_welcomebar_action = $( this ).val();
-			if ( mysticky_welcomebar_action == 'close_bar' ) {
-				$( '.mysticky-welcomebar-redirect' ).hide();
-			} else {
+			if ( mysticky_welcomebar_action == 'redirect_to_url' ) {
 				$( '.mysticky-welcomebar-redirect' ).show();
+			} else {
+				$( '.mysticky-welcomebar-redirect' ).hide();
+			}
+			if ( $('.mysticky-welcomebar-action option:selected').attr('data-href') !== '' && mysticky_welcomebar_action == 'thankyou_screen' ) {
+				window.open( $( '.mysticky-welcomebar-action option:selected' ).attr('data-href') , '_blank');
 			}
 		} );
 		//$( '#mysticky_welcomebar_expirydate' ).datepicker(  );

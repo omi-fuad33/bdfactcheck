@@ -3,7 +3,7 @@
 Plugin Name: myStickymenu
 Plugin URI: https://premio.io/
 Description: Simple sticky (fixed on top) menu implementation for navigation menu and Welcome bar for announcements and promotion. After install go to Settings / myStickymenu and change Sticky Class to .your_navbar_class or #your_navbar_id.
-Version: 2.3.2
+Version: 2.3.5
 Author: Premio
 Author URI: https://premio.io/downloads/mystickymenu/
 Text Domain: mystickymenu
@@ -12,7 +12,7 @@ License: GPLv2 or later
 */
 
 defined('ABSPATH') or die("Cannot access pages directly.");
-define( 'MYSTICKY_VERSION', '2.3.2' );
+define( 'MYSTICKY_VERSION', '2.3.5' );
 require_once("mystickymenu-fonts.php");
 require_once("welcome-bar.php");
 
@@ -82,6 +82,7 @@ class MyStickyMenuBackend
 		}
 		wp_enqueue_style('mystickymenuAdminStyle', plugins_url('/css/mystickymenu-admin.css', __FILE__), array(), MYSTICKY_VERSION );    
 		wp_enqueue_style( 'wp-color-picker' );		
+		//wp_enqueue_script( 'wp-color-picker-alpha', plugins_url('/js/wp-color-picker-alpha.min.js', __FILE__), array( 'wp-color-picker' ), MYSTICKY_VERSION );
 		wp_enqueue_style( 'wp-jquery-ui-dialog' );
 		wp_enqueue_style('jquery-ui');
 		
@@ -353,7 +354,7 @@ class MyStickyMenuBackend
 								<label for="myfixed_bgcolor" class="mysticky_title myssticky-remove-hand"><?php _e("Sticky Background Color", 'mystickymenu')?></label>
 							</td>
 							<td>
-								<input type="text" id="myfixed_bgcolor" name="mysticky_option_name[myfixed_bgcolor]" class="my-color-field" value="<?php echo $mysticky_options['myfixed_bgcolor'];?>" />
+								<input type="text" id="myfixed_bgcolor" name="mysticky_option_name[myfixed_bgcolor]" class="my-color-field" data-alpha="true" value="<?php echo $mysticky_options['myfixed_bgcolor'];?>" />
 
 							</td>
 						</tr>
@@ -731,8 +732,8 @@ class MyStickyMenuBackend
 											<option data-header="Renewals for 25% off" data-price="19" value="<?php echo esc_url($pro_url."1") ?>">
 												<?php esc_html_e("Updates & support for 1 year") ?>
 											</option>
-											<option data-header="For 3 years" data-price="35" value="<?php echo esc_url($pro_url."4") ?>">
-												<?php esc_html_e("Updates & support for 3 years") ?>
+											<option data-header="For 2 years" data-price="29" value="<?php echo esc_url($pro_url."13") ?>">
+												<?php esc_html_e("Updates & support for 2 years") ?>
 											</option>
 											<option data-header="For lifetime" data-price="59" value="<?php echo esc_url($pro_url."5") ?>">
 												<?php esc_html_e("Updates & support for lifetime") ?>
@@ -764,8 +765,8 @@ class MyStickyMenuBackend
 											<option data-header="Renewals for 25% off" data-price="39" value="<?php echo esc_url($pro_url."2") ?>">
 												<?php esc_html_e("Updates & support for 1 year") ?>
 											</option>
-											<option data-header="For 3 years" data-price="65" value="<?php echo esc_url($pro_url."6") ?>">
-												<?php esc_html_e("Updates & support for 3 years") ?>
+											<option data-header="For 2 years" data-price="59" value="<?php echo esc_url($pro_url."14") ?>">
+												<?php esc_html_e("Updates & support for 2 years") ?>
 											</option>
 											<option data-header="For lifetime" data-price="99" value="<?php echo esc_url($pro_url."7") ?>">
 												<?php esc_html_e("Updates & support for lifetime") ?>
@@ -797,8 +798,8 @@ class MyStickyMenuBackend
 											<option data-header="Renewals for 25% off" data-price="79" value="<?php echo esc_url($pro_url."3") ?>">
 												<?php esc_html_e("Updates & support for 1 year") ?>
 											</option>
-											<option data-header="For 3 years" data-price="139" value="<?php echo esc_url($pro_url."8") ?>">
-												<?php esc_html_e("Updates & support for 3 years") ?>
+											<option data-header="For 2 years" data-price="125" value="<?php echo esc_url($pro_url."15") ?>">
+												<?php esc_html_e("Updates & support for 2 years") ?>
 											</option>
 											<option data-header="For lifetime" data-price="199" value="<?php echo esc_url($pro_url."9") ?>">
 												<?php esc_html_e("Updates & support for lifetime") ?>
@@ -1017,6 +1018,9 @@ class MyStickyMenuFrontend
 				<?php } ?>
 				<?php if( $template_name == 'twentysixteen' ) { ?>
 					#mysticky-nav.wrapfixed > .site-header {padding-top: 0;padding-bottom: 0;}
+				<?php } ?>
+				<?php if( $template_name == 'twentytwenty' ) { ?>
+					#site-header {background: transparent;}
 				<?php } ?>
 			</style>
 			<?php

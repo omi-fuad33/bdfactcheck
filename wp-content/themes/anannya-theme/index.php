@@ -22,14 +22,14 @@ get_header();
                      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
 						<?php
 						  $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 3, 
-                              
+                              'posts_per_page' => 3,
+
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
                             ?>
                          <div class="carousel-inner">
                              <?php
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
 
                                 $image_id = get_post_thumbnail_id();
                                 $image_url = wp_get_attachment_image_src($image_id, 'slider-thumbnail', true);
@@ -40,7 +40,7 @@ get_header();
                                         <h5 class="o_slider_h5"><a class="o_slider_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
                               </div>
-                                        
+
                              <?php endwhile;
                                endif;
                                    ?>
@@ -64,8 +64,8 @@ get_header();
                 <div class="o_top_fact_check_wrap_top">
                         <?php
 						                $args = array('category_name' => 'ফিচার',
-                              'posts_per_page' => 4, 
-                              
+                              'posts_per_page' => 4,
+
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
                                 if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
@@ -77,7 +77,7 @@ get_header();
                                   <img class="" src="<?php echo $image_url[0]; ?>">
                                 </div>
                                 <div class="col-lg-8 o_top_fact_headline_top_wrap"><a class="o_top_fact_headline_top"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
-                            </div>       
+                            </div>
                              <?php endwhile;
                                endif;
                                    ?>
@@ -92,8 +92,9 @@ get_header();
         <div class="col-lg-8">
             <div class="o_landscape_ad_landscape">
                  <p>ADVERTISEMENT</p>
+
             </div>
-            
+
 <!-- 2nd Row post starts-->
             <div class="row o_below_advertise1">
                 <div class="col-lg-4">
@@ -125,7 +126,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -160,7 +161,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -195,7 +196,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -269,7 +270,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -280,12 +281,12 @@ get_header();
                      <!-- ফ্যাক্ট যাচাই করুন starts here-->
                 <h5 class="o_spotlight_title o_top_fact_check_title">ফ্যাক্ট যাচাই করুন</h5>
                 <div class="o_top_fact_check_wrap">
-                    <?php dynamic_sidebar( 'fact-test' ); ?>    
+                    <?php dynamic_sidebar( 'fact-test' ); ?>
                 </div>
                 <!--    twitter feed starts here-->
                 <h5 class="o_spotlight_title o_top_fact_check_title">Follow us on twitter</h5>
                 <div class="o_top_fact_check_wrap">
-                    <?php dynamic_sidebar( 'twitter-feed' ); ?>    
+                    <?php dynamic_sidebar( 'twitter-feed' ); ?>
                 </div>
                     <div class="o_sideber_ad2">
                          <p>ADVERTISEMENT</p>
@@ -325,7 +326,7 @@ get_header();
                           ?>
                           <?php
                           $counter++;
-                          endwhile; 
+                          endwhile;
                           //Pagination can go here if you want it.
                           endif;
                       ?>
@@ -358,7 +359,7 @@ get_header();
                           ?>
                           <?php
                           $counter++;
-                          endwhile; 
+                          endwhile;
                           //Pagination can go here if you want it.
                           endif;
                       ?>
@@ -391,7 +392,7 @@ get_header();
                           ?>
                           <?php
                           $counter++;
-                          endwhile; 
+                          endwhile;
                           //Pagination can go here if you want it.
                           endif;
                       ?>
@@ -424,7 +425,7 @@ get_header();
                           ?>
                           <?php
                           $counter++;
-                          endwhile; 
+                          endwhile;
                           //Pagination can go here if you want it.
                           endif;
                       ?>
@@ -468,7 +469,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -503,7 +504,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -538,7 +539,7 @@ get_header();
                                         ?>
                                         <?php
                                         $counter++;
-                                        endwhile; 
+                                        endwhile;
                                         //Pagination can go here if you want it.
                                         endif;
                                     ?>
@@ -575,11 +576,11 @@ get_header();
             <!-- <div class="row">
                         <?php
 						  $args = array('category_name' => 'খাবারদাবার',
-                              'posts_per_page' => 3, 
-                              
+                              'posts_per_page' => 3,
+
                           ); //start counter
                             $slider_query=new WP_Query($args); //Need this to make pagination work
-                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
+                                if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post();
 
                                 $image_id = get_post_thumbnail_id();
                                 $image_url = wp_get_attachment_image_src($image_id, 'large', true);
@@ -590,7 +591,7 @@ get_header();
                                     <div><img class="o_camera_icon_2ndrow" src="<?php echo get_template_directory_uri(); ?>/Images/camera_icon1.png"></div>
                                     <div class="o_gallery_title_2ndrow"><h5 class="o_post_2ndrow_column1"><a class="o_2nd_row_1_title o_khabardabar_title_text"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5></div>
                                 </div>
-                            </div>       
+                            </div>
                              <?php endwhile;
                                endif;
                                    ?>
@@ -598,11 +599,10 @@ get_header();
               </div> -->
         </div>
         <div class="col-lg-4">
-            
+          
         </div>
     </div>
     <div style="height: 80px;"></div>
 </div>
     <?php get_sidebar(); ?>
     <?php get_footer(); ?>
-

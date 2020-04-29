@@ -836,6 +836,9 @@ function sfsi_update_step6() {
     responsive_icons.settings.counter_bg_color = SFSI('input[name="sfsi_responsive_counter_bg_color"]').val();
     responsive_icons.settings.share_count_text = SFSI('input[name="sfsi_responsive_counter_share_count_text"]').val();
     responsive_icons.settings.show_count = countshare;
+    responsive_icons.settings.margin_above = SFSI('input[name="sfsi_responsive_icons_settings_margin_above"]').val();
+    responsive_icons.settings.margin_below = SFSI('input[name="sfsi_responsive_icons_settings_margin_below"]').val();
+
     n = {
         action: "updateSrcn6",
         sfsi_show_Onposts: s,

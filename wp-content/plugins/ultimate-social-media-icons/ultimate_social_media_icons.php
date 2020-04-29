@@ -6,7 +6,7 @@ Description: Easy to use and 100% FREE social media plugin which adds social med
 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 2.4.6
+Version: 2.5.1
 License: GPLv2 or later
 */
 require_once 'analyst/main.php';
@@ -40,16 +40,14 @@ define('SFSI_ALLICONS', serialize(array("rss", "email", "facebook", "twitter", "
 function sfsi_get_current_page_url()
 
 {
-
     global $post, $wp;
-    if (!empty($wp)) {
-
+    if (!empty($wp->request)) {
         return home_url(add_query_arg(array(), $wp->request));
-    } elseif (!empty($post)) {
-
+    } elseif (is_home()) {
+        return site_url();
+    } elseif (!empty($post->ID)) {
         return get_permalink($post->ID);
     } else {
-
         return site_url();
     }
 }
@@ -88,7 +86,7 @@ register_deactivation_hook(__FILE__, 'sfsi_deactivate_plugin');
 
 register_uninstall_hook(__FILE__, 'sfsi_Unistall_plugin');
 
-if (!get_option('sfsi_pluginVersion') || get_option('sfsi_pluginVersion') < 2.46) {
+if (!get_option('sfsi_pluginVersion') || get_option('sfsi_pluginVersion') < 2.51) {
 
     add_action("init", "sfsi_update_plugin");
 }
@@ -154,7 +152,7 @@ function DISPLAY_ULTIMATE_SOCIAL_ICONS($args = null, $content = null)
 
     /* Link the main icons function */
 
-    $return .= sfsi_check_visiblity(0,true);
+    $return .= sfsi_check_visiblity(0, true);
 
     $return .= '<div style="clear: both;"></div>';
 
@@ -440,7 +438,7 @@ function addStyleFunction()
 
             <?php endif;
                 ?><?php if (sanitize_text_field($option8['sfsi_form_border']) == 'yes') : ?>border: <?php echo intval($option8['sfsi_form_border_thickness']) . "px solid " . sfsi_sanitize_hex_color($option8['sfsi_form_border_color']);
-                                                                                                        ?> !important;
+                                                                                                            ?> !important;
 
             <?php endif;
                 ?>padding: 18px 0px !important;
@@ -517,7 +515,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_field_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_field_fontsize']) . "px" ?> !important;
 
@@ -542,7 +540,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_field_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_field_fontsize']) . "px" ?> !important;
 
@@ -568,7 +566,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_field_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_field_fontsize']) . "px" ?> !important;
 
@@ -594,7 +592,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_field_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_field_fontsize']) . "px" ?> !important;
 
@@ -619,7 +617,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_field_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_field_fontsize']) . "px" ?> !important;
 
@@ -644,7 +642,7 @@ function addStyleFunction()
                 }
 
                 ?>color: <?php echo sfsi_sanitize_hex_color($option8['sfsi_form_button_fontcolor']);
-                            ?> !important;
+                                ?> !important;
 
             font-size: <?php echo intval($option8['sfsi_form_button_fontsize']) . "px" ?> !important;
 
@@ -660,8 +658,7 @@ function addStyleFunction()
             $option5            =  unserialize(get_option('sfsi_section5_options', false));
 
             if ($option5['sfsi_icons_Alignment_via_shortcode'] == 'left') {
-            ?>
-        .sfsi_shortcode_container {
+                ?>.sfsi_shortcode_container {
             float: left;
         }
 
@@ -675,8 +672,7 @@ function addStyleFunction()
 
         <?php
             } elseif ($option5['sfsi_icons_Alignment_via_shortcode'] == 'right') {
-        ?>
-        .sfsi_shortcode_container {
+                ?>.sfsi_shortcode_container {
             float: right;
         }
 
@@ -690,10 +686,10 @@ function addStyleFunction()
 
         <?php
             } elseif ($option5['sfsi_icons_Alignment_via_shortcode'] == 'center') {
-        ?>
-        .sfsi_shortcode_container {
+                ?>.sfsi_shortcode_container {
             /* float: right; */
-        }     
+        }
+
         .sfsi_shortcode_container .norm_row.sfsi_wDiv {
             position: relative !important;
             float: none;

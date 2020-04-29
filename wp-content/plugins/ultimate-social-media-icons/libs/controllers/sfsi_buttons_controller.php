@@ -583,7 +583,9 @@ function sfsi_options_updater6()
             "show_count" => "no",
             "counter_color" => "#aaaaaa",
             "counter_bg_color" => "#fff",
-            "share_count_text" => "SHARES"
+            "share_count_text" => "SHARES",
+            "margin_above" => 10,
+            "margin_below" => 10,
         )
     );
     $sfsi_responsive_icons = array();

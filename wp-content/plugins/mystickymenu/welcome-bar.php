@@ -69,13 +69,13 @@ function mysticky_welcome_bar_backend() {
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Background Color', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
-							<input type="text" id="mysticky_welcomebar_bgcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgcolor]" class="my-color-field" value="<?php echo $welcomebar['mysticky_welcomebar_bgcolor'];?>" />
+							<input type="text" id="mysticky_welcomebar_bgcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgcolor]" class="my-color-field" data-alpha="true" value="<?php echo $welcomebar['mysticky_welcomebar_bgcolor'];?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Background Text Color', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
-							<input type="text" id="mysticky_welcomebar_bgtxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgtxtcolor]" class="my-color-field" value="<?php echo $welcomebar['mysticky_welcomebar_bgtxtcolor'];?>" />
+							<input type="text" id="mysticky_welcomebar_bgtxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgtxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo $welcomebar['mysticky_welcomebar_bgtxtcolor'];?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
@@ -143,40 +143,19 @@ function mysticky_welcome_bar_backend() {
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Color', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
-							<input type="text" id="mysticky_welcomebar_btncolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btncolor]" class="my-color-field" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btncolor']);?>" />
+							<input type="text" id="mysticky_welcomebar_btncolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btncolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btncolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Text Color', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
-							<input type="text" id="mysticky_welcomebar_btntxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btntxtcolor]" class="my-color-field" value="<?php echo $welcomebar['mysticky_welcomebar_btntxtcolor'];?>" />
+							<input type="text" id="mysticky_welcomebar_btntxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btntxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo $welcomebar['mysticky_welcomebar_btntxtcolor'];?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Text', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<input type="text" id="mysticky_welcomebar_btn_text" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_btn_text]" value="<?php echo $welcomebar['mysticky_welcomebar_btn_text'];?>"  />
-						</div>
-					</div>
-					<div class="mysticky-welcomebar-setting-content">
-						<label><?php _e('Action', 'myStickymenu'); ?></label>
-						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-redirect-wrap">
-							<div class="mysticky-welcomebar-setting-action">
-								<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action">
-									<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php _e( 'Redirect to URL', 'myStickymenu' );?></option>
-									<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php _e( 'Close bar', 'myStickymenu' );?></option>
-								</select>
-							</div>
-							<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
-								<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
-							</div>
-							<div class="mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
-								<label>
-									<input name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_newtab]" value= "1" type="checkbox" disabled />
-									<?php _e( 'Open in a new tab', 'mystickymenu' );?>
-								</label>
-								<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-							</div>
 						</div>
 					</div>
 					<!-- -->
@@ -197,8 +176,31 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<!-- -->
+					<div class="mysticky-welcomebar-setting-content">
+						<label><?php _e('Button Submission', 'myStickymenu'); ?></label>
+						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-redirect-wrap">
+							<div class="mysticky-welcomebar-setting-action">
+								<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action">
+									<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php _e( 'Redirect to URL', 'myStickymenu' );?></option>
+									<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php _e( 'Close bar', 'myStickymenu' );?></option>
+									<option value="thankyou_screen" data-href="<?php echo esc_url($upgarde_url); ?>"><?php _e( 'Thank you screen (Upgrade Now)', 'myStickymenu' );?></option>
+								</select>
+							</div>
+							<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
+								<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
+							</div>
+							<div class="mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
+								<label>
+									<input name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_newtab]" value= "1" type="checkbox" disabled />
+									<?php _e( 'Open in a new tab', 'mystickymenu' );?>
+								</label>
+								<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+							</div>
+						</div>
+					</div>
+					
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-setting-remove-getbar">
-						<label><?php _e('Remove myStickymenu', 'myStickymenu'); ?></label>
+						<label><?php _e('Remove myStickymenu Credit', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="mysticky-welcomebar-switch">
 								<input type="checkbox" id="mysticky-welcomebar-remove-getbar" name="mysticky_option_welcomebar[mysticky_welcomebar_remove_getbar]" value="1" disabled />
@@ -1221,7 +1223,7 @@ function mysticky_welcome_bar_frontend(){
 		top: 5px;
 		right: 10px;
 		outline: none;
-		font-family: Lato;
+		font-family: Lato; 
 		text-decoration: none;
 		text-shadow: 0 0 0px #fff;
 		-webkit-transition: all 0.5s ease 0s;

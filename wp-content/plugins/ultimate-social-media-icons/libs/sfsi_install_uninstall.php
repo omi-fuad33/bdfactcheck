@@ -39,7 +39,7 @@ function sfsi_update_plugin()
         update_option("sfsi_custom_icons", "yes");
     }
     //Install version
-    update_option("sfsi_pluginVersion", "2.46");
+    update_option("sfsi_pluginVersion", "2.51");
 
     if (!get_option('sfsi_serverphpVersionnotification')) {
         add_option("sfsi_serverphpVersionnotification", "yes");

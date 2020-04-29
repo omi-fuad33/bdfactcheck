@@ -421,6 +421,76 @@ function sfsi_widget_set(){
     });
 }
 
+function sfsi_pinterest_modal_images(event,url,title) {
+    console.log(event);
+    event && event.preventDefault();
+  var imgSrc = [];
+  var page_title;
+
+  page_title = SFSI('meta[property="og:title"]').attr('content');
+  if(undefined == page_title){
+    page_title = SFSI('head title').text();
+  }
+  if(undefined == title){
+    title = page_title;
+  }
+  if(undefined == url){
+    url = window.location.href;
+    // url = encodeURIComponent(window.location.href);
+  }
+  SFSI('body img').each(function (index) {
+    var src = SFSI(this).attr('src') || "";
+    var height = SFSI(this).height();
+    var width = SFSI(this).width();
+    var image_title = SFSI(this).attr('title') || "";
+    var alt = SFSI(this).attr('alt') || "";
+    var no_pin = SFSI(this).attr('data-pin-nopin') || "";
+    var no_pin_old = SFSI(this).attr('nopin') || "";
+
+    if (src !== "" && !src.startsWith("javascript") && height > 100 && width > 100 && no_pin_old !== "nopin" && no_pin !== "true") {
+      imgSrc.push({
+        src: src,
+        title: title && "" !== title ? title : (image_title && "" !== image_title ? image_title : alt)
+      });
+    }
+  });
+
+  sfsi_pinterest_modal();
+  console.log(imgSrc);
+  if(imgSrc.length==0){
+    var meta_img = SFSI('meta[property="og:image"]').attr('content');
+    if(undefined == meta_img){
+        meta_img ="";
+    }
+    SFSI('.sfsi_flex_container').append('<div><a href="http://www.pinterest.com/pin/create/button/?url=' + url + '&media=&description=' + encodeURIComponent(page_title).replace('+', '%20').replace("#", "%23") + '"><div style="width:140px;height:90px;display:inline-block;" ></div><span class="sfsi_pinterest_overlay"><img data-pin-nopin="true" height="30" width="30" src="' + window.sfsi_icon_ajax_object.plugin_url + '/images/pinterest.png" /></span></a></div>')
+  }else{
+
+      // console.log(imgSrc);
+      SFSI.each(imgSrc, function (index, val) {
+          // console.log('discrip',val);
+          SFSI('.sfsi_flex_container').append('<div><a href="http://www.pinterest.com/pin/create/button/?url=' + url + '&media=' + val.src + '&description=' + encodeURIComponent(val.title ? val.title : page_title).replace('+', '%20').replace("#", "%23") + '"><img style="display:inline"  data-pin-nopin="true" src="' + val.src + '"><span class="sfsi_pinterest_overlay" style="width:140px;left:unset;"><img data-pin-nopin="true" height="30" width="30" style="display:inline" src="' + window.sfsi_icon_ajax_object.plugin_url + '/images/pinterest.png" /></span></a></div>');
+      });
+    }
+    event.preventDefault();
+
+}
+
+function sfsi_pinterest_modal(imgs) {
+  // if (jQuery('.sfsi_premium_wechat_follow_overlay').length == 0) {
+  jQuery('body').append(
+    "<div class='sfsi_wechat_follow_overlay sfsi_overlay show'>" +
+    "<div class='sfsi_inner_display'>" +
+    '<a class="close_btn" href="" onclick="event.preventDefault();close_overlay(\'.sfsi_wechat_follow_overlay\')" >×</a>' +
+    "<div style='width:95%;max-width:500px; min-height:80%;background-color:#fff;margin:0 auto;margin:10% auto;padding: 20px 0;border-radius: 20px;'>" +
+    "<h4 style='margin-left:10px;'>Pin It on Pinterest</h4>" +
+    "<div class='sfsi_flex_container'>" +
+
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>"
+  );
+}
 
 // should execute at last so that every function is acceable in body.
 var sfsi_functions_loaded =  new CustomEvent('sfsi_functions_loaded',{detail:{"abc":"def"}});
