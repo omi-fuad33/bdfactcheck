@@ -590,7 +590,7 @@ html, body{
     height: 28px !important;
 }
 .o_footer_social_fb{
-    height: 23px !important;
+    height: 18px !important;
     margin-top: 5px;
 }
 .d_footer_Social img{
@@ -664,6 +664,43 @@ html, body{
       margin-top: 10px;
       margin-bottom: -15px;
   }
+  .o_footer_copyright_wrap{
+    background-color: #3a3b3a;
+    text-align: center;
+  }
+  .o_footer_copyright_wrap p{
+      color: #ffffff;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+  .o_footer_copyright_text{
+      width: 300px;
+      margin: 0 auto;
+      border-bottom: 2px solid #33856b;
+  }
+  .o_footer_developer_text{
+    padding-top: 5px;
+    margin-bottom: 0;
+    width: 300px;
+    margin: 0 auto;
+}
+.o_footer_developer_text span{
+	color: #29a7df;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+.o_footer_developer_text img{
+    height: 20px;
+    object-fit: cover;
+    transition: all 0.1s ease;
+}
+.o_footer_developer_text img:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+
 /*============================================
             Media query for mobile
 ==============================================*/

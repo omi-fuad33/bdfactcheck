@@ -69,15 +69,13 @@
             </div>
 
             </div>
-
-
-
-
             </div>
-    <div class="d_footer_2nd_row_text"><p>&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</p></div>
-    <div class="d_footer_2nd_row_text d_footer_3rd_row_text">Design & Development: <span><a href=""><img src="<?php echo get_template_directory_uri(); ?>/Images/Omni_blue_logo.png" alt="logo not found"></a></span></div>
 
-	</footer><!-- #colophon -->
+    </footer><!-- #colophon -->
+    <div class="o_footer_copyright_wrap">
+                <p class="o_footer_copyright_text">&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</p>
+                <p class="o_footer_developer_text">Design & Development: <span>OMNISPACE</span></p>
+            </div>
 <!-- #page -->
 
 <?php wp_footer(); ?>
