@@ -745,6 +745,12 @@ html, body{
     .o_media_school_content{
         padding-left: 15px !important;
     }
+    .o_footer_copyright_wrap p{
+        padding-bottom: 0;
+    }
+    .o_footer_developer_text{
+        display: none;
+    }
 
 }
 /*============================================
