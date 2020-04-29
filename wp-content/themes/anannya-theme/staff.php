@@ -28,28 +28,28 @@
                ?>
             <?php if($counter == 1) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+               <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
             <?php elseif($counter == 2) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+            <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
             <?php elseif($counter == 3
                ) :?>
             <div class="col-lg-4 n_staff_singleimage">
-               <a class="n_a" href="<?php echo get_home_url(); ?>/activities/we-belong-we-care/">
+            <div class="n_a">
                   <img class="n_image" src="<?php echo $image_url[0];?>">
-                  <h5 class="n_staff_name"><?php the_title(); ?></h5>
-               </a>
-               <h5 class="n_staff_name"><?php the_content(); ?></h5>
+                  <h5 class="o_staff_name"><?php the_title(); ?></h5>
+            </div>
+               <p class=""><?php the_content(); ?></p>
             </div>
          </div>
          <?php
@@ -67,55 +67,14 @@
        
        <!-- Sidebar things start here -->
       <div class="col-lg-4 n_sidebar_marginCon">
-         <div class="o_most_read_post_wrap clearfix">
-            <div class="o_most_read_button_wrap">
-               <button class="o_most_read_button" id="o_most_recent_button">সর্বশেষ</button>
-               <button class="o_most_read_button" id="o_most_read_button">সর্বাধিক পঠিত</button>
-            </div>
-            <?php
-               $args = array('category_name' => 'ফিচার',
-                   'posts_per_page' => 7, 
-               
-               ); //start counter
-                 $slider_query=new WP_Query($args); //Need this to make pagination work
-                     if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-               
-                  ?>
-            <div class=" o_top_fact-wrap" id="o_most_recent_tab">
-               <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-            </div>
-            <?php endwhile;
-               endif;
-                   ?>
-            <?php wp_reset_query(); ?>
-            <?php
-               $args = array('category_name' => 'ফিচার',
-                   'posts_per_page' => 7, 
-               
-               ); //start counter
-                 $slider_query=new WP_Query($args); //Need this to make pagination work
-                     if(have_posts()) :  while($slider_query->have_posts()) : $slider_query->the_post(); 
-               
-                  ?>
-            <div class=" o_top_fact-wrap" id="o_most_read_tab">
-               <h5 class="o_spotlight_headline o_top_fact_headline"><a class="o_spotlight_headline"  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
-            </div>
-            <?php endwhile;
-               endif;
-                   ?>
-            <?php wp_reset_query(); ?>
-         </div><br>
-          
-          <?php
-   while ( have_posts() ) : the_post(); 
-   $image_id = get_post_thumbnail_id();
-   $image_url = wp_get_attachment_image_src($image_id, 'full', true);
-   ?>
-          <img class="n_imageFull" src="<?php echo $image_url[0];?>">
-          <?php
-   endwhile; //resetting the page loop
-   wp_reset_query(); //resetting the page query
-   ?>
+        <!-- ফ্যাক্ট যাচাই করুন starts here-->
+        <h5 class="o_spotlight_title o_top_fact_check_title">ফ্যাক্ট যাচাই করুন</h5>
+                <div class="o_top_fact_check_wrap">
+                    <?php dynamic_sidebar( 'fact-test' ); ?>    
+                </div>
+                <img class="o_donate_front_page" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
+                <br>
+                <br>
           
       </div>
        

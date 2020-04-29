@@ -9,7 +9,6 @@ function mysticky_welcome_bar_backend() {
 	if ( $welcomebar == '' || empty($welcomebar)) {
 		$welcomebar = mysticky_welcomebar_pro_widget_default_fields();
 	}
-
 	$mysticky_welcomebar_showx_desktop = $mysticky_welcomebar_showx_mobile = '';
 	$mysticky_welcomebar_btn_desktop = $mysticky_welcomebar_btn_mobile = '';
 	$mysticky_welcomebar_display_desktop = $mysticky_welcomebar_display_mobile = '';
@@ -106,7 +105,28 @@ function mysticky_welcome_bar_backend() {
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Bar Text', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
-							<textarea id="mysticky_bar_text" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_bar_text]" rows="4"><?php echo stripslashes($welcomebar['mysticky_welcomebar_bar_text']);?> </textarea>
+						<?php 
+							$settings = array(
+								'media_buttons' => false, 
+								'textarea_name' => 'mysticky_option_welcomebar[mysticky_welcomebar_bar_text]',
+								'tinymce' => false,
+								'quicktags' => array(
+									'buttons' => 'strong,em,link'
+								)
+							);
+							wp_editor( stripslashes($welcomebar['mysticky_welcomebar_bar_text']), 'mysticky_bar_text', $settings );      
+							// add more buttons to the html editor
+							function underline_tag_add_quicktags() {
+								if ( wp_script_is('quicktags') ){ ?>
+								<script type="text/javascript">
+									QTags.addButton( 'underline_tag', 'U', '<u>', '</u>', 'underline', 'underline', 20, '' );
+								</script>
+							<?php
+								}
+							}
+							add_action( 'admin_print_footer_scripts', 'underline_tag_add_quicktags' );    
+							?>
+						<!--<textarea id="mysticky_bar_text" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_bar_text]" rows="4" style="display: none;"><?php echo stripslashes($welcomebar['mysticky_welcomebar_bar_text']);?> </textarea>-->
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
@@ -142,20 +162,20 @@ function mysticky_welcome_bar_backend() {
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Color', 'myStickymenu'); ?></label>
-						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
+						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btncolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btncolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btncolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Text Color', 'myStickymenu'); ?></label>
-						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
+						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btntxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btntxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo $welcomebar['mysticky_welcomebar_btntxtcolor'];?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php _e('Button Text', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
-							<input type="text" id="mysticky_welcomebar_btn_text" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_btn_text]" value="<?php echo $welcomebar['mysticky_welcomebar_btn_text'];?>"  />
+							<input type="text" id="mysticky_welcomebar_btn_text" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_btn_text]" value="<?php echo $welcomebar['mysticky_welcomebar_btn_text'];?>"  />
 						</div>
 					</div>
 					<!-- -->
@@ -163,7 +183,7 @@ function mysticky_welcome_bar_backend() {
 						<label><?php _e('Attention Effect', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="mysticky-welcomebar-setting-attention">
-								<select name="mysticky_option_welcomebar[mysticky_welcomebar_attentionselect]" class="mysticky-welcomebar-attention">
+								<select name="mysticky_option_welcomebar[mysticky_welcomebar_attentionselect]" class="mysticky-welcomebar-attention mysticky_welcomebar_disable">
 									<option value="default" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], '	' ); ?>><?php _e( 'None', 'myStickymenu' );?></option>
 									<option value="flash" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'flash' ); ?>><?php _e( 'Flash', 'myStickymenu' );?></option>
 									<option value="shake" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'shake' ); ?>><?php _e( 'Shake', 'myStickymenu' );?></option>
@@ -180,14 +200,14 @@ function mysticky_welcome_bar_backend() {
 						<label><?php _e('Button Submission', 'myStickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-redirect-wrap">
 							<div class="mysticky-welcomebar-setting-action">
-								<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action">
+								<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action mysticky_welcomebar_disable">
 									<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php _e( 'Redirect to URL', 'myStickymenu' );?></option>
 									<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php _e( 'Close bar', 'myStickymenu' );?></option>
 									<option value="thankyou_screen" data-href="<?php echo esc_url($upgarde_url); ?>"><?php _e( 'Thank you screen (Upgrade Now)', 'myStickymenu' );?></option>
 								</select>
 							</div>
 							<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
-								<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
+								<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
 							</div>
 							<div class="mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
 								<label>
@@ -195,6 +215,19 @@ function mysticky_welcome_bar_backend() {
 									<?php _e( 'Open in a new tab', 'mystickymenu' );?>
 								</label>
 								<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+							</div>
+						</div>
+					</div>
+					<!-- -->
+					<div class="mysticky-welcomebar-setting-content">
+						<label><?php _e('After Submission', 'myStickymenu'); ?></label>
+						<div class="mysticky-welcomebar-setting-content-right">
+							<div class="mysticky-welcomebar-setting-action">
+								<select name="mysticky_option_welcomebar[mysticky_welcomebar_aftersubmission]" class="mysticky-welcomebar-aftersubmission mysticky_welcomebar_disable">
+									<option value="dont_show_welcomebar" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'dont_show_welcomebar' ); ?>><?php _e( "Don't show the Welcome Bar", 'myStickymenu' );?></option>
+									<option value="show_welcomebar_next_visit" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_next_visit' ); ?>><?php _e( 'Show the Welcome Bar in the next visit', 'myStickymenu' );?></option>
+									<option value="show_welcomebar_every_page" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_every_page' ); ?> ><?php _e( 'Show the Welcome Bar on every page', 'myStickymenu' );?></option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -371,7 +404,8 @@ function mysticky_welcome_bar_backend() {
 		}
 		.mysticky-welcomebar-position-bottom {
 			bottom:0;
-		}
+		}		
+		.mysticky-welcomebar-fixed .mysticky-welcomebar-content p a,
 		.mysticky-welcomebar-fixed .mysticky-welcomebar-content p {
 			color: <?php echo $welcomebar['mysticky_welcomebar_bgtxtcolor'] ?>;
 			font-size: <?php echo $welcomebar['mysticky_welcomebar_fontsize'] ?>px;
@@ -477,7 +511,7 @@ function mysticky_welcome_bar_backend() {
 		
 		/* Animated Buttons */
 		.mysticky-welcomebar-btn a {
-			-webkit-animation: 1s;
+			-webkit-animation-duration: 1s;
 			animation-duration: 1s;
 		}
 		@-webkit-keyframes flash {
@@ -834,6 +868,7 @@ function mysticky_welcomebar_pro_widget_default_fields() {
 			'mysticky_welcomebar_btntxtcolor' 		=> '#ffffff',
 			'mysticky_welcomebar_btn_text' 			=> 'Got it!',
 			'mysticky_welcomebar_actionselect'		=> 'close_bar',
+			'mysticky_welcomebar_aftersubmission'	=> 'dont_show_welcomebar',
 			'mysticky_welcomebar_redirect' 			=> 'https://www.yourdomain.com',
 			'mysticky_welcomebar_redirect_newtab' 	=> '',
 			'mysticky_welcomebar_device_desktop'	=> 'desktop',
@@ -879,7 +914,7 @@ function mysticky_welcome_bar_frontend(){
 			$mysticky_welcomebar_actionselect_url = 'javascript:void(0)';
 		}
 	}
-	if( !isset($welcomebar['mysticky_welcomebar_enable']) ) {
+	if( isset($welcomebar['mysticky_welcomebar_enable']) ) {
 		if ( $welcomebar['mysticky_welcomebar_position'] == 'top' ) {
 			$welcomebar_enable_block = "top: -60px";
 		} else {
@@ -888,7 +923,7 @@ function mysticky_welcome_bar_frontend(){
 	}
 
 	?>
-	<div class="mysticky-welcomebar-fixed <?php echo $display_main_class; ?>" style="<?php echo $welcomebar_enable_block; ?>" data-after-triger="after_a_few_seconds" data-triger-sec="0" data-position="<?php echo esc_attr($welcomebar['mysticky_welcomebar_position']);?>" data-height="<?php echo esc_attr($welcomebar['mysticky_welcomebar_height']);?>" data-rediect="<?php echo esc_attr($welcomebar['mysticky_welcomebar_actionselect']);?>">
+	<div class="mysticky-welcomebar-fixed <?php echo $display_main_class; ?>" style="<?php echo $welcomebar_enable_block; ?>" data-after-triger="after_a_few_seconds" data-triger-sec="0" data-position="<?php echo esc_attr($welcomebar['mysticky_welcomebar_position']);?>" data-height="<?php echo esc_attr($welcomebar['mysticky_welcomebar_height']);?>" data-rediect="<?php echo esc_attr($welcomebar['mysticky_welcomebar_actionselect']);?>" data-aftersubmission="<?php echo esc_attr($welcomebar['mysticky_welcomebar_aftersubmission']);?>">
 		<div class="mysticky-welcomebar-content">
 			<?php echo wpautop( isset($welcomebar['mysticky_welcomebar_bar_text'])? stripslashes($welcomebar['mysticky_welcomebar_bar_text']) :"Get 30% off your first purchase" );?>
 		</div>
@@ -901,13 +936,23 @@ function mysticky_welcome_bar_frontend(){
 	<script>
 
 	jQuery(document).ready(function($){
-		var mysticky_welcomebar_height = jQuery( '.mysticky-welcomebar-fixed' ).innerHeight();
+		var mysticky_welcomebar_height = jQuery( '.mysticky-welcomebar-fixed' ).outerHeight();
 		if( jQuery( '.mysticky-welcomebar-fixed' ).data('position') == 'top' ) {
 			jQuery( '.mysticky-welcomebar-fixed' ).css( 'top', '-' + mysticky_welcomebar_height + 'px' );
 		} else {
 			jQuery( '.mysticky-welcomebar-fixed' ).css( 'bottom', '-' + mysticky_welcomebar_height + 'px' );
 		}
-		if ( sessionStorage.getItem("welcomebar_close") === null ){
+		var welcombar_aftersubmission = $( '.mysticky-welcomebar-fixed' ).data('aftersubmission');
+		if( welcombar_aftersubmission == 'dont_show_welcomebar' ){
+			var welcomebar_storage = localStorage.getItem("welcomebar_close");
+		} else if( welcombar_aftersubmission == 'show_welcomebar_next_visit' ) {
+			var welcomebar_storage = sessionStorage.getItem("welcomebar_close");
+		} else {
+			sessionStorage.removeItem('welcomebar_close');
+			localStorage.removeItem('welcomebar_close');
+			var welcomebar_storage = null;
+		}
+		if ( welcomebar_storage === null ){
 
 			var after_trigger = jQuery( '.mysticky-welcomebar-fixed' ).data('after-triger');
 
@@ -916,7 +961,7 @@ function mysticky_welcome_bar_frontend(){
 					if ( $( window ).width() > 767 ) {
 						var trigger_sec = jQuery( '.mysticky-welcomebar-fixed' ).data('triger-sec') * 1000;
 						var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
-						var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+						var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 						setTimeout(function(){
 							jQuery( '.mysticky-welcomebar-fixed' ).addClass( 'mysticky-welcomebar-animation' );
 							if ( welcombar_position == 'top' ) {
@@ -941,7 +986,7 @@ function mysticky_welcome_bar_frontend(){
 					if ( $( '.mysticky-welcomebar-fixed' ).hasClass( 'mysticky-welcomebar-display-mobile' ) ) {
 						var trigger_sec = jQuery( '.mysticky-welcomebar-fixed' ).data('triger-sec') * 1000;
 						var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
-						var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+						var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 						setTimeout(function(){
 							jQuery( '.mysticky-welcomebar-fixed' ).addClass( 'mysticky-welcomebar-animation' );
 							if ( welcombar_position == 'top' ) {
@@ -963,12 +1008,21 @@ function mysticky_welcome_bar_frontend(){
 			mystickyelements_present();
 		}
 		$( window ).resize( function(){
-			if ( sessionStorage.getItem("welcomebar_close") === null ){
+			if( welcombar_aftersubmission == 'dont_show_welcomebar' ){
+				var welcomebar_storage = localStorage.getItem("welcomebar_close");
+			} else if( welcombar_aftersubmission == 'show_welcomebar_next_visit' ) {
+				var welcomebar_storage = sessionStorage.getItem("welcomebar_close");
+			} else {
+				sessionStorage.removeItem('welcomebar_close');
+				localStorage.removeItem('welcomebar_close');
+				var welcomebar_storage = null;
+			}
+			if ( welcomebar_storage === null ){
 				var after_trigger = jQuery( '.mysticky-welcomebar-fixed' ).data('after-triger');
 				if ( after_trigger == 'after_a_few_seconds' ) {
 					var trigger_sec = jQuery( '.mysticky-welcomebar-fixed' ).data('triger-sec') * 1000;
 					var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
-					var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+					var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 					if ( $( window ).width() < 767 ) {
 						if ( $( '.mysticky-welcomebar-fixed' ).hasClass( 'mysticky-welcomebar-display-mobile' ) ) {
 							setTimeout(function(){
@@ -1012,8 +1066,17 @@ function mysticky_welcome_bar_frontend(){
 		} );
 
 		jQuery(window).scroll(function(){
-			if ( sessionStorage.getItem("welcomebar_close") === null ){
-				var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+			if( welcombar_aftersubmission == 'dont_show_welcomebar' ){
+				var welcomebar_storage = localStorage.getItem("welcomebar_close");
+			} else if( welcombar_aftersubmission == 'show_welcomebar_next_visit' ) {
+				var welcomebar_storage = sessionStorage.getItem("welcomebar_close");
+			} else {
+				sessionStorage.removeItem('welcomebar_close');
+				localStorage.removeItem('welcomebar_close');
+				var welcomebar_storage = null;
+			}
+			if ( welcomebar_storage === null ){
+				var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 				var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
 				if ( welcombar_position == 'top' ) {
 					$( '#mysticky-nav' ).css( 'top', mysticky_welcomebar_height + 'px' );
@@ -1022,7 +1085,7 @@ function mysticky_welcome_bar_frontend(){
 					var scroll = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 					var after_scroll_val = jQuery( '.mysticky-welcomebar-fixed' ).data('triger-sec');
 					var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
-					var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+					var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 					if( scroll > after_scroll_val ) {
 						if ( $( '.mysticky-welcomebar-fixed' ).hasClass( 'mysticky-welcomebar-display-desktop' ) ) {
 							if ( $( window ).width() > 767 ) {
@@ -1064,11 +1127,19 @@ function mysticky_welcome_bar_frontend(){
 			}
 
 		});
+		
 		jQuery( '.mysticky-welcomebar-close, .mysticky-welcomebar-btn a' ).on( 'click', function(){
-			console.log("mysticky_welcomebar_height = " + mysticky_welcomebar_height);
-			sessionStorage.setItem('welcomebar_close', 'close');
+			if( welcombar_aftersubmission != 'show_welcomebar_every_page' ){
+				if( welcombar_aftersubmission == 'dont_show_welcomebar' ){
+					sessionStorage.removeItem('welcomebar_close');
+					localStorage.setItem('welcomebar_close', 'close');
+				} else if( welcombar_aftersubmission == 'show_welcomebar_next_visit' ) {
+					localStorage.removeItem('welcomebar_close');
+					sessionStorage.setItem('welcomebar_close', 'close');
+				}
+			}
 			var welcombar_position = $( '.mysticky-welcomebar-fixed' ).data('position');
-			var welcombar_height = $( '.mysticky-welcomebar-fixed' ).data('height');
+			var welcombar_height = $( '.mysticky-welcomebar-fixed' ).outerHeight();
 			jQuery( '.mysticky-welcomebar-fixed' ).slideUp( 'slow' );
 			if ( welcombar_position == 'top' ) {
 				jQuery( '.mysticky-welcomebar-fixed' ).css( 'top', '-' + mysticky_welcomebar_height + 'px' );
@@ -1092,7 +1163,7 @@ function mysticky_welcome_bar_frontend(){
 		var mystickyelements_show = jQuery( '.mystickyelements-fixed' ).length;
 		if( mystickyelements_show ) {
 			var welcombar_position 			  = jQuery( '.mysticky-welcomebar-fixed' ).data('position');
-			var welcombar_height 			  = jQuery( '.mysticky-welcomebar-fixed' ).innerHeight();
+			var welcombar_height 			  = jQuery( '.mysticky-welcomebar-fixed' ).outerHeight();
 			var mystickyelements_height 	  = jQuery( '.mystickyelements-fixed' ).height();
 			var mystickyelements_total_height = welcombar_height + mystickyelements_height;
 			if ( jQuery( window ).width() <= 1024 && jQuery( '.mystickyelements-fixed' ).hasClass( 'mystickyelements-position-mobile-top' ) ) {
@@ -1142,8 +1213,13 @@ function mysticky_welcome_bar_frontend(){
 	
 	</script>
 	<style>
+	.mysticky-welcomebar-fixed , .mysticky-welcomebar-fixed * {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 	.mysticky-welcomebar-fixed {
-		height: 60px;
+		min-height: 60px;
 		background-color: <?php echo $welcomebar['mysticky_welcomebar_bgcolor'] ?>;
 		font-family: <?php echo $welcomebar['mysticky_welcomebar_font'] ?>;
 		position: fixed;
@@ -1172,7 +1248,8 @@ function mysticky_welcome_bar_frontend(){
 	}
 	.mysticky-welcomebar-display-desktop.mysticky-welcomebar-position-bottom.mysticky-welcomebar-fixed {
 		bottom: 0;
-	}
+	}	
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-content p a,
 	.mysticky-welcomebar-fixed .mysticky-welcomebar-content p {
 		color: <?php echo $welcomebar['mysticky_welcomebar_bgtxtcolor'] ?>;
 		font-size: <?php echo $welcomebar['mysticky_welcomebar_fontsize'] ?>px;
@@ -1271,8 +1348,8 @@ function mysticky_welcome_bar_frontend(){
 	}
 	/* Animated Buttons */
 		.mysticky-welcomebar-btn a {
-			animation-duration: 1s;
 			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
 		}
 		@-webkit-keyframes flash {
 			from,
@@ -1634,8 +1711,6 @@ function mysticky_welcome_bar_frontend(){
 	}
 	@media only screen and (max-width: 480px) {
 		.mysticky-welcomebar-fixed {
-			height: auto;
-			min-height: 60px;
 			padding: 15px 36px 35px 10px;
 		}
 		.mysticky-welcomebar-fixed .mysticky-welcomebar-btn {

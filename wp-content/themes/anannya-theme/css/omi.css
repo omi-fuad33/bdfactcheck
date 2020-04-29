@@ -70,9 +70,9 @@ html, body{
 /*Style for advertisement box*/
 .o_landscape_ad_landscape{
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: #b9e6fa;
-    line-height: 100px;
+    line-height: 120px;
     text-align: center;
     font-size: 28px;
     font-weight: 500;
@@ -239,8 +239,7 @@ html, body{
 /* Donate image front page */
 .o_donate_front_page{
     width: 100%;
-    margin: 10px 0;
-    margin-bottom: 0px;
+    margin: 20px 0;
 }
 /*front page 2nd row 1st post*/
 .o_2nd_row_post1{
@@ -320,7 +319,8 @@ html, body{
 .o_post_3rd_row{
     margin-top: 10px;
     background-color: #f1f1f2;
-    padding: 30px 10px;
+    padding: 15px 15px;
+    padding-left: 0px;
 }
 
 .o_3rd_row_post1{
@@ -393,7 +393,41 @@ html, body{
     font-weight: 500;
     margin-top: 20px;
 }
+/* Disclaimer text */
+.o_disclaimer_text_wrap{
+    margin: 5% 0;
+    width: 100%;
+    background-color: rgba(0, 103, 70, 0.8);
+    font-size: 18px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
+    -moz-box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
+    box-shadow: 0px 5px 10px -5px rgba(69,68,69,1);
+}
+.o_disclaimer_text_wrap span{
+    color: #006747;
+    font-size: 25px;
+    font-weight: 600;
+    float: right;
+    margin: 40px 50px 40px 0;
+}
+.o_disclaimer_text{
+    padding: 20px;
+}
+.o_disclaimer_logo{
+    background-color: #f1f1f2;
+}
+.o_disclaimer_text_wrap img{
+    width: 200px;
+    object-fit: cover;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
 /*4th row post styling front page*/
+.o_after_disclaimer_row{
+    margin-top: 40px;
+}
 .o_4th_row_img{
     width: 100%;
     height: 210px;
@@ -540,7 +574,7 @@ html, body{
     margin-bottom: 20px;
 }
 .o_sideber_ad4_green_color{
-    background-color: #c4df9b;
+    background-color: #9bdfbf;
     height: 300px;
     line-height: 300px;
 }
@@ -549,6 +583,87 @@ html, body{
     width: 100%;
     object-fit: cover;
 }
+.o_footer_social_instagram img{
+    height: 29px !important;
+}
+.o_footer_social_twitter img{
+    height: 28px !important;
+}
+.o_footer_social_fb{
+    height: 23px !important;
+    margin-top: 5px;
+}
+.d_footer_Social img{
+    transition: all 0.1s ease;
+}
+.d_footer_Social img:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+.d_list_parent a, .d_list_parent a:hover, .d_list_parent a:visited, .d_footer_clm2 a, .d_footer_clm2 a:hover, .d_footer_clm2 a:visited{
+    color: #ffffff;
+}
+/* Styles for gallery */
+.o_gallery_wrap li{
+    list-style: none;
+}
+.o_photo_gallery_container{
+    margin-top: 100px;
+  }
+  .o_media_section_post_wrap{
+    padding-bottom: 4%;
+    margin-top: 4%;
+    border-bottom: 1px dotted grey;
+  }
+  .o_gallery_post_wrap{
+    margin-bottom: 20px;
+  }
+  .o_photo_gallery_img{
+    height: 180px;
+    margin-bottom: 10px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .o_photo_gallery_title a{
+    font-size: 0.9rem;
+  }
+  .o_media_section_title_wrap{
+    padding-right: 10%;
+  }
+  .o_media_section_title a{
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000;
+  }
+  .o_media_section_title a:hover{
+    text-decoration: none;
+    color: #006747;
+  }
+  .o_pagination_links{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1rem;
+    color: #4f4f51;
+    padding-right: 20%;
+    padding-left: 10px;
+    font-family: 'Arimo', sans-serif;
+  }
+  .o_pagination_links a, .o_pagination_links a:visited{
+    color: #4f4f51;
+  }
+  .o_pagination_links .current, .o_pagination_links a:hover{
+    color: #006747;
+    text-decoration: underline;
+  }
+  .o_staff_name{
+      font-size: 20px !important;
+      color: #006747;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: -15px;
+  }
 /*============================================
             Media query for mobile
 ==============================================*/
@@ -586,6 +701,9 @@ html, body{
     .o_3rd_row_post1 {
         width: 100%;
         left: 0px;
+    }
+    .o_disclaimer_text_wrap span{
+        display: none;
     }
     .o_media_school_content{
         padding-left: 15px !important;

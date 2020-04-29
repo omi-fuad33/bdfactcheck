@@ -40,10 +40,10 @@
 				</div>
 				<div class="d_top_social">
 					<button class="d_d_button button2">Donate</button>
-					<a href="https://www.facebook.com/BGMEA.official/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
-					<a href="https://www.linkedin.com/company/13268451/admin/" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
-					<a href="https://instagram.com/brandbgmea?igshid=u2m5b975u82k"><i class="fa fa-instagram d_s_icon"></i></a>
-					<a href="https://www.youtube.com/channel/UCVhQMYrp0X1z24DdqMGVagw" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
+					<a href="https://www.facebook.com/bdfactcheck/" target="_blank"><i class="fa fa-facebook-square d_s_icon"></i></a>
+					<a href="https://twitter.com/BDFactChecks" target="_blank"><i class="fa fa-twitter-square d_s_icon"></i></a>
+					<a href=""><i class="fa fa-instagram d_s_icon"></i></a>
+					<a href="" target="_blank"><i class="fa fa-youtube-square d_s_icon"></i></a>
 					<img src="<?php echo get_template_directory_uri(); ?>/Images/search.png" class="d-none d-sm-block d_search_img">
 
 				</div>
@@ -66,11 +66,15 @@
 <div class="container d-md-none">
 	<div class="row">
 		<div class="col-12 d-md-none">
-			<div class="d_mobile_button">
-				<button class="d_m_button button1">English</button>
-				<button class="d_m_button button2">Donate</button>
-				<div class="d_m_top_social">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/search.png" class="d_search_img">
+			<div class="row d_mobile_button">
+				<div class="offset-5 col-2 mt-1 mr-1">
+					<span class="d_m_button">English</span>
+				</div>
+				<div class="col-2 mt-1">
+					<span class="d_m_button">Donate</span>
+				</div>
+				<div class=" col-2 d_m_top_social">
+					<img src="<?php echo get_template_directory_uri(); ?>/Images/search.png" class="d_search_img">
 				</div>
 			</div>
 

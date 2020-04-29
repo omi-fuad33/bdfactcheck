@@ -7,9 +7,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'poppinsbold';
     src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
@@ -18,9 +15,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'poppins_lightregular';
@@ -120,7 +114,7 @@
     height: 42px;
     padding: 0 10px 0 12px;
     margin: 0;
-    width: 229px;
+    width: 310px;
     box-shadow: none;
 }
 
@@ -128,6 +122,12 @@
     display: inline-block;
     vertical-align: top;
     margin-top: 7px;
+}
+
+.mysticky-welcomebar-setting-content-right input[type="text"]:disabled {
+    color: #a0a5aa;
+    border-color: #ddd;
+    background-color: #f7f7f7;
 }
 
 .mystickymenu-content-section .mysticky-number:focus {
@@ -321,19 +321,19 @@ span.input-px {
 }
 
 .myStickymenu-upgrade a {
-	background: #E1DAF6;
-	border-radius: 20px;
-	color: #7559C0;
-	padding-top: 2px;
-	padding-bottom: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 12px;
-	display: inline-block;
-	vertical-align: top;
-	line-height: 1;
+    background: #E1DAF6;
+    border-radius: 20px;
+    color: #7559C0;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
 }
 .myStickymenu-upgrade {
     float: right;
@@ -1531,7 +1531,7 @@ p.udner-title {
 }
 .mysticky-welcomebar-setting-content {
 	display: flex;
-	align-items: center;
+	/*align-items: center;*/
 	padding-bottom: 20px;
 }
 .mysticky-welcomebar-setting-content.show-on-apper {
@@ -1542,6 +1542,7 @@ p.udner-title {
 	line-height: 1.2;
 	color: #4F4F4F;
 	font-weight: 500;
+	margin-top: 10px;
 	width: 210px;
 	padding-right: 10px;
 }
@@ -1586,7 +1587,7 @@ p.udner-title {
 .mysticky-welcomebar-setting-content-right select ,
 .mysticky-welcomebar-setting-content-right input[type="text"] ,
 .mysticky-welcomebar-setting-content-right textarea {
-	width: 229px;
+	width: 310px;
 	height: 42px;
 	border-radius: 20px;
 	color: #32373c;
@@ -1599,7 +1600,7 @@ p.udner-title {
 	font-weight: 400;
 }
 .mysticky-welcomebar-setting-content-right select {
-	padding-right: 30px;
+	padding-right: 22px;
 }
 .mysticky-welcomebar-setting-content-right textarea {
 	height: 100px;
@@ -1927,6 +1928,9 @@ a.create-rule {
 .updates-content-buttons {
     background: #c1c1c1;
     padding: 0 20px;
+}
+div#wp-mysticky_bar_text-wrap {
+    width: 40%;
 }
 
 @-webkit-keyframes fa-spin {

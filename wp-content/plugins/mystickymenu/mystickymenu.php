@@ -3,7 +3,7 @@
 Plugin Name: myStickymenu
 Plugin URI: https://premio.io/
 Description: Simple sticky (fixed on top) menu implementation for navigation menu and Welcome bar for announcements and promotion. After install go to Settings / myStickymenu and change Sticky Class to .your_navbar_class or #your_navbar_id.
-Version: 2.3.5
+Version: 2.3.9
 Author: Premio
 Author URI: https://premio.io/downloads/mystickymenu/
 Text Domain: mystickymenu
@@ -12,7 +12,7 @@ License: GPLv2 or later
 */
 
 defined('ABSPATH') or die("Cannot access pages directly.");
-define( 'MYSTICKY_VERSION', '2.3.5' );
+define( 'MYSTICKY_VERSION', '2.3.9' );
 require_once("mystickymenu-fonts.php");
 require_once("welcome-bar.php");
 
@@ -80,7 +80,8 @@ class MyStickyMenuBackend
 		if ( $hook != 'toplevel_page_my-stickymenu-settings' && $hook != 'mystickymenu_page_my-stickymenu-welcomebar' && $hook != 'mystickymenu_page_my-stickymenu-upgrade' ) {
 			return;
 		}
-		wp_enqueue_style('mystickymenuAdminStyle', plugins_url('/css/mystickymenu-admin.css', __FILE__), array(), MYSTICKY_VERSION );    
+
+		wp_enqueue_style('mystickymenuAdminStyle', plugins_url('/css/mystickymenu-admin.css', __FILE__), array(), MYSTICKY_VERSION );
 		wp_enqueue_style( 'wp-color-picker' );		
 		//wp_enqueue_script( 'wp-color-picker-alpha', plugins_url('/js/wp-color-picker-alpha.min.js', __FILE__), array( 'wp-color-picker' ), MYSTICKY_VERSION );
 		wp_enqueue_style( 'wp-jquery-ui-dialog' );
@@ -89,8 +90,15 @@ class MyStickyMenuBackend
 		wp_enqueue_script('jquery-ui');
 		wp_enqueue_script('jquery-ui-slider');
 		//wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script( 'jquery-ui-dialog' );	
-		wp_enqueue_script( 'my-script-handle', plugins_url('js/iris-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+		wp_enqueue_script( 'jquery-ui-dialog' );
+
+        if($hook == "mystickymenu_page_my-stickymenu-upgrade") {
+            wp_enqueue_script( 'my-select2', plugins_url('js/select2.min.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+            wp_enqueue_script( 'my-script-handle', plugins_url('js/iris-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+
+            wp_enqueue_style('my-css-select2', plugins_url('css/select2.min.css', __FILE__), array(), MYSTICKY_VERSION );
+        }
+
 		wp_enqueue_script('mystickymenuAdminScript', plugins_url('/js/mystickymenu-admin.js', __FILE__), array( 'jquery', 'jquery-ui-slider' ), MYSTICKY_VERSION);
 	}
 
@@ -622,8 +630,9 @@ class MyStickyMenuBackend
 	public function mystickystickymenu_admin_welcomebar_page() {
 		/* welcome bar save data  */
 		if (isset($_POST['mysticky_option_welcomebar']) && !empty($_POST['mysticky_option_welcomebar']) && isset($_POST['nonce'])) {
-			if(!empty($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], 'mysticky_option_welcomebar_update')) {			
+			if(!empty($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], 'mysticky_option_welcomebar_update')) {						
 				$mysticky_option_welcomebar = filter_var_array( $_POST['mysticky_option_welcomebar'], FILTER_SANITIZE_STRING );
+				$mysticky_option_welcomebar['mysticky_welcomebar_bar_text'] = $_POST['mysticky_option_welcomebar']['mysticky_welcomebar_bar_text'];
 				$mysticky_option_welcomebar['mysticky_welcomebar_height'] = 60;
 				$mysticky_option_welcomebar['mysticky_welcomebar_device_desktop'] = 'desktop';
 				$mysticky_option_welcomebar['mysticky_welcomebar_device_mobile'] = 'mobile';
@@ -720,7 +729,7 @@ class MyStickyMenuBackend
 									<div style="clear:both;"></div>
 								</div>
 								<div class="rpt_features rpt_features_0">
-									<div class="rpt_feature rpt_feature_0-0"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Use myStickymenu on 1 domain</span>1 website<span class="rpt_tooltip_plus" > +</span></a></div>
+									<div style="padding: 12px 16px 6px 16px" class="rpt_feature rpt_feature_0-0"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Use myStickymenu on 1 domain</span>1 website<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_0-1"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can show the menu when scrolling up, down or both</span>Show on scroll up/down<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_0-2"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can disable the sticky effect on desktop or mobile</span>Devices<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_0-3"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Add CSS of your own to the sticky menu</span>CSS style<span class="rpt_tooltip_plus" > +</span></a></div>
@@ -753,7 +762,7 @@ class MyStickyMenuBackend
 									<div style="clear:both;"></div>
 								</div>
 								<div class="rpt_features rpt_features_1">
-									<div class="rpt_feature rpt_feature_1-0"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Use myStickymenu on 5 domains</span>5 websites<span class="rpt_tooltip_plus" > +</span></a></div>
+									<div style="padding: 12px 16px 6px 16px" class="rpt_feature rpt_feature_1-0"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Use myStickymenu on 5 domains</span>5 websites<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_1-1"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can show the menu when scrolling up, down or both</span>Show on scroll up/down<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_1-2"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can disable the sticky effect on desktop or mobile</span>Devices<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_1-3"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Add CSS of your own to the sticky menu</span>CSS style<span class="rpt_tooltip_plus" > +</span></a></div>
@@ -786,7 +795,13 @@ class MyStickyMenuBackend
 									<div style="clear:both;"></div>
 								</div>
 								<div class="rpt_features rpt_features_2">
-									<div class="rpt_feature rpt_feature_2-0"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Use myStickymenu on 50 domains</span>50 websites<span class="rpt_tooltip_plus" > +</span></a></div>
+									<div class="rpt_feature rpt_feature_2-0"><a href="javascript:;" class="rpt_tooltip">
+                                        <select class="multiple-web-options">
+                                            <option value="50_websites">50 websites</option>
+                                            <option value="500_websites">500 websites</option>
+                                            <option value="1000_websites">1000 websites</option>
+                                        </select>
+                                    </div>
 									<div class="rpt_feature rpt_feature_2-1"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can show the menu when scrolling up, down or both</span>Show on scroll up/down<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_2-2"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>You can disable the sticky effect on desktop or mobile</span>Devices<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_2-3"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Add CSS of your own to the sticky menu</span>CSS style<span class="rpt_tooltip_plus" > +</span></a></div>
@@ -794,14 +809,14 @@ class MyStickyMenuBackend
 									<div class="rpt_feature rpt_feature_2-5"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Fade/Slide, opacity, background color, transition time and more</span>Effects and more<span class="rpt_tooltip_plus" > +</span></a></div>
 									<div class="rpt_feature rpt_feature_2-6"><a href="javascript:;" class="rpt_tooltip"><span class="intool"><b></b>Including page targeting, delay and scroll triggers, devices, position, height, expiry date, open link in a new tab and remove credit</span>Welcome bar<span class="rpt_tooltip_plus"> +</span></a></div>
 									<div class="rpt_feature rpt_feature_0-9">
-										<select data-key="0" class="multiple-options">
-											<option data-header="Renewals for 25% off" data-price="79" value="<?php echo esc_url($pro_url."3") ?>">
+										<select data-key="0" class="multiple-options has-multiple-websites">
+											<option data-option="1_year" data-header="Renewals for 25% off" data-price="79" value="<?php echo esc_url($pro_url."3") ?>">
 												<?php esc_html_e("Updates & support for 1 year") ?>
 											</option>
-											<option data-header="For 2 years" data-price="125" value="<?php echo esc_url($pro_url."15") ?>">
+											<option data-option="2_year" data-header="For 2 years" data-price="125" value="<?php echo esc_url($pro_url."15") ?>">
 												<?php esc_html_e("Updates & support for 2 years") ?>
 											</option>
-											<option data-header="For lifetime" data-price="199" value="<?php echo esc_url($pro_url."9") ?>">
+											<option data-option="lifetime" data-header="For lifetime" data-price="199" value="<?php echo esc_url($pro_url."9") ?>">
 												<?php esc_html_e("Updates & support for lifetime") ?>
 											</option>
 										</select>

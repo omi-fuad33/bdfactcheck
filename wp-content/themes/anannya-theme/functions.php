@@ -114,21 +114,24 @@ add_action( 'after_setup_theme', 'anannya_content_width', 0 );
  */
 function anannya_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'anannya' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'anannya' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
 		'name'          => 'ফ্যাক্ট যাচাই করুন',
 		'id'            => 'fact-test',
 	) );
 	register_sidebar( array(
 		'name'          => 'Twitter Feed',
 		'id'            => 'twitter-feed',
+	) );
+	register_sidebar( array(
+		'name'          => 'Front Page Gallery',
+		'id'            => 'front-page-gallery',
+	) );
+	register_sidebar( array(
+		'name'          => 'Front Page Video 1',
+		'id'            => 'front-page-video-1',
+	) );
+	register_sidebar( array(
+		'name'          => 'Front Page Video 2',
+		'id'            => 'front-page-video-2',
 	) );
 }
 add_action( 'widgets_init', 'anannya_widgets_init' );
@@ -308,11 +311,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-	register_sidebar( array(
-		'name'          => 'Login',
-		'id'            => 'login',
-
-	) );
 
 add_action('after_setup_theme', 'remove_admin_bar');
 

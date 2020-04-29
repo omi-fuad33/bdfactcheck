@@ -54,11 +54,13 @@ body{
 }
 /* Mobile Button */
 .d_mobile_button{
-  margin-top: 30px;
-  display: flex;
-  justify-content: flex-end;
+  margin-top: 40px;
+  /* display: flex;
+  justify-content: flex-end; */
 }
 .d_m_button {
+  display: block;
+  width: 6em;
   background-color: #f1f1f2;
   border: 1px solid #064618;
   border-radius: 5px;
@@ -66,9 +68,7 @@ body{
   padding: 2px 8px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 8px 2px;
+  font-size: 10px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -415,7 +415,7 @@ hr.d_same_cat_news_hr{
 /*footer design starts===================================*/
  .d_site-footer{
      width: 100%;
-     background-color: rgba(0, 98, 71, 0.659);
+     background-color: rgba(0, 103, 70, 0.8);
 }
  .d_footerMain {
      padding-top:5%;
@@ -485,7 +485,7 @@ hr.d_same_cat_news_hr{
      background-color: #222823;
 }
  .d_footer_2nd_row_text{
-     font-size: 16px;
+     font-size: 17px;
      color: white;
      padding-top: 10px;
      text-align: center;
@@ -494,7 +494,7 @@ hr.d_same_cat_news_hr{
 .d_footer_2nd_row_text p{
   width: 300px;
   margin: 0 auto;
-  border-bottom: 1px solid #579785;
+  border-bottom: 2px solid #579785;
   padding-bottom: 5px;
 }
 .d_footer_3rd_row_text{
@@ -540,11 +540,6 @@ hr.d_same_cat_news_hr{
     width: 10px;
     margin: 6px 10px;
    }
-   .d_m_button {
-    font-size: 12px;
-    margin: 8px 5px;
-
-}
  }
 
 /* // Small devices (landscape phones, less than 768px) */
