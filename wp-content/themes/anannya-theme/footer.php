@@ -73,7 +73,7 @@
 
     </footer><!-- #colophon -->
     <div class="o_footer_copyright_wrap">
-                <p class="o_footer_copyright_text">&copy; বিডিফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</p>
+                <p class="o_footer_copyright_text">&copy; বিডি ফ্যাক্টচেক ২০২০, সর্বস্বত্ব সংরক্ষিত</p>
                 <p class="o_footer_developer_text">Design & Development: <span>OMNISPACE</span></p>
             </div>
 <!-- #page -->

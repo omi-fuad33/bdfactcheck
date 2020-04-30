@@ -699,7 +699,6 @@ html, body{
     transform: scale(1.1);
 }
 
-
 /*============================================
             Media query for mobile
 ==============================================*/
@@ -751,6 +750,12 @@ html, body{
         display: none;
     }
     .d_footer_logo{
+        display: none;
+    }
+    .o_landscape_ad_landscape_after_disclaimer{
+        margin-bottom: 15px;
+    }
+    .o_sideber_ad4_beside_business_check{
         display: none;
     }
 
@@ -805,6 +810,9 @@ html, body{
     }
     .o_media_school_content{
         padding-left: 15px !important;
+    }
+    .o_landscape_ad_landscape_after_disclaimer{
+        margin-bottom: 15px;
     }
 
 }

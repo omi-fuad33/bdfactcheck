@@ -13,39 +13,42 @@
 	<header class="entry-header">
 		<?php anannya_post_thumbnail(); ?>
 			<div class="d_true_false">
-				<div class="d_tf_boxes">
-					<span class="d_tf_button b1"></span>সত্য
-					<span class="d_tf_button b2"></span>মিথ্যা
-					<span class="d_tf_button b3"></span>আংশিক সত্য
-					<span class="d_tf_button b4"></span>আংশিক মিথ্যা
 
-				</div>
 
 				<?php
             if (has_category('ৎৎৎ-সত্য'))
             { ?>
-                <p class="d_tf_bar1"></p>
+							<div class="d_tf_boxes">
+									<span class="d_tf_button b1"></span>সত্য
+							</div>
+
 								<?php
 							}
-							 elseif (has_category('ৎৎৎ-মিথ্যা'))
+							 elseif (has_category('ৎৎৎ-অসত্য'))
 							{
 								?>
-              <p class="d_tf_bar2"></p>
+								<div class="d_tf_boxes">
+										<span class="d_tf_button b2"></span>অসত্য
+								</div>
+
 
 							<?php
 						}
 						 elseif (has_category('ৎৎৎ-আংশিক সত্য'))
 						{
 							?>
+							<div class="d_tf_boxes">
+									<span class="d_tf_button b3"></span>আংশিক সত্য
+							</div>
 
-								<p class="d_tf_bar3"></p>
 								<?php
 							}
-							 elseif (has_category('ৎৎৎ-আংশিক মিথ্যা'))
+							 elseif (has_category('ৎৎৎ-অমীমাংসিত'))
 							{
 								?>
-
-							  <p class="d_tf_bar4"></p>
+								<div class="d_tf_boxes">
+									<span class="d_tf_button b4"></span>অমীমাংসিত
+								</div>
 								<?php
 							}
 							?>
@@ -55,17 +58,31 @@
 			<div class="d-sm-block d-md-none col-12 d_single_sml">
 				<?php $category = get_the_category();
 				$category_id = the_category_id(false);
+				$category_link = get_category_link( $category_id);
 				?>
 
-					<p class="d_single_cat"> <?php $firstCategory = $category[0]->cat_name; echo $firstCategory;?></p>
-							<p class="d_single_date"><?php echo get_the_date(); ?> , <?php echo get_the_time(); ?></p>
-							<p class="d_last-modified">Last modified: <?php echo get_the_modified_date(); ?> , <?php echo get_the_modified_time(); ?></p>
+							<p class="d_single_cat">
+								<?php
+							  $categories = get_the_category();
+							  $separator = ' ';
+							  $output = '';
+							  if($categories){
+							      foreach($categories as $category) {
+							          $output .= '<a href="'.get_category_link( $category ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+							          break;
+							      }
+							  echo trim($output, $separator);
+							  }
+							  ?></p>
+							<p class="d_single_date"><?php echo get_the_date(); ?>, <?php echo get_the_time(); ?></p>
+							<p class="d_last-modified">Updated: <?php echo get_the_modified_date(); ?>, <?php echo get_the_modified_time(); ?></p>
 							<p><?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?></p>
 			</div>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="d_single_title">', '</h1>' );
-		else :
+			the_title( '<h1 class="d_single_title">', '</h1>' ); ?>
+			<h2 class="d_author">Author: <?php the_author(); ?> <span class="d_single_date d-none d-md-block">  Published: <?php echo get_the_date(); ?>, <?php echo get_the_time(); ?>  |  Updated: <?php echo get_the_modified_date(); ?>, <?php echo get_the_modified_time(); ?></span></h2>
+	<?php	else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 

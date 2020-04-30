@@ -15,9 +15,22 @@ get_header();
       <div class="row">
         <div class="d-none d-md-block col-md-2 col-lg-2">
           <?php $category = get_the_category(); ?>
-            <p class="d_single_cat"> <?php $firstCategory = $category[0]->cat_name; echo $firstCategory;?></p>
-                <p class="d_single_date"><?php echo get_the_date(); ?> , <?php echo get_the_time(); ?></p>
-                <p class="d_last-modified">Last modified: <?php echo get_the_modified_date(); ?> , <?php echo get_the_modified_time(); ?></p>
+            <p class="d_single_cat">
+                <?php
+  $categories = get_the_category();
+  $separator = ' ';
+  $output = '';
+  if($categories){
+      foreach($categories as $category) {
+          $output .= '<a href="'.get_category_link( $category ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+          break;
+      }
+  echo trim($output, $separator);
+  }
+  ?>
+</p>
+                <!-- <p class="d_single_date">Published: <?php echo get_the_date(); ?>, <?php echo get_the_time(); ?></p>
+                <p class="d_last-modified">Updated: <?php echo get_the_modified_date(); ?>, <?php echo get_the_modified_time(); ?></p> -->
                 <?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?>
         </div>
         <div class="col-sm-12 col-md-10 col-lg-7">
@@ -54,11 +67,11 @@ get_header();
                     </div>
                 </div>
 <!-- ফ্যাক্ট যাচাই করুন starts here-->
-    
+
                 <!--    twitter feed starts here-->
                 <h5 class="o_spotlight_title o_top_fact_check_title">Follow us on twitter</h5>
                 <div class="o_top_fact_check_wrap">
-                    <?php dynamic_sidebar( 'twitter-feed' ); ?>    
+                    <?php dynamic_sidebar( 'twitter-feed' ); ?>
                 </div>
                     <img class="d_donate" src="<?php echo get_template_directory_uri(); ?>/Images/donate2.png" alt="">
 

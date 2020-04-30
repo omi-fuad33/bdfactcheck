@@ -66,11 +66,15 @@
 <div class="container d-md-none">
 	<div class="row">
 		<div class="col-12 d-md-none">
-			<div class="d_mobile_button">
-				<button class="d_m_button button1">English</button>
-				<button class="d_m_button button2">Donate</button>
-				<div class="d_m_top_social">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/search.png" class="d_search_img">
+			<div class="row d_mobile_button">
+				<div class="offset-5 col-2 mt-1 mr-1">
+					<span class="d_m_button">English</span>
+				</div>
+				<div class="col-2 mt-1">
+					<span class="d_m_button">Donate</span>
+				</div>
+				<div class=" col-2 d_m_top_social">
+					<img src="<?php echo get_template_directory_uri(); ?>/Images/search.png" class="d_search_img">
 				</div>
 			</div>
 

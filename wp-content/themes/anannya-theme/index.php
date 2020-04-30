@@ -288,7 +288,7 @@ get_header();
               <?php echo $content; ?>
               </div>
             </div>
-            <div class="o_landscape_ad_landscape">
+            <div class="o_landscape_ad_landscape o_landscape_ad_landscape_after_disclaimer">
                  <p>AD</p>
             </div>
         </div>
@@ -566,20 +566,13 @@ get_header();
                 </div>
         </div>
         <div class="col-lg-4 o_5th_row_post_right">
-            <div class="o_sideber_ad2">
-                 <p>AD</p>
-             </div>
             <div class="o_sideber_ad4 o_sideber_ad4_green_color">
                  <p>AD</p>
              </div>
-            <div class="o_sideber_ad4">
+            <div class="o_sideber_ad4 o_sideber_ad4_beside_business_check">
                  <p>AD</p>
              </div>
         </div>
-<!--Advertisement box-->
-        <div class="o_landscape_ad_landscape_big">
-                 <p>AD</p>
-         </div>
     </div>
 <!--  Photo gallery satrts form here -->
     <div class="o_gallery_wrap">
