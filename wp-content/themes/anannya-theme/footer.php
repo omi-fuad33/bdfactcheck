@@ -46,8 +46,8 @@
                             <a href="<?php echo get_home_url(); ?>/?cat=41"><li>মিডিয়া ওয়াচ</li></a>
                             <a href="<?php echo get_home_url(); ?>/?cat=48"><li>পরিবেশ চেক</li></a>
                             <a href="<?php echo get_home_url(); ?>/?cat=49"><li>বিজনেস চেক</li></a>
-                            <a href="<?php echo get_home_url(); ?>/?cat=51"><li>ফ্যাক্টচেক অনুরোধ</li></a>
                             <a href="<?php echo get_home_url(); ?>/?cat=36"><li>ফেক নিউজ</li></a>
+                            <a href="<?php echo get_home_url(); ?>/?page_id=278"><li>ফ্যাক্টচেক অনুরোধ করুন</li></a>
                         </ul>
                     </div>
             </div>

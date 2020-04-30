@@ -60,7 +60,7 @@ get_header();
         </div>
         <div class="col-lg-4 o_slider_right">
             <div class="spotlight_box">
-                <h5 class="o_spotlight_title o_spotlight_title_top">শীর্ষ ফ্যাক্ট চেক</h5>
+                <h5 class="o_spotlight_title o_spotlight_title_top">শীর্ষ ফ্যাক্টচেক</h5>
                 <div class="o_top_fact_check_wrap_top">
                         <?php
 						                $args = array('category_name' => 'শীর্ষ-ফ্যাক্ট-চেক',
